@@ -27,10 +27,14 @@
 }
 
 html {
+  min-height: 100%;
+  overflow-x: hidden;
+  background: var(--color-sand);
   scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100%;
   margin: 0;
   color: var(--color-ink);
   background:
@@ -39,6 +43,7 @@ body {
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -369,12 +374,13 @@ p {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
+  object-position: center;
   transform: scale(1.01);
 }
 
 .eco-badge {
   position: absolute;
-  right: 1rem;
+  left: 1rem;
   bottom: 1rem;
   z-index: 2;
   display: grid;
@@ -489,21 +495,33 @@ p {
 
 .clean-list li,
 .check-list li {
-  position: relative;
-  padding-left: 1.8rem;
+  display: grid;
+  grid-template-columns: 1.45rem 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  padding-left: 0;
   color: var(--color-muted);
 }
 
-.clean-list li::before,
-.check-list li::before {
-  position: absolute;
-  top: 0.3rem;
-  left: 0;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background: var(--color-leaf);
-  content: "";
+.list-icon {
+  display: inline-grid;
+  width: 1.45rem;
+  height: 1.45rem;
+  place-items: center;
+  border-radius: 999px;
+  background: rgb(118 184 42 / 16%);
+  color: var(--color-forest);
+}
+
+.list-icon svg,
+.product-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .muted-section {
@@ -556,7 +574,17 @@ p {
   border-radius: var(--radius-sm);
   background: var(--color-moss);
   color: var(--color-forest);
-  font-weight: 950;
+  font-size: 1.7rem;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.product-card:hover .product-icon {
+  background: var(--color-forest);
+  color: var(--color-white);
+  transform: translateY(-1px);
 }
 
 .pro-section {
@@ -568,6 +596,11 @@ p {
 .pro-section .eyebrow,
 .pro-section .check-list li {
   color: rgb(255 255 255 / 78%);
+}
+
+.pro-section .list-icon {
+  background: rgb(255 255 255 / 12%);
+  color: var(--color-leaf);
 }
 
 .pro-section h2 {
@@ -649,6 +682,7 @@ p {
   padding-block: var(--space-xl);
   background: var(--color-sand);
   text-align: center;
+  margin-bottom: -1px;
 }
 
 .js .reveal {
