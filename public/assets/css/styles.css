@@ -738,6 +738,23 @@ p {
     font-size: 2.5rem;
   }
 
+  .hero-grid,
+  .split,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+    align-items: center;
+  }
+
+  .hero {
+    padding-block: 5.5rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 72rem) {
   .site-nav {
     display: flex;
     flex: 0 1 auto;
@@ -770,21 +787,6 @@ p {
 
   .menu-toggle {
     display: none;
-  }
-
-  .hero-grid,
-  .split,
-  .contact-grid {
-    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
-    align-items: center;
-  }
-
-  .hero {
-    padding-block: 5.5rem;
-  }
-
-  .cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
