@@ -336,6 +336,18 @@ p {
   font-weight: 750;
 }
 
+.region-pill {
+  display: inline-flex;
+  margin-bottom: var(--space-md);
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgb(25 77 50 / 18%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 78%);
+  color: var(--color-forest);
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
 .eyebrow {
   margin-bottom: var(--space-sm);
   color: var(--color-forest);
@@ -407,6 +419,36 @@ p {
   margin-top: 0.25rem;
   color: var(--color-muted);
   line-height: 1.35;
+}
+
+.region-sticker {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  display: grid;
+  max-width: 12.5rem;
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--color-white);
+  border-radius: 999px;
+  background: var(--color-leaf);
+  color: var(--color-forest-dark);
+  box-shadow: 0 16px 32px rgb(16 32 24 / 24%);
+  text-align: center;
+  transform: rotate(3deg);
+}
+
+.region-sticker span {
+  font-size: 1rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.region-sticker small {
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.15;
 }
 
 .usp-band {
@@ -555,14 +597,47 @@ p {
   transform: translateY(-3px);
 }
 
-.product-card p {
+.product-card > p:not(.product-card-meta) {
   flex: 1;
 }
 
-.product-card a {
+.product-card a:not(.product-card-media) {
   align-self: flex-start;
   color: var(--color-forest);
   font-weight: 850;
+}
+
+.product-card-media {
+  display: block;
+  overflow: hidden;
+  margin: calc(var(--space-lg) * -1) calc(var(--space-lg) * -1) var(--space-md);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: var(--color-moss);
+  text-decoration: none;
+}
+
+.product-card-media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 240ms ease;
+}
+
+.product-card:hover .product-card-media img {
+  transform: scale(1.025);
+}
+
+.product-card-meta {
+  margin-bottom: var(--space-xs);
+  color: var(--color-forest);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.read-more::after {
+  content: " \2192";
 }
 
 .product-icon {
@@ -615,11 +690,13 @@ p {
   background: rgb(255 255 255 / 7%);
 }
 
-.trust-section {
+.trust-section,
+.social-section {
   padding-block: var(--space-xl);
 }
 
-.trust-card {
+.trust-card,
+.social-card {
   padding: var(--space-lg);
 }
 
@@ -633,10 +710,282 @@ p {
   margin-bottom: 0;
 }
 
+.social-card {
+  display: grid;
+  gap: var(--space-lg);
+  border: 1px solid rgb(25 77 50 / 10%);
+  border-radius: var(--radius-lg);
+  background: rgb(255 255 255 / 84%);
+  box-shadow: var(--shadow-card);
+}
+
+.social-card h2 {
+  max-width: 48rem;
+  font-size: 1.9rem;
+}
+
+.social-card p {
+  max-width: 52rem;
+  margin-bottom: 0;
+}
+
+.social-links {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.social-links a,
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3.5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgb(25 77 50 / 12%);
+  border-radius: var(--radius-sm);
+  background: var(--color-sage);
+  color: var(--color-forest);
+  font-weight: 900;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.social-links svg {
+  flex: 0 0 1.45rem;
+  width: 1.45rem;
+  height: 1.45rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-links a span,
+.social-link span {
+  flex: 1;
+}
+
+.social-links a::after,
+.social-link::after {
+  content: "\2197";
+  flex: 0 0 auto;
+}
+
+.social-links a:hover {
+  background: var(--color-moss);
+  transform: translateY(-1px);
+}
+
+.social-link.is-disabled {
+  color: rgb(83 99 88 / 72%);
+  cursor: default;
+}
+
+.social-link.is-disabled::after {
+  content: "binnenkort";
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .contact-section {
   background:
     linear-gradient(135deg, rgb(25 77 50 / 94%), rgb(17 56 34 / 96%)),
     var(--color-forest);
+  color: var(--color-white);
+}
+
+.product-page main {
+  background: linear-gradient(180deg, var(--color-sand) 0%, var(--color-white) 42%, var(--color-sage) 100%);
+}
+
+.product-hero {
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+
+.product-hero-grid,
+.product-detail-grid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.product-detail-grid > div {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.back-link {
+  display: inline-flex;
+  margin-bottom: var(--space-lg);
+  color: var(--color-forest);
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.back-link::before {
+  margin-right: 0.4rem;
+  content: "\2190";
+}
+
+.product-kicker {
+  display: inline-flex;
+  margin-bottom: var(--space-sm);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgb(118 184 42 / 18%);
+  color: var(--color-forest);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-hero h1 {
+  max-width: 13ch;
+}
+
+.product-intro {
+  max-width: 43rem;
+  color: var(--color-forest);
+  font-size: 1.18rem;
+  font-weight: 750;
+}
+
+.product-meta-grid {
+  display: grid;
+  gap: var(--space-sm);
+  margin-block: var(--space-lg);
+}
+
+.product-meta-grid div,
+.product-summary,
+.dosage-card,
+.product-cta {
+  border: 1px solid rgb(25 77 50 / 10%);
+  border-radius: var(--radius-lg);
+  background: rgb(255 255 255 / 84%);
+  box-shadow: var(--shadow-card);
+}
+
+.product-meta-grid div {
+  padding: var(--space-md);
+}
+
+.product-meta-grid dt,
+.dosage-table th {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.product-meta-grid dd {
+  margin: 0.15rem 0 0;
+  color: var(--color-forest);
+  font-weight: 900;
+}
+
+.product-flyer {
+  align-self: start;
+}
+
+.product-flyer img {
+  width: min(100%, 34rem);
+  margin-inline: auto;
+  border: 1px solid rgb(25 77 50 / 12%);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.product-summary,
+.dosage-card,
+.product-cta {
+  padding: var(--space-lg);
+}
+
+.product-summary h2,
+.dosage-card h2,
+.product-cta h2 {
+  font-size: 1.75rem;
+}
+
+.product-summary p:last-child,
+.product-cta p:last-child {
+  margin-bottom: 0;
+}
+
+.seo-list {
+  display: grid;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0 0;
+  padding-left: 1.2rem;
+  color: var(--color-muted);
+}
+
+.seo-list li::marker {
+  color: var(--color-leaf);
+}
+
+.dosage-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dosage-table th,
+.dosage-table td {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgb(25 77 50 / 10%);
+  vertical-align: top;
+}
+
+.dosage-table tr:last-child th,
+.dosage-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.dosage-table td {
+  color: var(--color-ink);
+  font-weight: 750;
+}
+
+.product-cta {
+  background:
+    linear-gradient(135deg, rgb(25 77 50 / 94%), rgb(17 56 34 / 96%)),
+    var(--color-forest);
+  color: var(--color-white);
+}
+
+.product-cta p {
+  color: rgb(255 255 255 / 78%);
+}
+
+.product-cta .actions {
+  margin-top: var(--space-md);
+}
+
+.product-cta .button {
+  border-color: var(--color-white);
+  background: var(--color-white);
+  color: var(--color-forest);
+}
+
+.product-cta .button:hover {
+  background: var(--color-sage);
+  color: var(--color-forest-dark);
+}
+
+.product-cta .button-secondary {
+  border-color: rgb(255 255 255 / 62%);
+  background: transparent;
+  color: var(--color-white);
+}
+
+.product-cta .button-secondary:hover {
+  background: rgb(255 255 255 / 12%);
   color: var(--color-white);
 }
 
@@ -785,6 +1134,14 @@ p {
   .cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .social-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-meta-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 58rem) {
@@ -817,6 +1174,32 @@ p {
 
   .cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .product-grid .product-card {
+    padding: var(--space-md);
+  }
+
+  .product-grid .product-card-media {
+    margin: calc(var(--space-md) * -1) calc(var(--space-md) * -1) var(--space-md);
+  }
+
+  .product-grid h3 {
+    font-size: 1.05rem;
+  }
+
+  .product-hero-grid,
+  .product-detail-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+    align-items: start;
+  }
+
+  .product-intro {
+    font-size: 1.35rem;
   }
 }
 
