@@ -25,8 +25,92 @@
       content="Dungking insectenmest en duurzaam tuinadvies voor hoveniers en particuliere tuinliefhebbers in Noord-Brabant."
     >
     <meta property="og:image" content="public/assets/images/ecoyard-supply-logo.png">
+    <link rel="canonical" href="https://ecoyardsupply.nl/">
     <link rel="preload" href="public/assets/images/ecoyard-supply-logo.png" as="image">
     <link rel="preload" href="public/assets/images/ecoyard-supply-hero.png" as="image">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://ecoyardsupply.nl/#business",
+            "name": "Eco Yard Supply",
+            "url": "https://ecoyardsupply.nl/",
+            "image": "https://ecoyardsupply.nl/public/assets/images/ecoyard-supply-logo.png",
+            "telephone": "+31626672878",
+            "email": "info@ecoyardsupply.nl",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Tweede Stichting 9",
+              "postalCode": "5445 NZ",
+              "addressLocality": "Landhorst",
+              "addressRegion": "Noord-Brabant",
+              "addressCountry": "NL"
+            },
+            "areaServed": "Noord-Brabant",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "17:00"
+              }
+            ],
+            "sameAs": [
+              "https://www.instagram.com/ecoyardsupply",
+              "https://www.facebook.com/profile.php?id=61590307331633",
+              "https://www.tiktok.com/@eco.yard.supply"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ecoyardsupply.nl/#website",
+            "url": "https://ecoyardsupply.nl/",
+            "name": "Eco Yard Supply",
+            "publisher": {
+              "@id": "https://ecoyardsupply.nl/#business"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://ecoyardsupply.nl/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Waar is Eco Yard Supply actief?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Eco Yard Supply is actief in Noord-Brabant en levert advies en producten vanuit Landhorst."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kan ik langskomen bij Eco Yard Supply?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Een bezoek is alleen mogelijk op afspraak. Neem vooraf contact op of bel om een afspraak te maken."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Wanneer is Eco Yard Supply bereikbaar?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Eco Yard Supply is bereikbaar op doordeweekse dagen van 08:00 tot 20:00 en op zaterdag van 09:00 tot 17:00."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
     <script>
       document.documentElement.classList.add("js");
     </script>
@@ -325,17 +409,60 @@
         </div>
       </section>
 
+      <section class="section faq-section reveal" id="faq">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Veelgestelde vragen</p>
+            <h2>Praktische informatie over advies, bezoek en levering</h2>
+          </div>
+          <div class="faq-grid">
+            <details>
+              <summary>Waar is Eco Yard Supply actief?</summary>
+              <p>
+                Eco Yard Supply is actief in Noord-Brabant en levert duurzaam tuinadvies en Dungking meststoffen vanuit
+                Landhorst.
+              </p>
+            </details>
+            <details>
+              <summary>Kan ik langskomen bij Eco Yard Supply?</summary>
+              <p>
+                Een bezoek is alleen mogelijk op afspraak. Neem vooraf contact op of bel om een geschikt moment af te
+                spreken.
+              </p>
+            </details>
+            <details>
+              <summary>Wanneer is Eco Yard Supply bereikbaar?</summary>
+              <p>
+                We zijn bereikbaar op doordeweekse dagen van 08:00 tot 20:00 en op zaterdag van 09:00 tot 17:00.
+              </p>
+            </details>
+            <details>
+              <summary>Voor wie zijn de Dungking producten geschikt?</summary>
+              <p>
+                De producten zijn geschikt voor hoveniers, groenprofessionals en particuliere tuinliefhebbers die de
+                bodem, gazons, borders of nieuwe aanplant duurzaam willen ondersteunen.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section class="section contact-section reveal" id="contact">
         <div class="container contact-grid">
           <div>
             <p class="eyebrow">Contact</p>
             <h2>Klaar om je bodem duurzaam te voeden?</h2>
             <p>
-              Neem contact op voor advies, productinformatie of beschikbaarheid. Eco Yard Supply denkt graag met je mee.
+              Neem contact op voor advies, productinformatie of beschikbaarheid. Bezoek is alleen mogelijk op afspraak;
+              bel of mail vooraf om een moment in te plannen.
             </p>
           </div>
           <address class="contact-card">
             <dl>
+              <div>
+                <dt>Adres</dt>
+                <dd>Tweede Stichting 9<br>5445 NZ Landhorst</dd>
+              </div>
               <div>
                 <dt>E-mail</dt>
                 <dd><a href="mailto:info@ecoyardsupply.nl">info@ecoyardsupply.nl</a></dd>
@@ -348,8 +475,19 @@
                 <dt>Regio</dt>
                 <dd>Noord-Brabant</dd>
               </div>
+              <div>
+                <dt>Bezoek</dt>
+                <dd>Alleen op afspraak</dd>
+              </div>
+              <div>
+                <dt>Bereikbaar</dt>
+                <dd>Maandag t/m vrijdag 08:00 - 20:00<br>Zaterdag 09:00 - 17:00</dd>
+              </div>
             </dl>
-            <a class="button" href="mailto:info@ecoyardsupply.nl">Stuur een e-mail</a>
+            <div class="actions contact-actions">
+              <a class="button" href="tel:+31626672878">Bel voor afspraak</a>
+              <a class="button button-secondary" href="mailto:info@ecoyardsupply.nl">Stuur een e-mail</a>
+            </div>
           </address>
         </div>
       </section>

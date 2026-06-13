@@ -791,6 +791,34 @@ p {
   text-transform: uppercase;
 }
 
+.faq-section {
+  background: linear-gradient(180deg, rgb(255 255 255 / 72%), rgb(239 246 234 / 72%));
+}
+
+.faq-grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.faq-grid details {
+  border: 1px solid rgb(25 77 50 / 10%);
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 86%);
+  box-shadow: var(--shadow-card);
+}
+
+.faq-grid summary {
+  cursor: pointer;
+  padding: var(--space-md) var(--space-lg);
+  color: var(--color-forest);
+  font-weight: 900;
+}
+
+.faq-grid p {
+  margin: 0;
+  padding: 0 var(--space-lg) var(--space-md);
+}
+
 .contact-section {
   background:
     linear-gradient(135deg, rgb(25 77 50 / 94%), rgb(17 56 34 / 96%)),
@@ -1024,6 +1052,15 @@ p {
 }
 
 .contact-card a:not(.button) {
+  color: var(--color-forest);
+}
+
+.contact-actions {
+  margin-top: 0;
+}
+
+.contact-card .button-secondary {
+  background: transparent;
   color: var(--color-forest);
 }
 
