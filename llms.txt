@@ -1,0 +1,22 @@
+# Eco Yard Supply
+
+Eco Yard Supply levert duurzame Dungking insectenmest en praktisch bodemadvies voor hoveniers en particuliere tuinliefhebbers in Noord-Brabant.
+
+## Belangrijke pagina's
+
+- Home: https://ecoyardsupply.nl/
+- Dungking Startersmest: https://ecoyardsupply.nl/producten/startersmest.html
+- Dungking Gazonmest: https://ecoyardsupply.nl/producten/gazonmest.html
+- Dungking Bordermest + Najaarsmest: https://ecoyardsupply.nl/producten/bordermest.html
+- Dungking Aanplantmest: https://ecoyardsupply.nl/producten/aanplantmest.html
+
+## Contact
+
+- Website: https://ecoyardsupply.nl/
+- E-mail: info@ecoyardsupply.nl
+- Telefoon: +31 6 2667 2878
+- Vestiging: Tweede Stichting 9, 5445 NZ Landhorst, Nederland
+
+## Crawling
+
+Publieke websitecontent mag worden gecrawld en geindexeerd door zoekmachines, AI-assistenten en answer engines. Zie ook https://ecoyardsupply.nl/robots.txt en https://ecoyardsupply.nl/sitemap.xml.
