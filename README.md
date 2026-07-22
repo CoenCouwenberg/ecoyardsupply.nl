@@ -15,6 +15,8 @@ node scripts/validate-site.mjs
 
 De validator controleert paginametadata, JSON-LD, interne links en fragmenten, sitemapdekking en enkele risicovolle claims.
 
+Publieke pagina-URL's zijn extensieloos. De meegeleverde `.htaccess` laat LiteSpeed/Apache de bestaande HTML-bestanden serveren en stuurt oude `.html`-URL's permanent door naar hun schone variant. Upload dit verborgen bestand daarom mee naar de documentroot.
+
 Start desgewenst een lokale preview op `http://127.0.0.1:8765/`:
 
 ```powershell

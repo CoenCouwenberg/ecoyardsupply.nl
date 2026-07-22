@@ -38,6 +38,9 @@ for (const file of htmlFiles) {
   if (canonicalMatches.length !== 1) errors.push(`${relative}: expected exactly one canonical, found ${canonicalMatches.length}`);
   if (!description) errors.push(`${relative}: missing meta description`);
   if (!ogImage || !ogImage[1].startsWith("https://")) errors.push(`${relative}: og:image must be an absolute HTTPS URL`);
+  for (const match of html.matchAll(/\s(?:href|content)=["']([^"']+\.html(?:[?#][^"']*)?)["']/g)) {
+    errors.push(`${relative}: public URL must not expose .html (${match[1]})`);
+  }
 
   for (const match of html.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/g)) {
     try { JSON.parse(match[1]); }
@@ -67,12 +70,20 @@ for (const [relative, page] of pages) {
   for (const match of page.html.matchAll(/\s(?:href|src)=["']([^"']+)["']/g)) {
     const target = localTarget(relative, match[1]);
     if (!target) continue;
-    const absoluteTarget = path.join(root, target.targetRelative.replaceAll("/", path.sep));
+    let resolvedRelative = target.targetRelative;
+    let absoluteTarget = path.join(root, resolvedRelative.replaceAll("/", path.sep));
     try { await fs.access(absoluteTarget); }
-    catch { errors.push(`${relative}: missing local target ${match[1]} -> ${target.targetRelative}`); continue; }
-    if (target.fragment && target.targetRelative.endsWith(".html")) {
-      const targetPage = pages.get(target.targetRelative);
-      if (targetPage && !targetPage.ids.has(target.fragment)) errors.push(`${relative}: missing fragment #${target.fragment} in ${target.targetRelative}`);
+    catch {
+      if (!path.posix.extname(resolvedRelative)) {
+        resolvedRelative += ".html";
+        absoluteTarget = path.join(root, resolvedRelative.replaceAll("/", path.sep));
+      }
+      try { await fs.access(absoluteTarget); }
+      catch { errors.push(`${relative}: missing local target ${match[1]} -> ${target.targetRelative}`); continue; }
+    }
+    if (target.fragment && resolvedRelative.endsWith(".html")) {
+      const targetPage = pages.get(resolvedRelative);
+      if (targetPage && !targetPage.ids.has(target.fragment)) errors.push(`${relative}: missing fragment #${target.fragment} in ${resolvedRelative}`);
     }
   }
 }
@@ -97,4 +108,3 @@ if (errors.length) {
 }
 
 console.log(`Validated ${htmlFiles.length} HTML pages: metadata, JSON-LD, links, fragments, claims and sitemap are consistent.`);
-

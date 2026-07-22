@@ -13,10 +13,10 @@ export const advicePages = [
       <div class="table-wrap"><table class="advice-table">
         <thead><tr><th>Periode</th><th>Doel</th><th>Passende keuze binnen het assortiment</th></tr></thead>
         <tbody>
-          <tr><td>Februari - mei</td><td>Een krachtige start wanneer het bodemleven nog rustig is</td><td><a href="/producten/startersmest.html">Dungking Startersmest</a></td></tr>
-          <tr><td>Maart - april</td><td>Groei, kleur, beworteling en een dichtere grasmat ondersteunen</td><td><a href="/producten/gazonmest.html">Dungking Gazonmest</a></td></tr>
+          <tr><td>Februari - mei</td><td>Een krachtige start wanneer het bodemleven nog rustig is</td><td><a href="/producten/startersmest">Dungking Startersmest</a></td></tr>
+          <tr><td>Maart - april</td><td>Groei, kleur, beworteling en een dichtere grasmat ondersteunen</td><td><a href="/producten/gazonmest">Dungking Gazonmest</a></td></tr>
           <tr><td>Juni - juli</td><td>Voeding aanvullen tijdens het groeiseizoen</td><td>Dungking Gazonmest, als bodem en weer dit toelaten</td></tr>
-          <tr><td>September - november</td><td>Afharding en winterweerbaarheid ondersteunen</td><td><a href="/producten/bordermest.html">Dungking Border- en Najaarsmest</a></td></tr>
+          <tr><td>September - november</td><td>Afharding en winterweerbaarheid ondersteunen</td><td><a href="/producten/bordermest">Dungking Border- en Najaarsmest</a></td></tr>
         </tbody>
       </table></div>
       <h2 id="hoe-vaak">Hoe vaak moet je een gazon bemesten?</h2>
@@ -35,7 +35,7 @@ export const advicePages = [
       <p>Voor Dungking Gazonmest vermeldt het productblad 1 kg per 15 m² in maart-april en juni-juli. Voor de Border- en Najaarsmest staat in september-november 1 kg per 10 m². Dit zijn productspecifieke richtlijnen; gebruik ze niet automatisch voor een andere meststof.</p>
       <aside class="note-card"><strong>Rekenvoorbeeld:</strong> voor een gazon van 90 m² is bij 1 kg per 15 m² in totaal 6 kg nodig. Rond pas af nadat je het gazon hebt opgemeten.</aside>
       <h2 id="keuze">Welke mest past bij jouw gazon?</h2>
-      <p>Kies niet alleen op de term “beste gazonmest”. De beste keuze hangt af van seizoen, bodem en doel. Startersmest is gericht op het vroege voorjaar, Gazonmest op groei en onderhoud, en Border- en Najaarsmest op de latere seizoensfase. Bij een nieuw gazon of nieuwe graszoden is ook de voorbereiding van de bodem bepalend; bekijk dan de gids over <a href="/advies/mest-bij-aanplanten.html">mest bij nieuwe aanplant</a>.</p>
+      <p>Kies niet alleen op de term “beste gazonmest”. De beste keuze hangt af van seizoen, bodem en doel. Startersmest is gericht op het vroege voorjaar, Gazonmest op groei en onderhoud, en Border- en Najaarsmest op de latere seizoensfase. Bij een nieuw gazon of nieuwe graszoden is ook de voorbereiding van de bodem bepalend; bekijk dan de gids over <a href="/advies/mest-bij-aanplanten">mest bij nieuwe aanplant</a>.</p>
     `,
     faq: [
       ["Kun je een gazon bemesten als het droog is?", "Stel bemesting bij langdurige droogte of felle zon liever uit. Beregen na het strooien wanneer het productblad dit voorschrijft en regen uitblijft."],
@@ -43,7 +43,7 @@ export const advicePages = [
       ["Welke gazonmest gebruik je in het najaar?", "Kies een product met een samenstelling voor afharding en winterweerbaarheid. Binnen het assortiment is dat de Dungking Border- en Najaarsmest."],
     ],
     related: ["gazon-bemesten-voorjaar", "gazon-bemesten-najaar", "gazon-herstellen"],
-    product: { href: "/producten/gazonmest.html", label: "Bekijk Dungking Gazonmest", note: "Voor groei en onderhoud in maart-april en juni-juli." },
+    product: { href: "/producten/gazonmest", label: "Bekijk Dungking Gazonmest", note: "Voor groei en onderhoud in maart-april en juni-juli." },
   },
   {
     slug: "gazon-herstellen",
@@ -75,7 +75,7 @@ export const advicePages = [
       </ol>
       <h2 id="bemesten">Wanneer helpt gazonmest bij herstel?</h2>
       <p>Bemesting kan groei, kleur, wortelontwikkeling en dichtheid ondersteunen wanneer voeding een beperkende factor is. Dungking Gazonmest is volgens het productblad bedoeld voor maart-april en juni-juli, met een richtlijn van 1 kg per 15 m². Combineer dit met voldoende bodemvocht en normaal onderhoud.</p>
-      <p>Bij najaarsherstel draait het minder om snelle bladgroei en meer om sterk de winter in gaan. Gebruik dan een passende najaarsmest en bekijk de complete <a href="/advies/gazon-bemesten.html">bemestingskalender voor het gazon</a>.</p>
+      <p>Bij najaarsherstel draait het minder om snelle bladgroei en meer om sterk de winter in gaan. Gebruik dan een passende najaarsmest en bekijk de complete <a href="/advies/gazon-bemesten">bemestingskalender voor het gazon</a>.</p>
       <h2 id="mos">Mos en onkruid: formuleer het doel goed</h2>
       <p>Gazonmest bestrijdt geen mos of onkruid. Een dichtere, goed onderhouden grasmat kan wel minder open ruimte overlaten waarin ongewenste planten zich vestigen. Blijven mos of kale plekken terugkomen, onderzoek dan vooral schaduw, vocht, pH, bodemverdichting en maaigedrag.</p>
       <aside class="note-card"><strong>Twijfel over de oorzaak?</strong> Stuur Eco Yard Supply een paar overzichts- en detailfoto’s, plus informatie over bodem, beregening en onderhoud. Dat maakt productadvies veel gerichter.</aside>
@@ -86,7 +86,7 @@ export const advicePages = [
       ["Helpt gazonmest tegen mos?", "Gazonmest is geen mosbestrijder. Een gezonder en dichter gazon kan minder ruimte laten voor mos, maar de achterliggende omstandigheden moeten ook worden aangepakt."],
     ],
     related: ["gazon-bemesten", "tuingrond-verbeteren", "gazon-bemesten-voorjaar"],
-    product: { href: "/producten/gazonmest.html", label: "Bekijk Gazonmest", note: "Productspecificaties, toepassing en dosering voor gericht gazononderhoud." },
+    product: { href: "/producten/gazonmest", label: "Bekijk Gazonmest", note: "Productspecificaties, toepassing en dosering voor gericht gazononderhoud." },
   },
   {
     slug: "organische-mest",
@@ -161,7 +161,7 @@ export const advicePages = [
       </table></div>
       <h2 id="bodemleven">Hoe kun je bodemleven ondersteunen?</h2>
       <p>Een levende bodem heeft voedsel, vocht, lucht en een zo stabiel mogelijke leefomgeving nodig. Organisch materiaal, wortels en beperkte verstoring kunnen daaraan bijdragen. Vermijd absolute beloften: de reactie van bodemleven hangt af van het uitgangspunt en beheer.</p>
-      <p>Voor nieuwe aanplant kan Dungking Aanplantmest relevant zijn. Het productblad beschrijft deze als bodemverbeteraar met ten minste 80% insectenmest. Gebruik de dosering die past bij gazon, border, boom of haag en bekijk de gids <a href="/advies/mest-bij-aanplanten.html">welke mest bij aanplanten</a>.</p>
+      <p>Voor nieuwe aanplant kan Dungking Aanplantmest relevant zijn. Het productblad beschrijft deze als bodemverbeteraar met ten minste 80% insectenmest. Gebruik de dosering die past bij gazon, border, boom of haag en bekijk de gids <a href="/advies/mest-bij-aanplanten">welke mest bij aanplanten</a>.</p>
       <aside class="note-card"><strong>Voor hoveniers:</strong> bij grotere of terugkerende projecten helpt een eenvoudige bodemcheck om advies en producthoeveelheid vooraf beter te onderbouwen.</aside>
     `,
     faq: [
@@ -170,7 +170,7 @@ export const advicePages = [
       ["Kun je bodemleven snel verbeteren?", "Bodemleven reageert op voedsel, vocht, lucht en beheer. Verwacht geen universele termijn; werk aan stabiele omstandigheden en volg de ontwikkeling."],
     ],
     related: ["organische-mest", "mest-bij-aanplanten", "gazon-herstellen"],
-    product: { href: "/producten/aanplantmest.html", label: "Bekijk Aanplantmest", note: "Bodemverbeteraar voor nieuwe gazons, borders, bomen en hagen." },
+    product: { href: "/producten/aanplantmest", label: "Bekijk Aanplantmest", note: "Bodemverbeteraar voor nieuwe gazons, borders, bomen en hagen." },
   },
   {
     slug: "mest-bij-aanplanten",
@@ -214,7 +214,7 @@ export const advicePages = [
       ["Welke mest gebruik je onder graszoden?", "Kies een product dat voor gazonaanleg is bedoeld. Dungking Aanplantmest vermeldt voor nieuw gazon 1 kg per 10 m²."],
     ],
     related: ["mest-voor-graszoden", "beukenhaag-bemesten", "tuingrond-verbeteren"],
-    product: { href: "/producten/aanplantmest.html", label: "Bekijk Dungking Aanplantmest", note: "NPK, toepassingen, dosering en productblad op één pagina." },
+    product: { href: "/producten/aanplantmest", label: "Bekijk Dungking Aanplantmest", note: "NPK, toepassingen, dosering en productblad op één pagina." },
   },
   {
     slug: "gazon-bemesten-voorjaar",
@@ -232,8 +232,8 @@ export const advicePages = [
       <div class="table-wrap"><table class="advice-table">
         <thead><tr><th>Keuze</th><th>Periode productblad</th><th>Doel</th><th>Dosering</th></tr></thead>
         <tbody>
-          <tr><td><a href="/producten/startersmest.html">Dungking Startersmest</a></td><td>Februari - mei</td><td>Vroege start voor gazon en border</td><td>1 kg per 15 m²</td></tr>
-          <tr><td><a href="/producten/gazonmest.html">Dungking Gazonmest</a></td><td>Maart - april</td><td>Gericht gazononderhoud, groei en beworteling</td><td>1 kg per 15 m²</td></tr>
+          <tr><td><a href="/producten/startersmest">Dungking Startersmest</a></td><td>Februari - mei</td><td>Vroege start voor gazon en border</td><td>1 kg per 15 m²</td></tr>
+          <tr><td><a href="/producten/gazonmest">Dungking Gazonmest</a></td><td>Maart - april</td><td>Gericht gazononderhoud, groei en beworteling</td><td>1 kg per 15 m²</td></tr>
         </tbody>
       </table></div>
       <p>Gebruik de producten niet automatisch tegelijk. Kies op basis van moment, doel, conditie en eerder uitgevoerde bemesting. Bij twijfel kan Eco Yard Supply helpen bepalen welke voorjaarsbeurt het beste aansluit.</p>
@@ -256,7 +256,7 @@ export const advicePages = [
       ["Hoeveel voorjaarsmest heb je nodig?", "Startersmest en Gazonmest vermelden beide 1 kg per 15 m². Meet het oppervlak en controleer altijd het actuele etiket."],
     ],
     related: ["gazon-bemesten", "gazon-herstellen", "gazon-bemesten-najaar"],
-    product: { href: "/producten/startersmest.html", label: "Vergelijk met Startersmest", note: "Voor gazons en borders die vroeg in het seizoen een gerichte start nodig hebben." },
+    product: { href: "/producten/startersmest", label: "Vergelijk met Startersmest", note: "Voor gazons en borders die vroeg in het seizoen een gerichte start nodig hebben." },
   },
   {
     slug: "gazon-bemesten-najaar",
@@ -298,7 +298,7 @@ export const advicePages = [
       ["Hoeveel najaarsmest strooi je?", "Dungking Border- en Najaarsmest vermeldt 1 kg per 10 m² in de najaarsperiode."],
     ],
     related: ["gazon-bemesten", "gazon-bemesten-voorjaar", "gazon-herstellen"],
-    product: { href: "/producten/bordermest.html", label: "Bekijk Border- en Najaarsmest", note: "NPK 6-3-12 + 3MgO voor borders en de latere seizoensfase." },
+    product: { href: "/producten/bordermest", label: "Bekijk Border- en Najaarsmest", note: "NPK 6-3-12 + 3MgO voor borders en de latere seizoensfase." },
   },
   {
     slug: "mest-voor-graszoden",
@@ -337,7 +337,7 @@ export const advicePages = [
       ["Moet je nieuwe graszoden direct opnieuw bemesten?", "Nee. Laat de zoden eerst wortelen en houd rekening met de al gebruikte aanplantmest, het seizoen en de zichtbare groei."],
     ],
     related: ["mest-bij-aanplanten", "gazon-bemesten", "tuingrond-verbeteren"],
-    product: { href: "/producten/aanplantmest.html", label: "Bekijk Aanplantmest voor gazonaanleg", note: "Bodemverbeteraar met een productspecifieke richtlijn van 1 kg per 10 m²." },
+    product: { href: "/producten/aanplantmest", label: "Bekijk Aanplantmest voor gazonaanleg", note: "Bodemverbeteraar met een productspecifieke richtlijn van 1 kg per 10 m²." },
   },
   {
     slug: "beukenhaag-bemesten",
@@ -351,7 +351,7 @@ export const advicePages = [
       <h2 id="nieuw-of-bestaand">Nieuwe of bestaande beukenhaag?</h2>
       <div class="table-wrap"><table class="advice-table">
         <thead><tr><th>Situatie</th><th>Belangrijkste doel</th><th>Passende route</th></tr></thead>
-        <tbody><tr><td>Nieuwe beukenhaag</td><td>Doorwortelbare plantstrook, vocht en vestiging</td><td><a href="/producten/aanplantmest.html">Aanplantmest</a> volgens haagrichtlijn</td></tr><tr><td>Bestaande haag in voorjaar/zomer</td><td>Alleen voeden wanneer groei en bodem dat vragen</td><td>Vraag productadvies; voorkom een automatische standaardgift</td></tr><tr><td>Bestaande haag richting najaar</td><td>Afharding en winterfase ondersteunen</td><td><a href="/producten/bordermest.html">Border- en Najaarsmest</a> kan passen bij heesters, na controle</td></tr></tbody>
+        <tbody><tr><td>Nieuwe beukenhaag</td><td>Doorwortelbare plantstrook, vocht en vestiging</td><td><a href="/producten/aanplantmest">Aanplantmest</a> volgens haagrichtlijn</td></tr><tr><td>Bestaande haag in voorjaar/zomer</td><td>Alleen voeden wanneer groei en bodem dat vragen</td><td>Vraag productadvies; voorkom een automatische standaardgift</td></tr><tr><td>Bestaande haag richting najaar</td><td>Afharding en winterfase ondersteunen</td><td><a href="/producten/bordermest">Border- en Najaarsmest</a> kan passen bij heesters, na controle</td></tr></tbody>
       </table></div>
       <h2 id="aanplant">Aanplantmest voor een nieuwe beukenhaag</h2>
       <p>Het Dungking-productblad noemt voor bomen en hagen 0,3 kg per 50 liter of 5 kg per 10 strekkende meter. Kies vooraf één passende rekeneenheid voor de werkwijze; tel beide richtlijnen niet bij elkaar op.</p>
@@ -374,7 +374,7 @@ export const advicePages = [
       ["Waarom wordt een beukenhaag bruin?", "Bruin blad kan normaal winterblad zijn, maar ook samenhangen met droogte, wortelschade, natte grond of andere stress. Stel eerst de oorzaak vast."],
     ],
     related: ["mest-bij-aanplanten", "tuingrond-verbeteren", "organische-mest"],
-    product: { href: "/producten/aanplantmest.html", label: "Bekijk Aanplantmest voor hagen", note: "Met doseerrichtlijnen per strekkende meter of per 50 liter." },
+    product: { href: "/producten/aanplantmest", label: "Bekijk Aanplantmest voor hagen", note: "Met doseerrichtlijnen per strekkende meter of per 50 liter." },
   },
   {
     slug: "fruitbomen-bemesten",
@@ -388,7 +388,7 @@ export const advicePages = [
       <h2 id="situatie">Welke situatie heb je?</h2>
       <div class="table-wrap"><table class="advice-table">
         <thead><tr><th>Situatie</th><th>Passend product</th><th>Richtlijn productblad</th></tr></thead>
-        <tbody><tr><td>Nieuwe fruitboom</td><td><a href="/producten/aanplantmest.html">Dungking Aanplantmest</a></td><td>0,3 kg per 50 liter bij bomen/hagen</td></tr><tr><td>Bestaande fruitboom, maart-april</td><td><a href="/producten/bordermest.html">Border- en Najaarsmest</a></td><td>1 kg per 15 m² behandeld oppervlak</td></tr><tr><td>Bestaande fruitboom, juni-juli</td><td>Border- en Najaarsmest</td><td>1 kg per 15 m² behandeld oppervlak</td></tr><tr><td>Najaarsfase, september-december</td><td>Border- en Najaarsmest</td><td>1 kg per 10 m² behandeld oppervlak</td></tr></tbody>
+        <tbody><tr><td>Nieuwe fruitboom</td><td><a href="/producten/aanplantmest">Dungking Aanplantmest</a></td><td>0,3 kg per 50 liter bij bomen/hagen</td></tr><tr><td>Bestaande fruitboom, maart-april</td><td><a href="/producten/bordermest">Border- en Najaarsmest</a></td><td>1 kg per 15 m² behandeld oppervlak</td></tr><tr><td>Bestaande fruitboom, juni-juli</td><td>Border- en Najaarsmest</td><td>1 kg per 15 m² behandeld oppervlak</td></tr><tr><td>Najaarsfase, september-december</td><td>Border- en Najaarsmest</td><td>1 kg per 10 m² behandeld oppervlak</td></tr></tbody>
       </table></div>
       <h2 id="nieuwe-boom">Een nieuwe fruitboom aanplanten</h2>
       <p>Maak het plantgat niet alleen breed genoeg, maar voorkom ook een harde, gladde wand waarin water blijft staan. Houd de wortelhals op de juiste hoogte en meng aanplantmest gelijkmatig volgens voorschrift. Een overvolle mestconcentratie in het plantgat is geen vervanging voor goede grond.</p>
@@ -405,7 +405,7 @@ export const advicePages = [
       ["Kun je mest tegen de stam strooien?", "Nee. Verdeel de mest gelijkmatig over de behandelde wortelzone en voorkom een geconcentreerde hoop tegen de stam."],
     ],
     related: ["mest-bij-aanplanten", "tuingrond-verbeteren", "organische-mest"],
-    product: { href: "/producten/bordermest.html", label: "Bekijk Border- en Najaarsmest", note: "Productblad noemt fruitbomen expliciet en geeft doseerrichtlijnen per m²." },
+    product: { href: "/producten/bordermest", label: "Bekijk Border- en Najaarsmest", note: "Productblad noemt fruitbomen expliciet en geeft doseerrichtlijnen per m²." },
   },
 ];
 

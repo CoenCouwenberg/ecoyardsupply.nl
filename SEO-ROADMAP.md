@@ -21,9 +21,9 @@ De volgende clusters zijn organische mest en bodem (`wat is organische mest`, `o
 
 - `/` — brede regionale landingspagina
 - `/producten/` — productvergelijker op toepassing, seizoen, NPK en dosering
-- `/producten/*.html` — vier afzonderlijke productpagina's
+- `/producten/*` — vier afzonderlijke productpagina's met extensieloze URL's
 - `/advies/` — kennisbank met tien verdiepende adviespagina's
-- `/voor-hoveniers.html` — zakelijke en regionale landingspagina
+- `/voor-hoveniers` — zakelijke en regionale landingspagina
 
 De kennisbank bevat naast de basisartikelen aparte zoekintenties voor voorjaarsbemesting, najaarsbemesting, graszoden, beukenhagen en fruitbomen. Elke adviespagina bevat een direct antwoord, inhoudelijke verdieping, FAQ, productschakel, gerelateerde artikelen en een transparante bronnotitie.
 
