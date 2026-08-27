@@ -4,28 +4,27 @@ Deze site is ingericht rond regionale vindbaarheid in Noord-Brabant, zonder dunn
 
 ## Zoekwoordbasis
 
-De aangeleverde export bevat 59 zoekwoorden met circa 5.890 maandelijkse zoekopdrachten. De hoogste prioriteit is het gazoncluster, met onder andere:
+Bron voor deze fase is tabblad `SEO selectie` in `Eco_Yard_Supply_SEO_plan_2026-2027.xlsm`. De oude, voorlopige volumelijst in eerdere versies van dit document is daarmee vervallen. De eerste implementatie gebruikt alleen regels met prioriteit `A - Nu`; Ads-concurrentie wordt niet behandeld als organische SEO-moeilijkheid.
 
-- `gazonmest` (810)
-- `gazon bemesten` (290)
-- `gazon bemesten najaar` (210)
-- `gazon bemesten voorjaar` (170)
-- `gazon herstellen` (170)
-- `organische gazonmest` (140)
-- `hoe vaak gazon bemesten` (140)
-- `gazonmest kopen` (90)
-
-De volgende clusters zijn organische mest en bodem (`wat is organische mest`, `organische mestkorrels`, `arme grond verbeteren`, `tuingrond verbeteren`) en geschikte plant-/aanplanttoepassingen.
+| Bestaande/geplande URL | Zoekintentie | Hoofdcluster | Ondersteunende termen | Bron in plan | Voorgenomen actie | Prioriteit | Risico/afhankelijkheid |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `/advies/gazon-bemesten` | Informatief/commercieel | `gazon bemesten` | `wanneer het gras bemesten`, `bemesten gazon wanneer`, `gras bemesten` | `SEO selectie` rijen 5–8 | Bestaande pillar behouden en kalender, dosering, seizoenen en productlinks aanscherpen | A - Nu | Geen aparte variantpagina's maken |
+| `/advies/tuin-bemesten` | Informatief/commercieel | `wanneer tuin bemesten` | `tuin bemesten` | `SEO selectie` rijen 9–10 | Eén nieuwe bemestingskalender per toepassing | A - Nu | Geen universele timing of dosering suggereren |
+| `/producten/` | Commercieel | `tuinmest` | Dungking-producten per toepassing | `SEO selectie` rij 11 | Producthub op tuinmest, toepassing, NPK, seizoen en dosering aanscherpen | A - Nu | Beschikbaarheid en prijs alleen actueel vermelden |
+| `/advies/insectenmest` | Informatief/commercieel | `insectenmest` | Dungking, frass, toepassingen | `SEO selectie` rij 12 | Nieuwe USP-pillar met productverschillen en claimgrenzen | A - Nu | Geen biologische, ecologische of absolute milieuclaims zonder bewijs |
+| `/` | Lokaal/commercieel | Dungking + Noord-Brabant | `insecten mest noord brabant`, `Dungking mest Noord-Brabant` | `SEO selectie` rijen 13–14 | Dungking-leverancierschap en regio natuurlijk in title, H1 en intro verwerken | A - Nu | Niet `dé` of `exclusief` claimen |
+| `/advies/gazon-bemesten-najaar` | Informatief/commercieel | `gazon bemesten najaar` | najaarsmest, september, oktober, november | `SEO selectie` rij 15 | Bestaande seizoenspagina actualiseren en intern sterker koppelen | A - Nu | Productspecifieke periode en dosering behouden |
+| `/advies/rozen-bemesten` | Informatief/commercieel | `rozen bemesten wanneer` | `rozen bemesten` | `SEO selectie` rijen 17–18 | Nieuwe detailpagina over timing, bodem en productkeuze | A - Nu | Dosering alleen volgens het passende productblad |
 
 ## Huidige contentarchitectuur
 
 - `/` — brede regionale landingspagina
 - `/producten/` — productvergelijker op toepassing, seizoen, NPK en dosering
 - `/producten/*` — vier afzonderlijke productpagina's met extensieloze URL's
-- `/advies/` — kennisbank met tien verdiepende adviespagina's
+- `/advies/` — kennisbank met dertien verdiepende adviespagina's
 - `/voor-hoveniers` — zakelijke en regionale landingspagina
 
-De kennisbank bevat naast de basisartikelen aparte zoekintenties voor voorjaarsbemesting, najaarsbemesting, graszoden, beukenhagen en fruitbomen. Elke adviespagina bevat een direct antwoord, inhoudelijke verdieping, FAQ, productschakel, gerelateerde artikelen en een transparante bronnotitie.
+De kennisbank bevat naast de basisartikelen aparte zoekintenties voor tuinbemesting, insectenmest, rozen, voorjaarsbemesting, najaarsbemesting, graszoden, beukenhagen en fruitbomen. Elke adviespagina bevat een direct antwoord, inhoudelijke verdieping, FAQ, productschakel, gerelateerde artikelen en een transparante bronnotitie.
 
 ## Publicatieregels
 
