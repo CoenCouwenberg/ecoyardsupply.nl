@@ -4,7 +4,7 @@ Deze site is ingericht rond regionale vindbaarheid in Noord-Brabant, zonder dunn
 
 ## Zoekwoordbasis
 
-Bron voor deze fase is tabblad `SEO selectie` in `Eco_Yard_Supply_SEO_plan_2026-2027.xlsm`. De oude, voorlopige volumelijst in eerdere versies van dit document is daarmee vervallen. De eerste implementatie gebruikt alleen regels met prioriteit `A - Nu`; Ads-concurrentie wordt niet behandeld als organische SEO-moeilijkheid.
+Bron voor deze fase is tabblad `SEO selectie` in `Eco_Yard_Supply_SEO_plan_2026-2027.xlsm`. De oude, voorlopige volumelijst in eerdere versies van dit document is daarmee vervallen. De eerste implementatie gebruikte `A - Nu`; de goedgekeurde adviesuitbreiding van 31 augustus 2026 voegt de hieronder gemarkeerde B-/C-pagina's toe. Ads-concurrentie wordt niet behandeld als organische SEO-moeilijkheid.
 
 | Bestaande/geplande URL | Zoekintentie | Hoofdcluster | Ondersteunende termen | Bron in plan | Voorgenomen actie | Prioriteit | Risico/afhankelijkheid |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -15,13 +15,17 @@ Bron voor deze fase is tabblad `SEO selectie` in `Eco_Yard_Supply_SEO_plan_2026-
 | `/` | Lokaal/commercieel | Dungking + Noord-Brabant | `insecten mest noord brabant`, `Dungking mest Noord-Brabant` | `SEO selectie` rijen 13–14 | Dungking-leverancierschap en regio natuurlijk in title, H1 en intro verwerken | A - Nu | Niet `dé` of `exclusief` claimen |
 | `/advies/gazon-bemesten-najaar` | Informatief/commercieel | `gazon bemesten najaar` | najaarsmest, september, oktober, november | `SEO selectie` rij 15 | Bestaande seizoenspagina actualiseren en intern sterker koppelen | A - Nu | Productspecifieke periode en dosering behouden |
 | `/advies/rozen-bemesten` | Informatief/commercieel | `rozen bemesten wanneer` | `rozen bemesten` | `SEO selectie` rijen 17–18 | Nieuwe detailpagina over timing, bodem en productkeuze | A - Nu | Dosering alleen volgens het passende productblad |
+| `/advies/borders-bemesten` | Informatief/commercieel | `borders bemesten` | `wanneer border bemesten`, `mest voor borders` | `SEO selectie` rijen 23–24 | Nieuwe borderpagina met kalender en verschil tussen onderhoud en aanplant | B - Daarna | Onderhoudsdosering niet optellen bij aanplantmest |
+| `/advies/organische-gazonmest-of-kunstmest` | Vergelijkend | `kunstmest gazon` | `organische gazonmest`, `kunstmest gras` | `Pagina-keywordmap` rij 27 + `Keyword data` | Objectieve productsoortvergelijking met besliscriteria | C - Later, vervroegd na akkoord | Geen verkoop van kunstmest suggereren; geen absolute milieuclaims |
+| `/advies/gazon-bemesten-voorjaar` | Informatief/commercieel | `gazon bemesten voorjaar` | `gras bemesten voorjaar`, `gazon onderhoud voorjaar` | `SEO selectie` rij 16 + `Keyword data` | Bestaand artikel uitbreiden met voorjaarscontrole en planning | B - Daarna | Startersmest en Gazonmest niet automatisch combineren |
+| `/advies/mest-voor-graszoden` | Informatief/commercieel | `mest voor graszoden` | `graszoden bemesten wanneer`, `gazon aanleggen bemesting` | `SEO selectie` rij 29 + `Nieuwe plannertermen` | Bestaand artikel uitbreiden met timing voor en na aanleg | B - Daarna | Aanplantgift niet automatisch opvolgen met extra mest |
 
 ## Huidige contentarchitectuur
 
 - `/` — brede regionale landingspagina
 - `/producten/` — productvergelijker op toepassing, seizoen, NPK en dosering
 - `/producten/*` — vier afzonderlijke productpagina's met extensieloze URL's
-- `/advies/` — kennisbank met dertien verdiepende adviespagina's
+- `/advies/` — kennisbank met vijftien verdiepende adviespagina's
 - `/voor-hoveniers` — zakelijke en regionale landingspagina
 
 De kennisbank bevat naast de basisartikelen aparte zoekintenties voor tuinbemesting, insectenmest, rozen, voorjaarsbemesting, najaarsbemesting, graszoden, beukenhagen en fruitbomen. Elke adviespagina bevat een direct antwoord, inhoudelijke verdieping, FAQ, productschakel, gerelateerde artikelen en een transparante bronnotitie.

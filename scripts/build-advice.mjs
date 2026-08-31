@@ -4,7 +4,8 @@ import { adviceHub, advicePages } from "../content/advice-pages.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const published = "2026-07-22";
-const currentUpdate = "2026-08-27";
+const previousUpdate = "2026-08-27";
+const contentUpdate = "2026-08-31";
 const site = "https://ecoyardsupply.nl";
 
 const escapeJson = (value) => JSON.stringify(value).replaceAll("<", "\\u003c");
@@ -81,6 +82,7 @@ function articleSchema(page) {
 function articlePage(page) {
   const canonical = `${site}/advies/${page.slug}`;
   const dateModified = page.dateModified || page.datePublished || published;
+  const bodyHtml = page.body.trim();
   const faqHtml = page.faq.map(([question, answer]) => `<details><summary>${question}</summary><p>${answer}</p></details>`).join("");
   return makePortable(`${head({ title: page.seoTitle, description: page.description, canonical, schema: articleSchema(page) })}<body class="article-page">${header()}
     <main id="inhoud">
@@ -92,7 +94,7 @@ function articlePage(page) {
       <section class="section"><div class="container article-layout">
         <article class="article-body">
           <aside class="direct-answer"><p class="eyebrow">Kort antwoord</p><p>${page.summary}</p></aside>
-          ${page.body}
+      ${bodyHtml}
           <aside class="editorial-note"><p class="eyebrow">Bronnen en controle</p><h2>Hoe dit advies is opgebouwd</h2><p>Productsamenstelling, toepassingsperioden en doseringen zijn gecontroleerd aan de hand van de aangeleverde Dungking-productbladen. Praktische stappen zijn bewust voorwaardelijk geformuleerd, omdat bodem, weer en uitgangssituatie het resultaat beïnvloeden. De actuele verpakking en het actuele productblad blijven leidend.</p><p>Inhoudelijk gecontroleerd door Eco Yard Supply &middot; Laatste wijziging: ${dateModified.split("-").reverse().join("-")}</p></aside>
           <section class="faq-section article-faq" aria-labelledby="faq-title"><p class="eyebrow">Veelgestelde vragen</p><h2 id="faq-title">Veelgestelde vragen</h2><div class="faq-grid">${faqHtml}</div></section>
         </article>
@@ -163,8 +165,8 @@ await fs.writeFile(path.join(root, "producten", "index.html"), productHubPage())
 await fs.writeFile(path.join(root, "voor-hoveniers.html"), professionalPage());
 
 const urls = [
-  ["/", currentUpdate], ["/producten/", currentUpdate], ["/producten/startersmest", "2026-07-22"], ["/producten/gazonmest", "2026-07-22"], ["/producten/bordermest", currentUpdate], ["/producten/aanplantmest", "2026-07-22"],
-  ["/voor-hoveniers", currentUpdate], ["/advies/", currentUpdate], ...advicePages.map((page) => [`/advies/${page.slug}`, page.dateModified || page.datePublished || published]),
+  ["/", previousUpdate], ["/producten/", previousUpdate], ["/producten/startersmest", "2026-07-22"], ["/producten/gazonmest", contentUpdate], ["/producten/bordermest", contentUpdate], ["/producten/aanplantmest", "2026-07-22"],
+  ["/voor-hoveniers", previousUpdate], ["/advies/", contentUpdate], ...advicePages.map((page) => [`/advies/${page.slug}`, page.dateModified || page.datePublished || published]),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([url, lastmod]) => `  <url><loc>${site}${url}</loc><lastmod>${lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 await fs.writeFile(path.join(root, "sitemap.xml"), sitemap);
