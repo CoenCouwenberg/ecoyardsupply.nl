@@ -4,7 +4,7 @@ export const advicePages = [
     title: "Gazon bemesten: wanneer, hoe vaak en welke mest?",
     seoTitle: "Gazon bemesten: wanneer, hoe vaak en welke mest? | Eco Yard Supply",
     description: "Praktische gids voor gazon bemesten in het voorjaar, de zomer en het najaar. Met stappenplan, dosering en productkeuze voor tuinen in Noord-Brabant.",
-    dateModified: "2026-08-27",
+    dateModified: "2026-08-31",
     eyebrow: "Gazonadvies",
     intro: "Een gazon bemest je op het moment dat het gras actief groeit en de bodem voldoende vochtig is. Voor de meeste gazons zijn twee groeibeurten en een aangepaste najaarsbemesting een bruikbaar uitgangspunt; stem het aantal beurten altijd af op bodem, weer en conditie van de grasmat.",
     summary: "Start in het voorjaar zodra het gras groeit, geef zo nodig een tweede gift in juni of juli en kies in het najaar een meststof met een samenstelling die past bij afharding en winterweerbaarheid. Strooi gelijkmatig, houd de productdosering aan en beregen wanneer het daarna lang droog blijft.",
@@ -36,14 +36,14 @@ export const advicePages = [
       <p>Voor Dungking Gazonmest vermeldt het productblad 1 kg per 15 m² in maart-april en juni-juli. Voor de Border- en Najaarsmest staat in september-november 1 kg per 10 m². Dit zijn productspecifieke richtlijnen; gebruik ze niet automatisch voor een andere meststof.</p>
       <aside class="note-card"><strong>Rekenvoorbeeld:</strong> voor een gazon van 90 m² is bij 1 kg per 15 m² in totaal 6 kg nodig. Rond pas af nadat je het gazon hebt opgemeten.</aside>
       <h2 id="keuze">Welke mest past bij jouw gazon?</h2>
-      <p>Kies niet alleen op de term “beste gazonmest”. De beste keuze hangt af van seizoen, bodem en doel. Startersmest is gericht op het vroege voorjaar, Gazonmest op groei en onderhoud, en Border- en Najaarsmest op de latere seizoensfase. Bij een nieuw gazon of nieuwe graszoden is ook de voorbereiding van de bodem bepalend; bekijk dan de gids over <a href="/advies/mest-bij-aanplanten">mest bij nieuwe aanplant</a>.</p>
+      <p>Kies niet alleen op de term “beste gazonmest”. De beste keuze hangt af van seizoen, bodem en doel. Startersmest is gericht op het vroege voorjaar, Gazonmest op groei en onderhoud, en Border- en Najaarsmest op de latere seizoensfase. Twijfel je tussen productsoorten, lees dan de feitelijke vergelijking <a href="/advies/organische-gazonmest-of-kunstmest">organische gazonmest of kunstmest</a>. Bij een nieuw gazon of nieuwe graszoden is ook de voorbereiding van de bodem bepalend; bekijk dan de gids over <a href="/advies/mest-bij-aanplanten">mest bij nieuwe aanplant</a>.</p>
     `,
     faq: [
       ["Kun je een gazon bemesten als het droog is?", "Stel bemesting bij langdurige droogte of felle zon liever uit. Beregen na het strooien wanneer het productblad dit voorschrijft en regen uitblijft."],
       ["Moet je eerst maaien of eerst bemesten?", "Maai bij voorkeur enkele dagen vóór het bemesten en laat voldoende blad staan. Strooi niet op pas extreem kort gemaaid of gestrest gras."],
       ["Welke gazonmest gebruik je in het najaar?", "Kies een product met een samenstelling voor afharding en winterweerbaarheid. Binnen het assortiment is dat de Dungking Border- en Najaarsmest."],
     ],
-    related: ["gazon-bemesten-voorjaar", "gazon-bemesten-najaar", "gazon-herstellen"],
+    related: ["gazon-bemesten-voorjaar", "gazon-bemesten-najaar", "organische-gazonmest-of-kunstmest"],
     product: { href: "/producten/gazonmest", label: "Bekijk Dungking Gazonmest", note: "Voor groei en onderhoud in maart-april en juni-juli." },
   },
   {
@@ -52,7 +52,7 @@ export const advicePages = [
     seoTitle: "Wanneer tuin bemesten? Kalender voor gazon en planten",
     description: "Wanneer moet je de tuin bemesten? Bekijk een praktische kalender voor gazon, borders, rozen, hagen, bomen en nieuwe aanplant.",
     datePublished: "2026-08-27",
-    dateModified: "2026-08-27",
+    dateModified: "2026-08-31",
     eyebrow: "Bemestingskalender",
     intro: "Een tuin bemest je niet in één keer volgens één vast schema. Gazon, borders, rozen, hagen, bomen en nieuwe aanplant hebben elk een ander doel en moment. Gebruik de kalender als startpunt en controleer altijd bodem, groei, weer en het actuele productvoorschrift.",
     summary: "Bemest vooral wanneer planten actief groeien en de bodem voldoende vochtig is. Begin in het voorjaar met een keuze per toepassing, beoordeel in juni of juli of een vervolggift nodig is en gebruik in het najaar alleen een passende samenstelling. Bij nieuwe aanplant volg je het voorschrift voor de plantplaats in plaats van een algemene seizoensgift.",
@@ -63,9 +63,9 @@ export const advicePages = [
         <thead><tr><th>Periode</th><th>Wat controleer je?</th><th>Passende route</th></tr></thead>
         <tbody>
           <tr><td>Februari - april</td><td>Komt de groei op gang en is de bodem niet bevroren of verzadigd?</td><td><a href="/advies/gazon-bemesten-voorjaar">Gazon in het voorjaar</a> of een gerichte start voor border en planten</td></tr>
-          <tr><td>Maart - april</td><td>Welke toepassing en voedingsbehoefte staan centraal?</td><td><a href="/advies/gazon-bemesten">Gazon</a>, <a href="/advies/rozen-bemesten">rozen</a>, hagen of bomen afzonderlijk beoordelen</td></tr>
+          <tr><td>Maart - april</td><td>Welke toepassing en voedingsbehoefte staan centraal?</td><td><a href="/advies/gazon-bemesten">Gazon</a>, <a href="/advies/borders-bemesten">borders</a>, <a href="/advies/rozen-bemesten">rozen</a>, hagen of bomen afzonderlijk beoordelen</td></tr>
           <tr><td>Juni - juli</td><td>Is een vervolggift nodig op basis van groei, eerdere bemesting en bodem?</td><td>Gebruik alleen een product dat voor de toepassing en zomerperiode is bedoeld</td></tr>
-          <tr><td>September - november</td><td>Groeit de plant nog en past de samenstelling bij de najaarsfase?</td><td><a href="/advies/gazon-bemesten-najaar">Najaarsadvies voor het gazon</a> of productspecifiek advies voor borders en bomen</td></tr>
+          <tr><td>September - november</td><td>Groeit de plant nog en past de samenstelling bij de najaarsfase?</td><td><a href="/advies/gazon-bemesten-najaar">Najaarsadvies voor het gazon</a> of <a href="/advies/borders-bemesten">productspecifiek borderadvies</a></td></tr>
           <tr><td>Bij nieuwe aanplant</td><td>Hoe groot zijn plantvak, kluit, haaglengte of gazonoppervlak?</td><td><a href="/advies/mest-bij-aanplanten">Mest bij nieuwe aanplant</a> volgens de juiste rekeneenheid</td></tr>
         </tbody>
       </table></div>
@@ -85,7 +85,7 @@ export const advicePages = [
       ["Kun je de hele tuin met dezelfde mest bemesten?", "Niet vanzelfsprekend. Gazon, borders, rozen en nieuwe aanplant kunnen een andere samenstelling, periode en dosering vragen."],
       ["Moet je tuinmest strooien voor of na regen?", "Strooi niet op verzadigde grond of vlak voor zware regen. Volg het actuele productvoorschrift en beregen alleen wanneer dat wordt geadviseerd en regen uitblijft."],
     ],
-    related: ["gazon-bemesten", "rozen-bemesten", "mest-bij-aanplanten"],
+    related: ["gazon-bemesten", "borders-bemesten", "rozen-bemesten"],
     product: { href: "/producten/", label: "Vergelijk Dungking tuinmest", note: "Kies op toepassing, seizoen, NPK en productspecifieke dosering." },
   },
   {
@@ -179,8 +179,63 @@ export const advicePages = [
       ["Welke mest gebruik je voor rozen?", "Dungking Border- en Najaarsmest noemt rozen als toepassing en heeft NPK 6-3-12 + 3MgO. Volg de periode en dosering op de actuele verpakking."],
       ["Hoeveel mest geef je per roos?", "Het productblad geeft een richtlijn per m² behandeld oppervlak, niet één vaste hoeveelheid per rozenstruik. Meet daarom het relevante bodemoppervlak."],
     ],
-    related: ["tuin-bemesten", "mest-bij-aanplanten", "organische-mest"],
+    related: ["borders-bemesten", "tuin-bemesten", "mest-bij-aanplanten"],
     product: { href: "/producten/bordermest", label: "Bekijk Border- en Najaarsmest", note: "Productblad noemt rozen als toepassing en geeft dosering per m² en periode." },
+  },
+  {
+    slug: "borders-bemesten",
+    title: "Borders bemesten: wanneer, hoeveel en welke mest?",
+    seoTitle: "Borders bemesten: wanneer en welke mest gebruiken?",
+    description: "Wanneer moet je borders bemesten? Bekijk de kalender, dosering en het verschil tussen een bestaande border en nieuwe aanplant.",
+    datePublished: "2026-08-31",
+    dateModified: "2026-08-31",
+    eyebrow: "Borderadvies",
+    intro: "Een border bemest je op basis van groeifase, bodem en beplanting. Maak eerst onderscheid tussen een bestaande border en een nieuw plantvak. Beoordeel daarna of een voorjaars-, zomer- of najaarsgift past en meet het werkelijk behandelde oppervlak.",
+    summary: "Voor een bestaande border noemt Dungking Border- en Najaarsmest maart-april, juni-juli en september-december als toepassingsperioden. De richtlijn is 1 kg per 15 m² in voorjaar en zomer en 1 kg per 10 m² in het najaar. Voor een nieuwe border geldt een andere route met Aanplantmest: 1 kg per 10 m² volgens het productblad.",
+    body: `
+      <h2 id="nieuw-of-bestaand">Bestaande border of nieuwe aanplant?</h2>
+      <p>De juiste aanpak begint bij de situatie. Een bestaande border heeft gevestigde wortels en krijgt alleen een onderhoudsgift wanneer groei, bodem en seizoen daar aanleiding toe geven. Bij een nieuwe border draait het eerst om een doorwortelbare plantplaats, goed bodemcontact en voldoende vocht.</p>
+      <div class="table-wrap"><table class="advice-table">
+        <thead><tr><th>Situatie</th><th>Hoofddoel</th><th>Passende route</th></tr></thead>
+        <tbody>
+          <tr><td>Bestaande border</td><td>Gericht voeden op basis van groei en seizoen</td><td><a href="/producten/bordermest">Border- en Najaarsmest</a> volgens periode en dosering</td></tr>
+          <tr><td>Nieuwe border</td><td>Plantplaats en wortelomgeving voorbereiden</td><td><a href="/producten/aanplantmest">Aanplantmest</a> volgens de richtlijn voor aanleg</td></tr>
+          <tr><td>Rozen in de border</td><td>Timing en behandelde bodemoppervlakte beoordelen</td><td>Bekijk het aparte advies over <a href="/advies/rozen-bemesten">rozen bemesten</a></td></tr>
+        </tbody>
+      </table></div>
+      <h2 id="wanneer">Wanneer moet je een bestaande border bemesten?</h2>
+      <p>Gebruik de kalender als controlepunt, niet als automatische opdracht om iedere periode te strooien. Noteer eerdere giften en kijk vóór elk moment naar groei, bodemvocht, weersverwachting en eventuele stress.</p>
+      <div class="table-wrap"><table class="advice-table">
+        <thead><tr><th>Periode productblad</th><th>Wat beoordeel je?</th><th>Richtlijn Border- en Najaarsmest</th></tr></thead>
+        <tbody>
+          <tr><td>Maart - april</td><td>Komt de groei op gang en is de bodem niet bevroren of verzadigd?</td><td>1 kg per 15 m² behandeld oppervlak</td></tr>
+          <tr><td>Juni - juli</td><td>Is na de voorjaarsgift werkelijk een vervolggift nodig?</td><td>1 kg per 15 m², alleen wanneer omstandigheden passen</td></tr>
+          <tr><td>September - december</td><td>Zijn planten en bodem nog geschikt voor een najaarstoepassing?</td><td>1 kg per 10 m² behandeld oppervlak</td></tr>
+        </tbody>
+      </table></div>
+      <h2 id="bodem">Controleer bodem en planten vóór het strooien</h2>
+      <p>Gele bladeren, weinig bloei of zwakke groei betekenen niet automatisch dat de border meer mest nodig heeft. Droogte, langdurig natte grond, verdichting, wortelschade, een ongeschikte standplaats of een afwijkende zuurgraad kunnen vergelijkbare signalen geven. Pak zulke oorzaken eerst aan.</p>
+      <p>Een gemengde border bevat bovendien planten met verschillende behoeften. Strooi daarom niet blind over het volledige vak wanneer slechts één plant een probleem toont. Kijk naar het totaalbeeld en vraag bij gevoelige soorten of een afwijkende bodem gericht advies.</p>
+      <h2 id="hoeveel">Hoeveel bordermest heb je nodig?</h2>
+      <p>Meet alleen het plantvak dat je werkelijk behandelt. Bij 1 kg per 15 m² is voor een bestaande border van 45 m² in voorjaar of zomer 3 kg nodig. Bij de najaarsrichtlijn van 1 kg per 10 m² is voor hetzelfde oppervlak 4,5 kg nodig.</p>
+      <aside class="note-card"><strong>Nieuwe border?</strong> Dungking Aanplantmest vermeldt voor de aanleg van een border 1 kg per 10 m². Tel deze aanplantgift niet automatisch op bij de onderhoudsdosering voor een bestaande border.</aside>
+      <h2 id="stappen">Borders bemesten in zes stappen</h2>
+      <ol class="steps-list">
+        <li><strong>Bepaal de situatie.</strong> Maak onderscheid tussen nieuwe aanplant en een bestaande border.</li>
+        <li><strong>Controleer bodem en groei.</strong> Stel bemesting uit bij vorst, verzadiging, uitdroging of duidelijke plantstress.</li>
+        <li><strong>Noteer eerdere giften.</strong> Voorkom dat compost, aanplantmest en onderhoudsmest ongepland worden opgeteld.</li>
+        <li><strong>Meet het plantvak.</strong> Trek paden, terras, vijver en andere onbeplante delen af.</li>
+        <li><strong>Weeg en verdeel.</strong> Strooi gelijkmatig en voorkom hoopjes tegen stengels en wortelhalzen.</li>
+        <li><strong>Volg het actuele voorschrift.</strong> Houd rekening met regen, beregening en de aanwijzingen op verpakking en productblad.</li>
+      </ol>
+    `,
+    faq: [
+      ["Wanneer moet je borders bemesten?", "Beoordeel een bestaande border in maart-april, eventueel opnieuw in juni-juli en productspecifiek in het najaar. Bemest alleen wanneer groei, bodem en weer geschikt zijn."],
+      ["Hoeveel mest gebruik je voor een border?", "Dungking Border- en Najaarsmest vermeldt 1 kg per 15 m² in voorjaar en zomer en 1 kg per 10 m² in het najaar. Meet het werkelijk behandelde plantvak."],
+      ["Gebruik je dezelfde mest bij een nieuwe border?", "Niet automatisch. Voor aanleg vermeldt Dungking Aanplantmest 1 kg per 10 m². Houd aanplant en later onderhoud als afzonderlijke toepassingen bij."],
+    ],
+    related: ["tuin-bemesten", "rozen-bemesten", "mest-bij-aanplanten"],
+    product: { href: "/producten/bordermest", label: "Bekijk Border- en Najaarsmest", note: "NPK, perioden en productspecifieke dosering voor bestaande borders." },
   },
   {
     slug: "gazon-herstellen",
@@ -230,6 +285,7 @@ export const advicePages = [
     title: "Wat is organische mest? Betekenis, werking en juiste claims",
     seoTitle: "Wat is organische mest? Organisch vs. biologisch | Eco Yard Supply",
     description: "Heldere uitleg over organische mest, organische mestkorrels en het verschil met mineraal, biologisch, natuurlijk, duurzaam en ecologisch.",
+    dateModified: "2026-08-31",
     eyebrow: "Bodemkennis",
     intro: "Organische mest levert voedingsstoffen via grondstoffen van plantaardige of dierlijke oorsprong. Dat zegt iets over herkomst en werking, maar het betekent niet automatisch dat een product biologisch gecertificeerd, volledig natuurlijk of voor elke toepassing hetzelfde is.",
     summary: "Organische mest bestaat geheel of gedeeltelijk uit organische grondstoffen. ‘Biologisch’ en ‘ecologisch’ zijn geen vrije synoniemen: gebruik zulke claims alleen met passende onderbouwing of certificering. Dungking gebruikt insectenmest als organische basis en combineert die bij verschillende producten met een toepassingsgerichte NPK-samenstelling.",
@@ -258,6 +314,7 @@ export const advicePages = [
         <li><span class="list-icon" aria-hidden="true">✓</span><span><strong>Border en najaar:</strong> een kaliumrijkere samenstelling voor bloei, afharding en winterweerbaarheid.</span></li>
         <li><span class="list-icon" aria-hidden="true">✓</span><span><strong>Nieuwe aanplant:</strong> een product dat bodem en wortelomgeving ondersteunt bij gazon, border, boom of haag.</span></li>
       </ul>
+      <p>Wil je specifiek voor een grasmat productsoorten afwegen? Bekijk dan <a href="/advies/organische-gazonmest-of-kunstmest">de vergelijking tussen organische gazonmest en kunstmest</a>. Daarin staan samenstelling, toepassingsmoment en praktische besliscriteria centraal.</p>
       <aside class="note-card"><strong>Transparantie:</strong> Eco Yard Supply gebruikt ‘organische meststoffen op basis van insectenmest’ als feitelijke hoofdomschrijving. Absolute milieuclaims worden alleen gebruikt wanneer de leverancier daar actuele onderbouwing voor kan geven.</aside>
     `,
     faq: [
@@ -265,8 +322,60 @@ export const advicePages = [
       ["Werkt organische mest direct?", "De werking verschilt per samenstelling en omstandigheden. Temperatuur, vocht en bodemleven beïnvloeden hoe voedingsstoffen beschikbaar komen."],
       ["Is alle Dungking-mest een bodemverbeteraar?", "Nee. De Aanplantmest wordt zo beschreven; de andere producten zijn toepassingsgerichte mestkorrels met een eigen NPK-samenstelling."],
     ],
-    related: ["tuingrond-verbeteren", "gazon-bemesten", "mest-bij-aanplanten"],
+    related: ["organische-gazonmest-of-kunstmest", "tuingrond-verbeteren", "insectenmest"],
     product: { href: "/#producten", label: "Vergelijk de Dungking-producten", note: "Kies op toepassing, seizoen en actuele productspecificatie." },
+  },
+  {
+    slug: "organische-gazonmest-of-kunstmest",
+    title: "Organische gazonmest of kunstmest: wat past bij jouw gazon?",
+    seoTitle: "Organische gazonmest of kunstmest voor je gazon?",
+    description: "Vergelijk organische gazonmest en kunstmest op samenstelling, werking, bodem, seizoen en dosering. Kies op productspecificatie, niet op een algemene claim.",
+    datePublished: "2026-08-31",
+    dateModified: "2026-08-31",
+    eyebrow: "Gazonmest vergelijken",
+    intro: "Organische gazonmest en kunstmest verschillen in grondstoffen en de manier waarop voedingsstoffen zijn samengesteld en beschikbaar komen. De productnaam alleen bepaalt niet wat het beste past: kijk naar NPK, toepassingsperiode, bodem, weer en het doel van de bemesting.",
+    summary: "Kies gazonmest niet uitsluitend op het etiket ‘organisch’ of ‘kunstmest’. Vergelijk de volledige samenstelling, dosering, toepassingsperiode en conditie van het gazon. Dungking Gazonmest gebruikt insectenmest als organische basis of verrijking en bevat daarnaast een productspecifieke voedingssamenstelling. Volg daarom altijd het concrete productblad.",
+    body: `
+      <h2 id="verschil">Wat is het verschil tussen organische gazonmest en kunstmest?</h2>
+      <p>Bij organische mest zijn organische grondstoffen onderdeel van de voedingsbron. Bodemorganismen, temperatuur en vocht beïnvloeden hoe een deel van die voeding beschikbaar komt. Met kunstmest wordt doorgaans een minerale meststof bedoeld waarvan voedingsstoffen in direct beschikbare minerale vormen zijn samengesteld.</p>
+      <p>In de praktijk bestaan ook samengestelde producten die een organische basis combineren met toegevoegde minerale voedingsstoffen. De tegenstelling is dus niet altijd zwart-wit. Lees de volledige productspecificatie en gebruik termen als biologisch, natuurlijk of ecologisch niet automatisch als synoniem voor organisch.</p>
+      <div class="table-wrap"><table class="advice-table">
+        <thead><tr><th>Vergelijkingspunt</th><th>Organische basis</th><th>Minerale meststof / kunstmest</th></tr></thead>
+        <tbody>
+          <tr><td>Grondstoffen</td><td>Geheel of gedeeltelijk van organische oorsprong</td><td>Voedingsstoffen in minerale samenstelling</td></tr>
+          <tr><td>Beschikbaarheid</td><td>Kan mede afhangen van bodemleven, vocht en temperatuur</td><td>Kan sneller beschikbaar zijn, afhankelijk van formulering en omstandigheden</td></tr>
+          <tr><td>Beoordeling</td><td colspan="2">Vergelijk NPK, dosering, werkingsduur, toepassingsperiode en gebruiksvoorschrift per product</td></tr>
+          <tr><td>Belangrijk risico</td><td colspan="2">Een verkeerde hoeveelheid of toepassing bij droogte, vorst of verzadigde grond kan ongewenst resultaat geven</td></tr>
+        </tbody>
+      </table></div>
+      <h2 id="keuze">Welke gazonmest past bij jouw situatie?</h2>
+      <p>Begin bij het gazon en niet bij een algemene voorkeur voor een productsoort. Een pas aangelegd gazon, een grasmat na de winter, onderhoud in juni en een najaarsbeurt hebben verschillende doelen. Ook bodemtype, vocht, gebruiksdruk en eerdere bemesting spelen mee.</p>
+      <ol class="steps-list">
+        <li><strong>Bepaal het moment.</strong> Kies een product waarvan de toepassingsperiode aansluit op het seizoen.</li>
+        <li><strong>Beschrijf het doel.</strong> Gaat het om een vroege start, regulier onderhoud, herstel of voorbereiding op het najaar?</li>
+        <li><strong>Controleer de samenstelling.</strong> Vergelijk NPK en eventuele aanvullende voedingsstoffen in plaats van alleen de voorkant van de verpakking.</li>
+        <li><strong>Meet het gazon.</strong> Een juiste dosering begint met het werkelijke aantal vierkante meters.</li>
+        <li><strong>Bekijk bodem en weer.</strong> Bemest niet automatisch bij droogtestress, vorst, plassen of wanneer groei stilstaat.</li>
+        <li><strong>Houd eerdere giften bij.</strong> Combineer producten niet zonder te weten wat al is gegeven.</li>
+      </ol>
+      <h2 id="dungking">Hoe past Dungking Gazonmest in deze vergelijking?</h2>
+      <p><a href="/producten/gazonmest">Dungking Gazonmest</a> is een mestkorrel op basis van insectenmest met NPK 9-3-6 + 4MgO. Het productblad noemt maart-april en juni-juli als toepassingsperioden en 1 kg per 15 m² als richtlijn. De organische grondstof zegt niet dat het product biologisch gecertificeerd is en vervangt de rest van de productspecificatie niet.</p>
+      <p>Voor een vroege voorjaarsstart en voor de najaarsfase zijn binnen het assortiment andere samenstellingen beschikbaar. Bekijk daarom ook de <a href="/advies/gazon-bemesten">jaarkalender voor gazonbemesting</a> voordat je kiest.</p>
+      <h2 id="misverstanden">Drie misverstanden bij het vergelijken</h2>
+      <ul class="check-list content-checks">
+        <li><span class="list-icon" aria-hidden="true">✓</span><span><strong>‘Organisch werkt altijd langzaam.’</strong> De werking hangt af van de volledige formulering en de omstandigheden.</span></li>
+        <li><span class="list-icon" aria-hidden="true">✓</span><span><strong>‘Kunstmest is automatisch beter voor snel herstel.’</strong> Eerst moet duidelijk zijn waardoor het gazon achteruitgaat.</span></li>
+        <li><span class="list-icon" aria-hidden="true">✓</span><span><strong>‘Meer voeding geeft sneller resultaat.’</strong> Overdosering en een verkeerd toepassingsmoment kunnen juist problemen veroorzaken.</span></li>
+      </ul>
+      <aside class="note-card"><strong>Objectieve keuze:</strong> Eco Yard Supply verkoopt Dungking meststoffen. Deze vergelijking is bedoeld om de keuzecriteria helder te maken, niet om ieder ander product zonder productspecificatie te beoordelen.</aside>
+    `,
+    faq: [
+      ["Is organische gazonmest hetzelfde als biologische gazonmest?", "Nee. Organisch beschrijft de herkomst van grondstoffen; biologisch kan naar een gecontroleerde productiewijze of certificering verwijzen."],
+      ["Werkt kunstmest sneller dan organische gazonmest?", "Minerale voedingsstoffen kunnen sneller beschikbaar zijn, maar het resultaat hangt ook af van formulering, dosering, bodem, vocht, temperatuur en de oorzaak van het gazonprobleem."],
+      ["Welke mest kiest Eco Yard Supply voor gazononderhoud?", "Eco Yard Supply voert Dungking Gazonmest voor maart-april en juni-juli. Controleer eerst of seizoen, doel en gazonconditie bij dit product passen."],
+    ],
+    related: ["gazon-bemesten", "organische-mest", "insectenmest"],
+    product: { href: "/producten/gazonmest", label: "Bekijk Dungking Gazonmest", note: "Productsamenstelling, periode en dosering voor gericht gazononderhoud." },
   },
   {
     slug: "tuingrond-verbeteren",
@@ -358,6 +467,7 @@ export const advicePages = [
     title: "Gazon bemesten in het voorjaar: timing en productkeuze",
     seoTitle: "Gazon bemesten in het voorjaar | Wanneer en hoeveel?",
     description: "Wanneer bemest je het gazon in het voorjaar? Vergelijk Startersmest en Gazonmest, bereken de dosering en voorkom bemesten bij vorst of droogte.",
+    dateModified: "2026-08-31",
     eyebrow: "Voorjaarsbemesting",
     intro: "Bemest een gazon in het voorjaar pas wanneer de groei zichtbaar op gang komt en de bodem niet bevroren, kletsnat of uitgedroogd is. Kies Startersmest voor een vroege seizoensstart of Gazonmest voor gericht gazononderhoud in maart en april.",
     summary: "Kijk naar groei en bodem in plaats van alleen naar de kalender. Dungking Startersmest kan volgens het productblad van februari tot mei worden gebruikt; Dungking Gazonmest is voor de eerste onderhoudsbeurt in maart-april bedoeld. Beide vermelden 1 kg per 15 m², maar hebben een andere samenstelling en functie.",
@@ -365,6 +475,17 @@ export const advicePages = [
       <h2 id="moment">Wanneer begin je met voorjaarsbemesting?</h2>
       <p>Een zonnige februaridag betekent niet automatisch dat het gazon al voeding kan benutten. Wacht tot het gras weer groeit, de bodemtemperatuur oploopt en water voldoende kan wegzakken. Bemesten op een bevroren, verzadigde of zeer droge bodem vergroot de kans dat voeding niet op de juiste plek terechtkomt.</p>
       <p>Loop ook eerst een ronde over het gazon. Kale plekken, plassen, een dikke viltlaag of schade door intensief gebruik vragen mogelijk om herstel vóór of naast de bemesting.</p>
+      <h2 id="voorjaarscontrole">Gazononderhoud in het voorjaar: eerst controleren</h2>
+      <div class="table-wrap"><table class="advice-table">
+        <thead><tr><th>Wat zie je?</th><th>Wat betekent dit voor bemesten?</th></tr></thead>
+        <tbody>
+          <tr><td>Gras groeit en bodem is licht vochtig</td><td>Een geplande voorjaarsgift kan passen wanneer het product voor deze periode bedoeld is</td></tr>
+          <tr><td>Nachtvorst of bevroren bovenlaag</td><td>Wacht tot bodem en gras weer actief zijn</td></tr>
+          <tr><td>Plassen of sponsachtige grond</td><td>Los afwatering of verdichting eerst op; voeg niet direct voeding toe</td></tr>
+          <tr><td>Droge, vale grasmat</td><td>Herstel vocht en vermijd strooien vlak voor een droge periode</td></tr>
+          <tr><td>Kale plekken en weinig wortels</td><td>Combineer de diagnose zo nodig met herstel of doorzaaien; mest alleen is niet voldoende</td></tr>
+        </tbody>
+      </table></div>
       <h2 id="kiezen">Startersmest of Gazonmest?</h2>
       <div class="table-wrap"><table class="advice-table">
         <thead><tr><th>Keuze</th><th>Periode productblad</th><th>Doel</th><th>Dosering</th></tr></thead>
@@ -374,6 +495,9 @@ export const advicePages = [
         </tbody>
       </table></div>
       <p>Gebruik de producten niet automatisch tegelijk. Kies op basis van moment, doel, conditie en eerder uitgevoerde bemesting. Bij twijfel kan Eco Yard Supply helpen bepalen welke voorjaarsbeurt het beste aansluit.</p>
+      <h2 id="planning">Praktische planning voor het voorjaar</h2>
+      <p>Maak vóór het strooien een korte onderhoudsplanning. Noteer wanneer je voor het laatst hebt bemest, wanneer je wilt maaien en of herstelwerk zoals beluchten of doorzaaien nodig is. Zo voorkom je dat meerdere ingrepen in een korte periode extra stress veroorzaken.</p>
+      <p>Na een voorjaarsgift is niet iedere verkleuring een signaal voor meer mest. Geef het product en het gazon tijd, houd vocht en groei bij en beoordeel pas daarna of in juni of juli een onderhoudsbeurt met Gazonmest nodig is.</p>
       <h2 id="stappen">Voorjaarsbemesting in 6 stappen</h2>
       <ol class="steps-list">
         <li><strong>Controleer de bodem.</strong> Wacht bij vorst, plassen of aanhoudende droogte.</li>
@@ -388,7 +512,7 @@ export const advicePages = [
       <aside class="note-card"><strong>Niet direct opnieuw bemesten.</strong> Zowel het product, het weer als het maaibeheer beïnvloeden wat je ziet. Wacht de opgegeven werkingsperiode af en beoordeel daarna opnieuw.</aside>
     `,
     faq: [
-      ["In welke maand bemest je het gazon in het voorjaar?", "De groeiomstandigheden zijn belangrijker dan één vaste maand. Startersmest vermeldt februari-mei; Gazonmest vermeldt maart-april."],
+      ["In welke maand bemest je het gazon in het voorjaar?", "De groeiomstandigheden zijn belangrijker dan één vaste maand. Startersmest vermeldt februari-mei; Gazonmest vermeldt maart-april. Wacht bij vorst, verzadiging of droogtestress."],
       ["Kun je gazonmest strooien bij nachtvorst?", "Wacht liever tot de bodem niet bevroren is en het gras actief groeit. Zo voorkom je een slecht benut toepassingsmoment."],
       ["Hoeveel voorjaarsmest heb je nodig?", "Startersmest en Gazonmest vermelden beide 1 kg per 15 m². Meet het oppervlak en controleer altijd het actuele etiket."],
     ],
@@ -440,15 +564,17 @@ export const advicePages = [
   },
   {
     slug: "mest-voor-graszoden",
-    title: "Mest voor graszoden: de bodem voorbereiden vóór het leggen",
+    title: "Welke mest gebruik je bij het leggen van graszoden?",
     seoTitle: "Mest voor graszoden en een nieuw gazon | Stappenplan",
-    description: "Welke mest gebruik je onder graszoden? Bereid de bodem goed voor, bereken 1 kg aanplantmest per 10 m² en voorkom uitdroging na het leggen.",
+    description: "Welke mest gebruik je bij graszoden? Bereid de bodem voor, bereken 1 kg aanplantmest per 10 m² en lees wanneer je later opnieuw bemest.",
+    dateModified: "2026-08-31",
     eyebrow: "Nieuw gazon",
     intro: "Bij graszoden bepaalt vooral de voorbereiding of jonge wortels contact maken met de ondergrond. Gebruik aanplantmest vóór het leggen volgens voorschrift, verdeel gelijkmatig door de toplaag en houd de zoden daarna consequent vochtig.",
     summary: "Dungking Aanplantmest vermeldt voor de aanleg van een gazon 1 kg per 10 m². Werk de afgewogen hoeveelheid gelijkmatig door de voorbereide bovenlaag, leg de graszoden direct en voorkom uitdroging. Voeg niet kort daarna op eigen initiatief nog een tweede mestgift toe.",
     body: `
       <h2 id="voorbereiding">Wat hebben nieuwe graszoden nodig?</h2>
       <p>Nieuwe zoden hebben een vlakke, losse maar stabiele bodem nodig, zonder storende verdichting of wateroverlast. Verwijder puin en hardnekkige wortelresten, egaliseer zorgvuldig en laat de ondergrond niet kurkdroog worden voordat je begint.</p>
+      <p>De mestkeuze is maar één onderdeel van de aanleg. Slecht bodemcontact, uitgedroogde rollen of onvoldoende water kunnen niet worden gecompenseerd met een ruimere mestgift.</p>
       <h2 id="dosering">Hoeveel aanplantmest onder graszoden?</h2>
       <p>Het productblad van Dungking Aanplantmest geeft voor gazonaanleg een richtlijn van 1 kg per 10 m². Reken dus 5 kg voor 50 m² en 12 kg voor 120 m². Meet alleen het oppervlak waarop werkelijk gras komt.</p>
       <div class="table-wrap"><table class="advice-table">
@@ -465,14 +591,24 @@ export const advicePages = [
         <li><strong>Druk aan.</strong> Zorg voor goed contact tussen zode en bodem zonder de grond dicht te rijden.</li>
         <li><strong>Beregen zorgvuldig.</strong> Houd de wortelzone vochtig en pas water aan op weer en bodem.</li>
       </ol>
+      <h2 id="wanneer">Wanneer moet je graszoden bemesten?</h2>
+      <div class="table-wrap"><table class="advice-table">
+        <thead><tr><th>Moment</th><th>Doel</th><th>Aanpak</th></tr></thead>
+        <tbody>
+          <tr><td>Vóór het leggen</td><td>De voorbereide wortelzone gelijkmatig behandelen</td><td>Aanplantmest volgens 1 kg per 10 m² door de toplaag werken</td></tr>
+          <tr><td>Direct na het leggen</td><td>Bodemcontact en beworteling ondersteunen</td><td>Goed aandrukken en consequent water geven; niet automatisch extra mest strooien</td></tr>
+          <tr><td>Na zichtbare beworteling</td><td>Beoordelen of regulier onderhoud nodig is</td><td>Kijk naar seizoen, groei, kleur, bodem en wat bij aanleg al is gebruikt</td></tr>
+        </tbody>
+      </table></div>
       <h2 id="nazorg">Wanneer opnieuw bemesten?</h2>
-      <p>Geef de graszoden eerst tijd om vast te groeien. Het juiste vervolg hangt af van aanlegmoment, productwerking, groei en seizoen. Gebruik niet automatisch kort na de aanleg Gazonmest; vraag advies als je niet weet wat al in bodem of zode aanwezig was.</p>
+      <p>Geef de graszoden eerst tijd om vast te groeien. Controleer door voorzichtig aan een hoek te voelen of de zode weerstand geeft en nieuwe wortels contact maken met de bodem. Het juiste vervolg hangt af van aanlegmoment, productwerking, groei en seizoen.</p>
+      <p>Gebruik niet automatisch kort na de aanleg Gazonmest. Wanneer het gazon goed is aangeslagen, kies je een volgende onderhoudsbeurt via de <a href="/advies/gazon-bemesten">jaarkalender voor gazonbemesting</a>. Vraag advies als je niet weet wat al in bodem of zode aanwezig was.</p>
       <aside class="note-card"><strong>Veelgemaakte fout:</strong> extra voeding compenseert geen slecht bodemcontact, verdichting of te weinig water.</aside>
     `,
     faq: [
       ["Welke mest gebruik je onder graszoden?", "Dungking Aanplantmest is volgens het productblad geschikt voor gazonaanleg met 1 kg per 10 m²."],
       ["Strooi je mest boven of onder graszoden?", "Werk de afgewogen aanplantmest vóór het leggen gelijkmatig door de voorbereide toplaag volgens het productvoorschrift."],
-      ["Moet je nieuwe graszoden direct opnieuw bemesten?", "Nee. Laat de zoden eerst wortelen en houd rekening met de al gebruikte aanplantmest, het seizoen en de zichtbare groei."],
+      ["Wanneer moet je graszoden na het leggen bemesten?", "Niet automatisch direct na aanleg. Laat de zoden eerst wortelen en beoordeel daarna seizoen, groei, bodem en de al gebruikte aanplantmest."],
     ],
     related: ["mest-bij-aanplanten", "gazon-bemesten", "tuingrond-verbeteren"],
     product: { href: "/producten/aanplantmest", label: "Bekijk Aanplantmest voor gazonaanleg", note: "Bodemverbeteraar met een productspecifieke richtlijn van 1 kg per 10 m²." },

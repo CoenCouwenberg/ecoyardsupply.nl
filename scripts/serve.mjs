@@ -4,6 +4,7 @@ import path from "node:path";
 
 const root = path.resolve(import.meta.dirname, "..");
 const port = Number(process.env.PORT || 8765);
+const host = process.env.HOST || "127.0.0.1";
 const basePath = (process.env.BASE_PATH || "").replace(/\/$/, "");
 const mimeTypes = {
   ".css": "text/css; charset=utf-8",
@@ -46,4 +47,4 @@ const server = http.createServer(async (request, response) => {
   }
 });
 
-server.listen(port, "0.0.0.0", () => console.log(`Eco Yard Supply preview: http://127.0.0.1:${port}${basePath}/`));
+server.listen(port, host, () => console.log(`Eco Yard Supply preview: http://${host}:${port}${basePath}/`));
