@@ -1,5 +1,174 @@
 export const advicePages = [
   {
+    slug: "wanneer-graszaad-zaaien",
+    title: "Wanneer graszaad zaaien? Temperatuur, seizoen en nazorg",
+    seoTitle: "Wanneer graszaad zaaien? KingSeed-advies | Eco Yard Supply",
+    description: "Wanneer kun je KingSeed graszaad zaaien? Lees over de zaaiperiode april tot en met oktober, minimaal 10 °C bodemtemperatuur en verzorging na het zaaien.",
+    eyebrow: "Graszaad en zaaimoment",
+    intro: "Het juiste zaaimoment hangt niet alleen van de maand af. Voor KingSeed Allround noemt het productblad april tot en met oktober én een minimale bodemtemperatuur van 10 °C. Kijk daarnaast of je de grond in de eerste weken vochtig kunt houden.",
+    summary: "Zaai KingSeed Allround van april tot en met oktober bij een bodemtemperatuur van minimaal 10 °C, op goed losgemaakte grond. Houd de grond de eerste weken vochtig. Voor een nieuw gazon geldt 25 g/m²; voor doorzaaien 10 g/m².",
+    body: `
+<h2 id="periode">Van april tot en met oktober: controleer ook de bodem</h2>
+<p>De periode op het productblad is een startpunt. Een warme middag zegt nog niet dat de grond voldoende is opgewarmd. Controleer de bodemtemperatuur op de plek waar je wilt zaaien. Bij minder dan 10 °C voldoet de plantplaats niet aan de voor KingSeed genoemde gebruiksvoorwaarde.</p>
+<p>Voorjaar en vroege herfst zijn vaak geschikte momenten om een gazon te zaaien, omdat warmte en vocht dan makkelijker samengaan. Bij langdurige droogte of aanhoudend natte grond is uitstellen verstandiger. Kijk dus naar je eigen tuin en de weersverwachting, niet alleen naar een vaste kalenderdatum.</p>
+<h2 id="voorbereiden">Bereid je zaaimoment voor</h2>
+<ol class="steps-list"><li><strong>Beoordeel de plek.</strong> KingSeed Allround is volgens het productblad bedoeld voor zon en halfschaduw. Ga bij diepe schaduw eerst na welk mengsel en welke aanpak passen.</li><li><strong>Bereid de grond voor.</strong> Verwijder onkruid en stenen, maak de grond los en werk naar een vlak zaaibed. Zorg dat regenwater kan wegzakken.</li><li><strong>Meet de oppervlakte.</strong> Kies daarna de hoeveelheid voor nieuwe aanleg of doorzaaien. Dat zijn verschillende doseringen.</li><li><strong>Plan de nazorg.</strong> Zaai op een moment waarop je de eerste weken het bodemvocht kunt blijven controleren.</li></ol>
+<h2 id="zaaien">Nieuw gazon of bestaand gazon doorzaaien?</h2>
+<p>Bij nieuwe aanleg is de KingSeed-richtlijn 25 gram per vierkante meter. Voor doorzaaien van een bestaande grasmat is dat 10 gram per vierkante meter. Weeg de benodigde hoeveelheid af en verdeel gelijkmatig. Bekijk de <a href="/advies/hoeveel-graszaad-per-m2">rekentabel voor graszaad per m²</a> voor jouw oppervlak.</p>
+<p>Bij een dun of beschadigd gazon helpt ook de oorzaak bepalen. Lees eerst <a href="/advies/gazon-herstellen">waarom een gazon geel, dun of kaal wordt</a>. Doorzaaien neemt een probleem met afwatering of intensieve betreding niet vanzelf weg.</p>
+<h2 id="nazorg">Vocht, opkomst en de eerste maaibeurt</h2>
+<p>Houd de grond volgens het KingSeed-productblad de eerste weken vochtig. Geef voorzichtig water zodat het zaad niet wegspoelt. Beperk belopen zolang het jonge gras zich nog moet vestigen.</p>
+<p>Het productblad noemt zichtbaar resultaat binnen één tot twee weken. Zie dit als een indicatie bij passende omstandigheden: bodemtemperatuur, vocht en voorbereiding beïnvloeden de opkomst. Het is geen belofte dat het gazon dan al volledig dicht of belastbaar is.</p>
+<p>Maai volgens het productblad zodra het gras 8 cm hoog is. Controleer ook of de jonge planten voldoende vaststaan en maai voorzichtig. Bespreek eventuele bemesting afzonderlijk; de zaaihoeveelheid is geen mestadvies.</p>
+<h2 id="product">KingSeed Allround voor jouw gazon</h2>
+<p>Bekijk <a href="/producten/kingseed">KingSeed Allround graszaad</a> voor de samenstelling, het bereik per verpakking en het downloadbare productblad. Eco Yard Supply denkt mee met hoveniers en tuinliefhebbers in Noord-Brabant. Vermeld bij je vraag het oppervlak, de hoeveelheid zon en of je een nieuw gazon maakt of doorzaait.</p>
+`,
+    faq: [["Wanneer mag je KingSeed Allround zaaien?", "Het productblad noemt april tot en met oktober, op goed losgemaakte grond bij minimaal 10 °C bodemtemperatuur. Houd de grond de eerste weken vochtig."], ["Hoe snel komt KingSeed graszaad op?", "Het productblad noemt zichtbaar resultaat binnen één tot twee weken. De werkelijke opkomst hangt af van temperatuur, vocht en de voorbereiding van het zaaibed."], ["Wanneer maai je het nieuwe gras voor het eerst?", "Het KingSeed-productblad noemt een grashoogte van 8 cm. Controleer dat het jonge gras voldoende vaststaat en maai voorzichtig."]],
+    related: ["hoeveel-graszaad-per-m2", "gazon-herstellen", "gazon-bemesten"],
+    sourceNote: "<p>Zaaihoeveelheden, samenstelling, toepassingsperiode en gebruiksvoorwaarden komen uit het <a href=\"/public/assets/pdfs/kingseed-allround.pdf\">aangeleverde KingSeed Allround-productblad (PDF)</a>. De actuele verpakking blijft leidend. Rekenvoorbeelden zijn berekend met de daarin vermelde doseringen.</p><p>Algemene voorbereiding en nazorg: <a href=\"https://www.rhs.org.uk/lawns/lawns-from-seed\">RHS: een gazon zaaien</a>. De productspecifieke KingSeed-richtlijnen hierboven komen uit het aangeleverde productblad.</p>",
+    datePublished: "2026-10-01",
+    dateModified: "2026-10-01",
+    product: {"href": "/producten/kingseed", "label": "Bekijk KingSeed Allround", "note": "Graszaad voor nieuwe aanleg en doorzaai, met productspecifieke dosering en downloadbaar productblad."},
+  },
+  {
+    slug: "hoeveel-graszaad-per-m2",
+    title: "Hoeveel graszaad per m²? Nieuwe aanleg en doorzaaien",
+    seoTitle: "Hoeveel graszaad per m²? KingSeed rekentabel",
+    description: "Bereken hoeveel KingSeed Allround graszaad je nodig hebt: 25 g/m² voor een nieuw gazon en 10 g/m² voor doorzaaien. Met rekentabel en voorbeelden.",
+    eyebrow: "Graszaad berekenen",
+    intro: "Voor een nieuw gazon gebruik je een andere hoeveelheid graszaad dan voor het doorzaaien van een bestaande grasmat. Met de KingSeed Allround-richtlijnen en een gemeten oppervlak bereken je vooraf hoeveel gram of kilo je nodig hebt.",
+    summary: "Reken voor KingSeed Allround met 25 g/m² voor nieuwe aanleg en 10 g/m² voor doorzaaien. Vermenigvuldig je oppervlak met de gekozen dosering. Deel door 1.000 voor kilo’s. Een verpakking van 7,5 kg is volgens deze richtlijnen goed voor 300 m² nieuwe aanleg of 750 m² doorzaaien.",
+    body: `
+<h2 id="dosering">Hoeveel gram graszaad per vierkante meter?</h2>
+<p>Het <a href="/producten/kingseed">KingSeed Allround-productblad</a> maakt onderscheid tussen een nieuw gazon en doorzaai. Neem deze hoeveelheden niet automatisch over voor een ander mengsel. De actuele verpakking van het gekozen graszaad blijft leidend.</p>
+<div class="table-wrap"><table class="advice-table compact-table"><thead><tr><th>Oppervlak</th><th>Nieuw gazon<br>25 g/m²</th><th>Doorzaaien<br>10 g/m²</th></tr></thead><tbody><tr><td>20 m²</td><td>500 g</td><td>200 g</td></tr><tr><td>50 m²</td><td>1,25 kg</td><td>500 g</td></tr><tr><td>100 m²</td><td>2,5 kg</td><td>1 kg</td></tr><tr><td>200 m²</td><td>5 kg</td><td>2 kg</td></tr><tr><td>300 m²</td><td>7,5 kg</td><td>3 kg</td></tr><tr><td>750 m²</td><td>18,75 kg</td><td>7,5 kg</td></tr></tbody></table></div>
+<h2 id="oppervlak">Meet alleen het oppervlak dat je zaait</h2>
+<p>Een rechthoekig gazon van 8 bij 5 meter is 40 m². Splits een onregelmatige tuin op in eenvoudige vlakken en tel die op. Trek borders, bestrating en andere stukken die je niet zaait af. Meet bij plaatselijk herstel de te behandelen plekken in plaats van de hele tuin.</p>
+<aside class="direct-answer"><p><strong>Benodigde kilo’s = oppervlak in m² × gram per m² ÷ 1.000</strong></p><p>Voor 40 m² nieuwe aanleg: 40 × 25 ÷ 1.000 = 1 kg KingSeed Allround. Voor 40 m² doorzaaien: 40 × 10 ÷ 1.000 = 0,4 kg, dus 400 gram.</p></aside>
+<h2 id="verpakking">Wat betekent het bereik van 300 of 750 m²?</h2>
+<p>De twee oppervlakken op het productblad horen bij dezelfde verpakking van 7,5 kg. Bij 25 g/m² reken je 7.500 ÷ 25 = 300 m². Bij 10 g/m² is dat 7.500 ÷ 10 = 750 m². Het verschil komt dus door de toepassing, niet door een andere verpakkingsinhoud.</p>
+<p>Heb je bijvoorbeeld 400 m² nieuw gazon, dan is de berekende hoeveelheid 10 kg. Als je verpakkingen van 7,5 kg gebruikt, zijn dat twee verpakkingen met samen 15 kg. Verdeel de benodigde 10 kg over het gazon en strooi het restant niet extra uit om de verpakking leeg te maken.</p>
+<h2 id="verdelen">Afwegen, verdelen en bewaren</h2>
+<p>Weeg de totale hoeveelheid af voordat je begint. Verdeel grotere oppervlakken in vakken en reserveer per vak de bijbehorende hoeveelheid. Zo kun je controleren of je voldoende hebt voor het laatste deel van het gazon.</p>
+<p>Het productblad noemt een houdbaarheid van twee jaar ongeopend en één jaar na openen, mits donker en droog bewaard. Controleer de verpakking voor de actuele houdbaarheid en bewaar een restant goed afgesloten op een passende plek.</p>
+<h2 id="moment">Een goede berekening is pas het begin</h2>
+<p>Zaai op een goed voorbereid oppervlak en zorg dat de grond de eerste weken vochtig blijft. Lees <a href="/advies/wanneer-graszaad-zaaien">wanneer je KingSeed graszaad kunt zaaien</a> voor temperatuur en nazorg. Bij terugkerende kale plekken helpt het advies over <a href="/advies/gazon-herstellen">gazonherstel</a> om eerst de oorzaak te bepalen.</p>
+<p>Bekijk de <a href="/producten/kingseed">KingSeed-productpagina</a> of bespreek de hoeveelheid en beschikbaarheid met Eco Yard Supply. Geef door of het om nieuwe aanleg, volledig doorzaaien of plaatselijk herstel gaat.</p>
+`,
+    faq: [["Hoeveel KingSeed graszaad heb ik nodig voor 100 m²?", "Voor een nieuw gazon is dat 2,5 kg bij 25 g/m². Voor doorzaaien is dat 1 kg bij 10 g/m²."], ["Hoeveel m² kan ik zaaien met 7,5 kg?", "Met KingSeed Allround is 7,5 kg volgens het productblad voldoende voor 300 m² nieuwe aanleg of 750 m² doorzaaien."], ["Geldt dezelfde dosering voor elk graszaad?", "Nee. Mengsels kunnen andere doseringen hebben. Gebruik de hoeveelheid op het productblad of de actuele verpakking van jouw graszaad."]],
+    related: ["wanneer-graszaad-zaaien", "gazon-herstellen", "mest-voor-graszoden"],
+    sourceNote: "<p>Zaaihoeveelheden, samenstelling, toepassingsperiode en gebruiksvoorwaarden komen uit het <a href=\"/public/assets/pdfs/kingseed-allround.pdf\">aangeleverde KingSeed Allround-productblad (PDF)</a>. De actuele verpakking blijft leidend. Rekenvoorbeelden zijn berekend met de daarin vermelde doseringen.</p>",
+    datePublished: "2026-10-01",
+    dateModified: "2026-10-01",
+    product: {"href": "/producten/kingseed", "label": "Bekijk KingSeed Allround", "note": "Graszaad voor nieuwe aanleg en doorzaai, met productspecifieke dosering en downloadbaar productblad."},
+  },
+{
+  "slug": "aanplantgrond-of-tuinaarde",
+  "title": "Aanplantgrond of tuinaarde: wat kies je bij aanplanten?",
+  "seoTitle": "Aanplantgrond of tuinaarde? Het verschil | Eco Yard Supply",
+  "description": "Lees het verschil tussen aanplantgrond, tuinaarde en aanplantmest. Bepaal welke productinformatie je nodig hebt voor jouw nieuwe beplanting.",
+  "eyebrow": "Grond voor nieuwe aanplant",
+  "intro": "Een plantgat vullen, een border ophogen en planten voeding geven zijn verschillende klussen. Daarom zijn aanplantgrond, tuinaarde en aanplantmest niet zomaar uitwisselbaar. Begin bij de toepassing en kijk daarna naar de informatie op de zak.",
+  "summary": "Aanplantgrond is bedoeld voor de plantplaats bij nieuwe aanplant. Tuinaarde wordt vaak gebruikt om op te hogen of te egaliseren. Aanplantmest is een afzonderlijk product voor de wortelomgeving en bemesting. De precieze toepassing en verwerking volgen altijd uit het productvoorschrift.",
+  body: `
+<h2 id="verschil">Wat is het verschil tussen aanplantgrond en tuinaarde?</h2>
+<p>De naam op de zak geeft richting, maar controleer ook de gebruiksaanwijzing. Zo beschrijft Pokon zijn tuinaarde als een product voor ophogen en egaliseren, en zijn aanplantgrond voor gebruik bij het planten. Dat onderscheid helpt om gericht te kiezen; het betekent niet dat alle merken dezelfde samenstelling hebben.</p>
+<div class="table-wrap"><table class="advice-table compact-table"><thead><tr><th>Productsoort</th><th>Vraag bij de keuze</th><th>Controleer vooraf</th></tr></thead><tbody>
+<tr><td>Aanplantgrond</td><td>Welke grond past bij mijn nieuwe beplanting?</td><td>Geschikte planten, verwerking en eventuele mengverhouding</td></tr>
+<tr><td>Tuinaarde</td><td>Wil ik vooral ophogen of egaliseren?</td><td>Of rechtstreeks aanplanten is toegestaan en hoe je de grond verwerkt</td></tr>
+<tr><td>Aanplantmest</td><td>Is een gerichte toevoeging bij de aanplant nodig?</td><td>Dosering en de voeding die al in het grondmengsel zit</td></tr>
+</tbody></table></div>
+<h2 id="vitalmix">Waar past Vitalmix in dit overzicht?</h2>
+<p><a href="/producten/vitalmix">Vitalmix is hoogwaardige aanplantgrond in zakken van 50 liter</a>. De samenstelling bevat Baltisch veen middel, Horticompost, Hortivezel, tuinturf middel en Biovin, met bemesting 4-7-7 en aanplantmest. Bespreek met Eco Yard Supply of Vitalmix past bij jouw beplanting en bestaande grond.</p>
+<p>Verwar Vitalmix niet met de afzonderlijke <a href="/producten/aanplantmest">Dungking Aanplantmest</a>. Een hoeveelheid grond in liters kun je niet vervangen door dezelfde hoeveelheid mest. Ook hoef je niet automatisch extra aanplantmest toe te voegen aan een grondmengsel waarin al bemesting zit.</p>
+<h2 id="keuze">Drie vragen voor je grond kiest</h2>
+<ol class="steps-list"><li><strong>Wat ga je doen?</strong> Noteer of je gaat aanplanten, een niveauverschil wilt opvullen of bestaande planten wilt bemesten.</li><li><strong>Welke planten en grond heb je?</strong> Geef de plantnamen door en beschrijf de huidige bodem. Vermeld ook of het om volle grond of een plantenbak gaat.</li><li><strong>Wat zegt het productvoorschrift?</strong> Controleer de geschikte toepassing, mengverhouding en aanwezige voeding voordat je een hoeveelheid bestelt.</li></ol>
+<h2 id="hoeveelheid">Hoeveel grond heb je nodig?</h2>
+<p>Meet eerst de ruimte die gevuld moet worden en houd rekening met de kluit en de grond die je opnieuw gebruikt. In <a href="/advies/hoeveel-aanplantgrond-nodig">hoeveel aanplantgrond heb je nodig?</a> lees je hoe je liters omrekent naar zakken van 50 liter. Het rekenvoorbeeld bepaalt alleen de hoeveelheid, niet de juiste mengverhouding.</p>
+<p>Twijfel je vooral over de conditie van de bestaande bodem? Begin dan met het advies over <a href="/advies/tuingrond-verbeteren">tuingrond verbeteren</a>. Stuur bij een productvraag de plantnamen, afmetingen en een foto van de plantplaats mee.</p>
+`,
+  "faq": [
+    [
+      "Is aanplantgrond hetzelfde als aanplantmest?",
+      "Nee. Aanplantgrond is een grondmengsel; aanplantmest is een afzonderlijke toevoeging met een eigen toepassing en dosering. Controleer welke voeding al in de grond zit."
+    ],
+    [
+      "Is Vitalmix tuinaarde?",
+      "Eco Yard Supply biedt Vitalmix aan als hoogwaardige aanplantgrond, in zakken van 50 liter. Kies de toepassing op basis van het productvoorschrift en advies voor jouw beplanting."
+    ],
+    [
+      "Kan ik elke aanplantgrond in een pot gebruiken?",
+      "Ga daar niet van uit. Controleer of het gekozen product geschikt is voor jouw plant en voor gebruik in potten of bakken."
+    ]
+  ],
+  "related": [
+    "hoeveel-aanplantgrond-nodig",
+    "mest-bij-aanplanten",
+    "tuingrond-verbeteren"
+  ],
+  "sourceNote": "<p>Algemene productkeuze: <a href=\"https://www.pokon.nl/producten/item/aanplantgrond-tuinplanten-bomen-hagen-bio-30l/\">Pokon over aanplantgrond</a> en <a href=\"https://www.pokon.nl/producten/item/tuinaarde-25l/\">Pokon over tuinaarde</a>. Deze bronnen beschrijven hun eigen producten; hun mengverhoudingen en productwerking gelden niet als voorschrift voor Vitalmix. De Vitalmix-productgegevens zijn aangeleverd door Eco Yard Supply op 28 september 2026.</p>",
+  "datePublished": "2026-09-30",
+  "dateModified": "2026-09-30",
+  "product": {
+    "href": "/producten/vitalmix",
+    "label": "Bekijk Vitalmix aanplantgrond",
+    "note": "Hoogwaardige aanplantgrond in zakken van 50 liter. Bespreek de toepassing en hoeveelheid voor jouw project."
+  }
+},
+{
+  "slug": "hoeveel-aanplantgrond-nodig",
+  "title": "Hoeveel aanplantgrond heb je nodig? Van liters naar zakken",
+  "seoTitle": "Hoeveel aanplantgrond nodig? Liters en zakken berekenen",
+  "description": "Bereken het benodigde volume voor je plantvak of plantsleuf en reken liters aanplantgrond om naar zakken van 50 liter. Met voorbeelden en aandachtspunten.",
+  "eyebrow": "Hoeveelheden berekenen",
+  "intro": "Een zakinhoud van 50 liter is duidelijk, maar hoeveel zakken zijn dat voor jouw project? Meet eerst de ruimte, bepaal hoeveel bestaande grond je hergebruikt en reken pas daarna het benodigde volume aanplantgrond om naar zakken.",
+  "summary": "Voor een rechthoekige ruimte is het volume in liters: lengte × breedte × diepte in meters × 1.000. Trek het volume van kluiten en hergebruikte grond af om de resterende ruimte te bepalen. Deel het benodigde aantal liters aanplantgrond door 50 en rond naar boven af voor hele zakken Vitalmix.",
+  body: `
+<h2 id="formule">Van afmetingen naar liters</h2>
+<p>Meet lengte, breedte en de werkelijk te vullen diepte. Gebruik in de formule overal meters: 30 centimeter is 0,30 meter. Eén kubieke meter is 1.000 liter. Voor een onregelmatig plantvak kun je meerdere rechthoeken apart berekenen en de volumes optellen.</p>
+<aside class="direct-answer"><p><strong>Volume in liters = lengte (m) × breedte (m) × diepte (m) × 1.000</strong></p><p>Dit is het totale gemeten volume. Het is nog niet automatisch de hoeveelheid aanplantgrond die je moet kopen.</p></aside>
+<h2 id="plantsleuf">Rekenvoorbeeld: een plantsleuf</h2>
+<p>Een rechthoekige sleuf van 2 meter lang, 0,40 meter breed en 0,30 meter diep heeft een bruto volume van 240 liter: 2 × 0,40 × 0,30 × 1.000. Dit zijn gekozen rekenmaten, geen geadviseerde plantafmetingen. De juiste ruimte hangt af van de planten en hun kluiten.</p>
+<p>Stel dat kluiten samen 40 liter innemen en je 100 liter bestaande grond terugplaatst. Er blijft dan rekenkundig 100 liter ruimte over. Alleen wanneer het productvoorschrift of toepassingsadvies bevestigt dat deze verdeling geschikt is, kun je die ruimte als benodigde aanplantgrond rekenen. Bij Vitalmix komt 100 liter overeen met twee zakken van 50 liter.</p>
+<h2 id="zakken">Liters omrekenen naar zakken van 50 liter</h2>
+<div class="table-wrap"><table class="advice-table compact-table"><thead><tr><th>Benodigde aanplantgrond</th><th>Berekening</th><th>Hele zakken van 50 liter</th></tr></thead><tbody><tr><td>50 liter</td><td>50 ÷ 50</td><td>1 zak</td></tr><tr><td>100 liter</td><td>100 ÷ 50</td><td>2 zakken</td></tr><tr><td>125 liter</td><td>125 ÷ 50</td><td>3 zakken (150 liter)</td></tr><tr><td>200 liter</td><td>200 ÷ 50</td><td>4 zakken</td></tr><tr><td>1.000 liter</td><td>1.000 ÷ 50</td><td>20 zakken</td></tr></tbody></table></div>
+<p>Bij 125 liter rond je dus af naar drie hele zakken, met nominaal 25 liter over. De tabel rekent met de opgegeven zakinhoud; het volume na verwerking of aandrukken kan afwijken. Bespreek bij grotere projecten welke marge passend is.</p>
+<h2 id="mengen">Houd hoeveelheid en mengverhouding uit elkaar</h2>
+<p>Een volumeberekening vertelt hoeveel ruimte er is. Ze vertelt niet welke verhouding tussen aanplantgrond en bestaande grond geschikt is. Neem een verhouding van een ander merk daarom niet automatisch over voor <a href="/producten/vitalmix">Vitalmix aanplantgrond</a>. Vraag vooraf advies over je planten, bodem en verwerking.</p>
+<p>Ook liters grond en kilo’s mest zijn verschillende eenheden. Voeg niet op basis van deze rekentabel extra mest toe. Lees het <a href="/advies/aanplantgrond-of-tuinaarde">verschil tussen aanplantgrond, tuinaarde en aanplantmest</a> en bespreek welke voeding al aanwezig is.</p>
+<h2 id="aanvraag">Deze gegevens helpen bij een aanvraag</h2>
+<ul><li>Afmetingen van plantvakken of plantsleuven, inclusief de diepte.</li><li>Aantal planten en afmetingen van de kluiten.</li><li>Hoeveel bestaande grond je wilt hergebruiken.</li><li>Plantnamen, bodemtype en eventuele eerdere bemesting.</li></ul>
+<p>Met die gegevens kan Eco Yard Supply meedenken over productkeuze en hoeveelheden. Bekijk de <a href="/producten/vitalmix">productinformatie van Vitalmix, 50 liter per zak</a> of <a href="/#contact">neem contact op voor jouw project</a>.</p>
+`,
+  "faq": [
+    [
+      "Hoeveel zakken van 50 liter gaan er in een kubieke meter?",
+      "Eén kubieke meter is 1.000 liter. Op basis van de opgegeven zakinhoud zijn dat twintig zakken van 50 liter."
+    ],
+    [
+      "Hoeveel vierkante meter doe je met 50 liter?",
+      "Dat hangt af van de laagdikte. Rekenkundig is 50 liter over 1 m² een laag van 5 cm. Dit is een volumevoorbeeld en geen advies om aanplantgrond als laag van 5 cm toe te passen."
+    ],
+    [
+      "Moet het hele plantgat met aanplantgrond worden gevuld?",
+      "Niet automatisch. Kluiten nemen ruimte in en bestaande grond kan worden hergebruikt als het toepassingsadvies dat toelaat. Volg de mengverhouding en verwerking voor het gekozen product."
+    ]
+  ],
+  "related": [
+    "aanplantgrond-of-tuinaarde",
+    "mest-bij-aanplanten",
+    "tuingrond-verbeteren"
+  ],
+  "sourceNote": "<p>De voorbeelden gebruiken de rekenkundige omzetting van kubieke meters naar liters en de door Eco Yard Supply opgegeven Vitalmix-zakinhoud van 50 liter (28 september 2026). Afmetingen en volumes zijn rekenvoorbeelden; ze zijn geen plantspecifiek voorschrift of mengadvies.</p>",
+  "datePublished": "2026-09-30",
+  "dateModified": "2026-09-30",
+  "product": {
+    "href": "/producten/vitalmix",
+    "label": "Bekijk Vitalmix aanplantgrond",
+    "note": "Hoogwaardige aanplantgrond in zakken van 50 liter. Bespreek de toepassing en hoeveelheid voor jouw project."
+  }
+},
+  {
     slug: "gazon-bemesten",
     title: "Gazon bemesten: wanneer, hoe vaak en welke mest?",
     seoTitle: "Gazon bemesten: wanneer, hoe vaak en welke mest? | Eco Yard Supply",
@@ -242,6 +411,7 @@ export const advicePages = [
     title: "Gazon herstellen: van geel of dun gras naar een sterkere grasmat",
     seoTitle: "Gazon herstellen en geel gras aanpakken | Eco Yard Supply",
     description: "Ontdek waarom gras geel, dun of kaal wordt en herstel je gazon stap voor stap met de juiste diagnose, bodemzorg en bemesting.",
+    dateModified: "2026-10-01",
     eyebrow: "Probleemoplossing",
     intro: "Een geel of dun gazon heeft niet automatisch meer mest nodig. Controleer eerst vocht, maaigedrag, bodemverdichting, vilt en gebruiksschade. Bemesting helpt pas goed wanneer de oorzaak en het seizoen bij de gekozen aanpak passen.",
     summary: "Begin met de oorzaak: watertekort, een dichte bodem, te kort maaien, vilt of een voedingsvraag. Herstel daarna de groeiomstandigheden en bemest gericht. Een goed gevoede, dichter groeiende grasmat laat minder open ruimte over voor mos en onkruid, maar mest is geen bestrijdingsmiddel.",
@@ -271,12 +441,15 @@ export const advicePages = [
       <h2 id="mos">Mos en onkruid: formuleer het doel goed</h2>
       <p>Gazonmest bestrijdt geen mos of onkruid. Een dichtere, goed onderhouden grasmat kan wel minder open ruimte overlaten waarin ongewenste planten zich vestigen. Blijven mos of kale plekken terugkomen, onderzoek dan vooral schaduw, vocht, pH, bodemverdichting en maaigedrag.</p>
       <aside class="note-card"><strong>Twijfel over de oorzaak?</strong> Stuur Eco Yard Supply een paar overzichts- en detailfoto’s, plus informatie over bodem, beregening en onderhoud. Dat maakt productadvies veel gerichter.</aside>
+      <h2 id="doorzaaien">Graszaad kiezen voor doorzaai</h2>
+      <p><a href="/producten/kingseed">KingSeed Allround</a> is volgens het productblad geschikt voor nieuwe aanleg en doorzaaien in zon en halfschaduw. Voor doorzaaien geldt 10 g/m². Bekijk <a href="/advies/wanneer-graszaad-zaaien">het juiste zaaimoment</a> en <a href="/advies/hoeveel-graszaad-per-m2">de rekentabel voor graszaad</a>. Stem aanvullende bemesting apart af op bodem, seizoen en eerdere giften.</p>
     `,
     faq: [
       ["Hoe krijg je een geel gazon weer groen?", "Herstel eerst vocht, maaien en bodemconditie. Bemest alleen wanneer voeding en seizoen bij het probleem passen; meer mest is niet altijd de oplossing."],
       ["Moet je altijd verticuteren om een gazon te herstellen?", "Nee. Verticuteren is vooral zinvol bij een storende viltlaag. Zonder diagnose kan het extra stress en kale plekken veroorzaken."],
       ["Helpt gazonmest tegen mos?", "Gazonmest is geen mosbestrijder. Een gezonder en dichter gazon kan minder ruimte laten voor mos, maar de achterliggende omstandigheden moeten ook worden aangepakt."],
     ],
+    sourceNote: "<p>Dungking-specificaties komen uit de aangeleverde meststofproductbladen. De aanvullende gegevens voor doorzaai komen uit het <a href=\"/public/assets/pdfs/kingseed-allround.pdf\">KingSeed Allround-productblad</a>. Volg per product de actuele verpakking; graszaad en mest hebben afzonderlijke gebruiksvoorschriften.</p>",
     related: ["gazon-bemesten", "tuingrond-verbeteren", "gazon-bemesten-voorjaar"],
     product: { href: "/producten/gazonmest", label: "Bekijk Gazonmest", note: "Productspecificaties, toepassing en dosering voor gericht gazononderhoud." },
   },
@@ -382,6 +555,8 @@ export const advicePages = [
     title: "Tuingrond verbeteren: werk aan structuur, bodemleven en voeding",
     seoTitle: "Tuingrond en bodemleven verbeteren | Eco Yard Supply",
     description: "Praktisch stappenplan om arme of verdichte tuingrond te verbeteren. Leer het verschil tussen bodemverbeteraar en meststof.",
+    dateModified: "2026-09-30",
+    sourceNote: "<p>De Dungking-doseringen en productspecificaties zijn gebaseerd op de aangeleverde productbladen. De aanvullende Vitalmix-informatie komt van Eco Yard Supply (28 september 2026). De actuele verpakking en het productspecifieke toepassingsadvies blijven leidend; een Dungking-dosering geldt niet voor Vitalmix.</p>",
     eyebrow: "Bodemadvies",
     intro: "Tuingrond verbeteren begint niet met zomaar mest strooien. Breng eerst structuur, waterhuishouding, organische stof en gebruik in beeld. Een meststof vult voeding aan; een bodemverbeteraar is primair gericht op eigenschappen van de bodem.",
     summary: "Onderzoek eerst of de grond te nat, te droog, arm, verdicht of weinig actief is. Verbeter daarna gericht met organisch materiaal, passende bewerking, plantenkeuze en zo nodig bemesting. Werk stap voor stap en voorkom dat je één product als oplossing voor ieder bodemprobleem presenteert.",
@@ -409,6 +584,9 @@ export const advicePages = [
       <p>Een levende bodem heeft voedsel, vocht, lucht en een zo stabiel mogelijke leefomgeving nodig. Organisch materiaal, wortels en beperkte verstoring kunnen daaraan bijdragen. Vermijd absolute beloften: de reactie van bodemleven hangt af van het uitgangspunt en beheer.</p>
       <p>Voor nieuwe aanplant kan Dungking Aanplantmest relevant zijn. Het productblad beschrijft deze als bodemverbeteraar met ten minste 80% insectenmest. Gebruik de dosering die past bij gazon, border, boom of haag en bekijk de gids <a href="/advies/mest-bij-aanplanten">welke mest bij aanplanten</a>.</p>
       <aside class="note-card"><strong>Voor hoveniers:</strong> bij grotere of terugkerende projecten helpt een eenvoudige bodemcheck om advies en producthoeveelheid vooraf beter te onderbouwen.</aside>
+
+      <h2 id="aanplantgrond">Grond kiezen voor nieuwe aanplant</h2>
+      <p>Zoek je een grondmengsel voor de plantplaats? Bekijk <a href="/producten/vitalmix">Vitalmix aanplantgrond in zakken van 50 liter</a>. Dit is een ander product dan Dungking Aanplantmest. Lees het <a href="/advies/aanplantgrond-of-tuinaarde">verschil tussen aanplantgrond en tuinaarde</a> en bereken <a href="/advies/hoeveel-aanplantgrond-nodig">hoeveel liters aanplantgrond je nodig hebt</a>. Stem eventuele extra bemesting af op de voeding die al in het grondmengsel zit.</p>
     `,
     faq: [
       ["Hoe verbeter je arme tuingrond?", "Bepaal eerst of voeding, organische stof, verdichting of waterhuishouding het probleem is. Verbeter vervolgens gericht in plaats van alleen extra mest toe te voegen."],
@@ -423,6 +601,8 @@ export const advicePages = [
     title: "Welke mest gebruik je bij nieuwe aanplant?",
     seoTitle: "Welke mest bij aanplanten van bomen, hagen en borders?",
     description: "Advies over aanplantmest voor bomen, hagen, borders, gazon en graszoden. Met productspecifieke dosering en stappenplan.",
+    dateModified: "2026-09-30",
+    sourceNote: "<p>De Dungking-doseringen en productspecificaties zijn gebaseerd op de aangeleverde productbladen. De aanvullende Vitalmix-informatie komt van Eco Yard Supply (28 september 2026). De actuele verpakking en het productspecifieke toepassingsadvies blijven leidend; een Dungking-dosering geldt niet voor Vitalmix.</p>",
     eyebrow: "Aanplantadvies",
     intro: "Bij nieuwe aanplant zijn bodemcontact, vocht en een onbeschadigde wortelkluit minstens zo belangrijk als bemesting. Kies een aanplantmest die bij de toepassing past, meng volgens voorschrift en voorkom dat geconcentreerde mest direct tegen jonge wortels ligt.",
     summary: "Verbeter eerst de plantplaats, maak de kluit goed vochtig en gebruik een passende dosering. Dungking Aanplantmest wordt in het productblad beschreven voor aanleg van gazon en border en voor bomen en hagen. De hoeveelheid verschilt per toepassing.",
@@ -453,6 +633,9 @@ export const advicePages = [
       <h2 id="product">Wat maakt Dungking Aanplantmest anders?</h2>
       <p>Volgens het aangeleverde productblad bestaat de mest voor ten minste 80% uit insectenmest en heeft deze NPK 4-3-3. Dungking beschrijft het product als bodemverbeteraar voor gazon, border, bomen en hagen. Eco Yard Supply gebruikt bewust geen bredere certificerings- of resultaatsclaims zonder aanvullende onderbouwing.</p>
       <aside class="note-card"><strong>Zakelijk project?</strong> Deel oppervlak, plantlijst, bodemtype, planning en locatie in Noord-Brabant. Dan kan Eco Yard Supply gerichter meedenken over hoeveelheid en toepassing.</aside>
+
+      <h2 id="aanplantgrond">Grond kiezen voor nieuwe aanplant</h2>
+      <p>Zoek je een grondmengsel voor de plantplaats? Bekijk <a href="/producten/vitalmix">Vitalmix aanplantgrond in zakken van 50 liter</a>. Dit is een ander product dan Dungking Aanplantmest. Lees het <a href="/advies/aanplantgrond-of-tuinaarde">verschil tussen aanplantgrond en tuinaarde</a> en bereken <a href="/advies/hoeveel-aanplantgrond-nodig">hoeveel liters aanplantgrond je nodig hebt</a>. Stem eventuele extra bemesting af op de voeding die al in het grondmengsel zit.</p>
     `,
     faq: [
       ["Hoeveel aanplantmest gebruik je voor een haag?", "Het Dungking-productblad noemt 5 kg per 10 strekkende meter, of 0,3 kg per 50 liter. Bepaal vooraf welke rekeneenheid bij de aanlegmethode past."],
@@ -684,7 +867,7 @@ export const advicePages = [
 ];
 
 export const adviceHub = {
-  title: "Advies over tuin bemesten, gazon en insectenmest",
-  seoTitle: "Tuin bemesten, gazon en insectenmest | Eco Yard Supply",
-  description: "Praktische kennisbank over tuin en gazon bemesten, insectenmest, rozen, bodem, hagen, fruitbomen en nieuwe aanplant.",
+  title: "Advies over gazon, bemesting en aanplant",
+  seoTitle: "Tuinadvies: graszaad, bemesting en aanplant | Eco Yard Supply",
+  description: "Praktische kennisbank over graszaad zaaien, gazon en tuin bemesten, insectenmest, aanplantgrond en bodem. Bekijk alle adviesartikelen.",
 };

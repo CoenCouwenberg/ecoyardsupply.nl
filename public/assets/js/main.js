@@ -75,3 +75,26 @@ document.addEventListener("click", (event) => {
     link_url: link.href,
   });
 });
+
+// Keep every article available without JavaScript; enhance the overview with filters.
+const adviceFilters = document.querySelector(".advice-filters");
+const adviceCards = [...document.querySelectorAll("#advice-cards [data-advice-category]")];
+const adviceCount = document.querySelector("[data-advice-count]");
+
+if (adviceFilters && adviceCards.length && adviceCount) {
+  adviceFilters.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-advice-filter]");
+    if (!button || !adviceFilters.contains(button)) return;
+    const category = button.dataset.adviceFilter;
+    adviceFilters.querySelectorAll("[data-advice-filter]").forEach((filter) => {
+      filter.setAttribute("aria-pressed", String(filter === button));
+    });
+    let visibleCount = 0;
+    adviceCards.forEach((card) => {
+      card.hidden = category !== "all" && card.dataset.adviceCategory !== category;
+      if (!card.hidden) visibleCount += 1;
+    });
+    adviceCount.textContent = `${visibleCount} ${visibleCount === 1 ? "artikel" : "artikelen"}${category === "all" ? "" : ` · ${button.textContent.trim()}`}`;
+  });
+  adviceFilters.hidden = false;
+}
