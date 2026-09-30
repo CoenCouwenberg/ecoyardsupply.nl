@@ -1639,3 +1639,102 @@ p {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Compact product- and volume tables remain readable without horizontal scrolling. */
+.advice-table.compact-table {
+  min-width: 0;
+  table-layout: fixed;
+  overflow-wrap: anywhere;
+}
+
+.compact-table caption {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--color-forest);
+}
+
+@media (max-width: 600px) {
+  .compact-table th,
+  .compact-table td {
+    padding: 0.7rem;
+  }
+}
+
+.seed-product { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: var(--space-lg); align-items: center; }
+.seed-flyer { display: block; }
+.seed-flyer img { display: block; width: 100%; height: auto; border-radius: var(--radius-lg); }
+.product-hub-page section[id] { scroll-margin-top: 6rem; }
+@media (max-width: 700px) {
+  .seed-product { grid-template-columns: minmax(0, 1fr); }
+  .seed-product > .seed-flyer { max-width: 220px; }
+}
+
+.advice-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: var(--space-md);
+}
+.advice-filters[hidden],
+.knowledge-grid > [hidden] {
+  display: none;
+}
+.advice-filter {
+  padding: 0.7rem 1.1rem;
+  border: 1px solid rgb(25 77 50 / 30%);
+  border-radius: 999px;
+  background: var(--color-white);
+  color: var(--color-forest);
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+.advice-filter:hover {
+  background: var(--color-moss);
+}
+.advice-filter[aria-pressed="true"] {
+  background: var(--color-forest);
+  border-color: var(--color-forest);
+  color: var(--color-white);
+}
+.advice-filter:focus-visible {
+  outline: 3px solid var(--color-leaf);
+  outline-offset: 3px;
+}
+.advice-result-count {
+  margin-bottom: var(--space-lg);
+  color: var(--color-muted);
+}
+
+.additional-products {
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: var(--space-lg);
+}
+.additional-product {
+  flex-direction: row;
+  gap: var(--space-md);
+}
+.additional-product .product-card-media {
+  flex: 0 0 32%;
+  align-self: flex-start;
+  margin: 0;
+  border-radius: var(--radius-lg);
+}
+.additional-product .product-card-media img {
+  display: block;
+  aspect-ratio: auto;
+}
+.additional-product-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.additional-product-content > p:not(.product-card-meta) {
+  flex: 1;
+}
+@media (min-width: 760px) {
+  .additional-products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
