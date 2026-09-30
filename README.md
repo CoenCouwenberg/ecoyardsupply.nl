@@ -25,6 +25,6 @@ node scripts/serve.mjs
 
 Met `BASE_PATH=/preview` kan dezelfde server ook een hosting-submap simuleren. Alle zichtbare interne links en assets gebruiken daarom relatieve paden; canonicals en structured data blijven bewust absolute productie-URL's.
 
-De builder beheert de HTML in `advies/`, `producten/index.html` en `voor-hoveniers.html`; pas die gegenereerde bestanden niet handmatig aan.
+De builder beheert de HTML in `advies/`, `producten/index.html`, `producten/vitalmix.html`, `producten/kingseed.html` en `voor-hoveniers.html`; pas die gegenereerde bestanden niet handmatig aan.
 
 Zie `SEO-ROADMAP.md` voor zoekwoordclusters, claimregels en volgende contentprioriteiten.

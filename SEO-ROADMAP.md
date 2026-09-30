@@ -24,8 +24,8 @@ Bron voor deze fase is tabblad `SEO selectie` in `Eco_Yard_Supply_SEO_plan_2026-
 
 - `/` — brede regionale landingspagina
 - `/producten/` — productvergelijker op toepassing, seizoen, NPK en dosering
-- `/producten/*` — vier afzonderlijke productpagina's met extensieloze URL's
-- `/advies/` — kennisbank met vijftien verdiepende adviespagina's
+- `/producten/*` — zes afzonderlijke productpagina's met extensieloze URL's
+- `/advies/` — kennisbank met negentien verdiepende adviespagina's
 - `/voor-hoveniers` — zakelijke en regionale landingspagina
 
 De kennisbank bevat naast de basisartikelen aparte zoekintenties voor tuinbemesting, insectenmest, rozen, voorjaarsbemesting, najaarsbemesting, graszoden, beukenhagen en fruitbomen. Elke adviespagina bevat een direct antwoord, inhoudelijke verdieping, FAQ, productschakel, gerelateerde artikelen en een transparante bronnotitie.
@@ -71,3 +71,30 @@ node scripts/validate-site.mjs
 ```
 
 De builder genereert de adviespagina's, productvergelijker, hovenierspagina, `sitemap.xml` en `llms.txt`. Bewerk gegenereerde HTML daarom niet handmatig.
+
+## Vitalmix-uitbreiding — 30 september 2026
+
+Bron: expliciete product- en blogopdracht van Coen, met productinformatie van Harm van 28 september 2026. Dit is een aanvulling op het SEO-plan 2026–2027. Er zijn geen nieuwe zoekvolumes, rankings of conversieverwachtingen vastgesteld. De oude uitsluiting van transactioneel `tuinaarde` in `SEO selectie` blijft gelden: Vitalmix wordt aangeboden als aanplantgrond, niet als tuinaarde.
+
+| Bestaande/geplande URL | Zoekintentie | Hoofdcluster | Ondersteunende termen | Bron in plan | Actie | Prioriteit | Risico/afhankelijkheid |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `/producten/vitalmix` | Productinformatie/aanvraag | Vitalmix aanplantgrond | aanplantgrond 50 liter | Nieuwe opdracht 30 september | Nieuwe productpagina; links vanaf homepage, producten en hoveniers | Nu | Geen onbevestigde percentages, doseereenheden, prijs of plantgeschiktheid |
+| `/advies/aanplantgrond-of-tuinaarde` | Productsoorten vergelijken | aanplantgrond of tuinaarde | aanplantmest, verschil grond en mest | Nieuwe opdracht 30 september | Informatief artikel met link naar Vitalmix | Nu | Geen verkoop van tuinaarde suggereren; geen voorschriften van andere merken overnemen |
+| `/advies/hoeveel-aanplantgrond-nodig` | Hoeveelheid berekenen | hoeveel aanplantgrond nodig | liters, 50 liter, aantal zakken | Nieuwe opdracht 30 september | Artikel met volumevoorbeelden en productlink | Nu | Rekenvoorbeeld is geen mengverhouding of plantvoorschrift |
+| `/advies/mest-bij-aanplanten`, `/advies/tuingrond-verbeteren` | Bestaande aanplant-/bodemvraag | Bestaande clusters behouden | Vitalmix, grondmengsel | Bestaand plan + nieuwe opdracht | Korte relevante verwijzing toevoegen | Nu | Grond en mest niet uitwisselbaar presenteren |
+
+Algemene bronnen voor het verschil tussen grondsoorten: Pokon-productinformatie voor aanplantgrond en tuinaarde, geraadpleegd 30 september 2026 en gekoppeld in het artikel. Vitalmix-specificaties komen uitsluitend uit de aangeleverde productinformatie. De rekenpagina gebruikt eenvoudige volumeconversies en de bevestigde zakinhoud van 50 liter.
+
+## KingSeed en overzichtspagina's — 1 oktober 2026
+
+Bron: expliciete vervolgopdracht van Coen en het aangeleverde KingSeed Allround-productblad. De productgroep **Zaden** staat onder `/producten/#zaden` en kan later meer producten bevatten. Meststoffen en Aanplantgrond behouden hun eigen sectie. Geen zoekvolumes of rankingverwachtingen toegevoegd.
+
+| URL | Zoekintentie | Hoofdcluster | Ondersteunende termen | Bron | Actie | Prioriteit | Afhankelijkheid |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `/producten/kingseed` | Productinformatie/aanvraag | KingSeed Allround graszaad | 7,5 kg, doorzaai, nieuw gazon | Productblad + opdracht | Nieuwe pagina met PDF-download en bronafbeelding | Nu | Geen prijs, voorraad of gegarandeerde opkomst claimen |
+| `/advies/wanneer-graszaad-zaaien` | Timing en uitvoering | wanneer graszaad zaaien | temperatuur, nazorg, KingSeed | Productblad; RHS voor algemene voorbereiding | Nieuw adviesartikel met productlink | Nu | Minimaal 10 °C is bodemtemperatuur; indicatieve opkomst |
+| `/advies/hoeveel-graszaad-per-m2` | Hoeveelheid berekenen | hoeveel graszaad per m² | nieuw gazon, doorzaaien, 25 g, 10 g | Productblad + berekeningen | Nieuw artikel met rekentabel | Nu | Doseringen gelden voor KingSeed Allround |
+| `/advies/gazon-herstellen` | Bestaande diagnose/herstel | gazon herstellen | doorzaaien | Bestaand artikel + productblad | Product- en blogverwijzingen toevoegen | Nu | Hersteloorzaak blijft leidend; geen duplicaatartikel |
+| `/advies/` | Artikelen vinden | tuinadvies | graszaad, aanplantgrond, bemesting | Opdracht | Alle artikelen in één kaartenoverzicht met categoriefilters | Nu | Alle bestaande artikelen behouden |
+
+Productblad: `/public/assets/pdfs/kingseed-allround.pdf`, ongewijzigde kopie van de aangeleverde PDF. WebP-preview is uit de volledige pagina-afbeelding geëxtraheerd. Websitecopy gebruikt de concrete productspecificaties; geen extra milieu- of resultaatclaims toegevoegd.
