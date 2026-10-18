@@ -1,0 +1,209 @@
+[
+  {
+    "file": "dungking-startersmest-overzicht.webp",
+    "source": "Geel/PNG met schaduw/IMG_2500.png",
+    "bytes": 295606,
+    "quality": 90,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 53422
+  },
+  {
+    "file": "dungking-startersmest-emmer.webp",
+    "source": "Geel/PNG met schaduw/IMG_2489.png",
+    "bytes": 291536,
+    "quality": 91,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 44984
+  },
+  {
+    "file": "dungking-startersmest-zak.webp",
+    "source": "Geel/PNG met schaduw/IMG_2498.png",
+    "bytes": 277996,
+    "quality": 92,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 46774
+  },
+  {
+    "file": "dungking-startersmest-korrels.webp",
+    "source": "Geel/IMG_2493.jpg",
+    "bytes": 297856,
+    "quality": 91,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 47216
+  },
+  {
+    "file": "dungking-gazonmest-overzicht.webp",
+    "source": "Oranje/PNG met schaduw/IMG_2472.png",
+    "bytes": 288634,
+    "quality": 87,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 54624
+  },
+  {
+    "file": "dungking-gazonmest-emmer.webp",
+    "source": "Oranje/PNG met schaduw/IMG_2462.png",
+    "bytes": 281482,
+    "quality": 92,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 43854
+  },
+  {
+    "file": "dungking-gazonmest-zak.webp",
+    "source": "Oranje/PNG met schaduw/IMG_2466.png",
+    "bytes": 292218,
+    "quality": 90,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 47700
+  },
+  {
+    "file": "dungking-gazonmest-korrels.webp",
+    "source": "Oranje/IMG_2473.jpg",
+    "bytes": 299600,
+    "quality": 85,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 51960
+  },
+  {
+    "file": "dungking-bordermest-overzicht.webp",
+    "source": "Groen/PNG met schaduw/IMG_2483.png",
+    "bytes": 299848,
+    "quality": 88,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 54010
+  },
+  {
+    "file": "dungking-bordermest-emmer.webp",
+    "source": "Groen/PNG met schaduw/IMG_2477.png",
+    "bytes": 289284,
+    "quality": 89,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 50784
+  },
+  {
+    "file": "dungking-bordermest-zak.webp",
+    "source": "Groen/PNG met schaduw/IMG_2479.png",
+    "bytes": 296596,
+    "quality": 96,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 40472
+  },
+  {
+    "file": "dungking-bordermest-korrels.webp",
+    "source": "Groen/IMG_2485.jpg",
+    "bytes": 290142,
+    "quality": 84,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 53232
+  },
+  {
+    "file": "dungking-aanplantmest-overzicht.webp",
+    "source": "Blauw/PNG met schaduw/IMG_2451.png",
+    "bytes": 293868,
+    "quality": 90,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 49022
+  },
+  {
+    "file": "dungking-aanplantmest-emmer.webp",
+    "source": "Blauw/PNG met schaduw/IMG_2453.png",
+    "bytes": 285260,
+    "quality": 93,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 42696
+  },
+  {
+    "file": "dungking-aanplantmest-zak.webp",
+    "source": "Blauw/PNG met schaduw/IMG_2468.png",
+    "bytes": 294392,
+    "quality": 89,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 47454
+  },
+  {
+    "file": "dungking-aanplantmest-korrels.webp",
+    "source": "Blauw/IMG_2475.jpg",
+    "bytes": 293624,
+    "quality": 90,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 39482
+  },
+  {
+    "file": "kingseed-allround-overzicht.webp",
+    "source": "Rood/IMG_2510.png",
+    "bytes": 288218,
+    "quality": 96,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 33744
+  },
+  {
+    "file": "kingseed-allround-emmer-75-kg.webp",
+    "source": "Rood/7.5KG/IMG_2501.png",
+    "bytes": 273416,
+    "quality": 92,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 45162
+  },
+  {
+    "file": "kingseed-allround-emmer-375-kg.webp",
+    "source": "Rood/3.75KG/IMG_2505.png",
+    "bytes": 293478,
+    "quality": 93,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 42060
+  },
+  {
+    "file": "kingseed-allround-zak-2-kg.webp",
+    "source": "Rood/2KG/IMG_2503.png",
+    "bytes": 268310,
+    "quality": 92,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 37462
+  },
+  {
+    "file": "vitalmix-aanplantgrond-zak.webp",
+    "source": "Wit/PNG met schaduw/IMG_2514.png",
+    "bytes": 232126,
+    "quality": 100,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 22972
+  },
+  {
+    "file": "vitalmix-aanplantgrond-verpakking.webp",
+    "source": "Wit/PNG met schaduw/IMG_2511.png",
+    "bytes": 285930,
+    "quality": 98,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 29150
+  },
+  {
+    "file": "vitalmix-aanplantgrond-structuur.webp",
+    "source": "Wit/PNG met schaduw/IMG_2517.png",
+    "bytes": 299542,
+    "quality": 77,
+    "width": 1600,
+    "height": 1600,
+    "responsiveBytes": 69692
+  }
+]

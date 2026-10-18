@@ -3,6 +3,9 @@ DirectoryIndex index.html
 
 RewriteEngine On
 
+# Houd interne projectdocumentatie en SEO-onderzoek buiten de publieke website.
+RewriteRule \.(?:md|xlsm)$ - [F,L,NC]
+
 # Stuur expliciete indexbestanden door naar de map-URL.
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[?\s]) [NC]
 RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L,NE]

@@ -98,3 +98,43 @@ if (adviceFilters && adviceCards.length && adviceCount) {
   });
   adviceFilters.hidden = false;
 }
+
+// Links open the original photo without JS; enhance them into a compact gallery.
+document.querySelectorAll('[data-product-gallery]').forEach((gallery) => {
+  const mainImage = gallery.querySelector('.gallery-stage img');
+  const fullLink = gallery.querySelector('[data-gallery-full]');
+  const zoomLink = gallery.querySelector('[data-gallery-zoom]');
+  const caption = gallery.querySelector('[data-gallery-caption]');
+  const choices = [...gallery.querySelectorAll('[data-gallery-select]')];
+  function selectPhoto(choice) {
+    mainImage.srcset = `${choice.dataset.small} 560w, ${choice.dataset.src} 1600w`;
+    mainImage.src = choice.dataset.src;
+    mainImage.alt = choice.dataset.alt;
+    mainImage.title = choice.dataset.title;
+    fullLink.href = choice.dataset.src;
+    zoomLink.href = choice.dataset.src;
+    caption.textContent = choice.dataset.caption;
+    choices.forEach((link) => {
+      if (link === choice) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  choices.forEach((choice, index) => {
+    choice.addEventListener('click', (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      selectPhoto(choice);
+    });
+    choice.addEventListener('keydown', (event) => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % choices.length;
+      if (event.key === 'ArrowLeft') next = (index + choices.length - 1) % choices.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = choices.length - 1;
+      if (next === undefined) return;
+      event.preventDefault();
+      choices[next].focus();
+      selectPhoto(choices[next]);
+    });
+  });
+});

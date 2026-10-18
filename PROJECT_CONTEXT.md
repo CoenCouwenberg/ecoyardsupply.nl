@@ -233,3 +233,42 @@ Coen heeft expliciet toestemming gegeven om te mergen en live te pushen.
 - Alternatief via bestaande GitHub-app geprobeerd: profiel CoenCouwenberg en repositorymetadata bereikbaar; blob-write wordt geweigerd met HTTP 403 `Resource not accessible by integration`. Geen remote wijzigingen aangemaakt.
 - `main` staat lokaal twee commits voor origin/main. Hervatten na opnieuw aanmelden: remote opnieuw ophalen/controleren en `git push origin main`; daarna live deployment verifiëren. Bestaande publicatieautorisatie blijft gelden.
 - Nog niet live. Live homepage vóór push gaf HTTP 200 via LiteSpeed; hostingdeploy-trigger is niet afzonderlijk bevestigd.
+
+## 16. Productfotografie — 18 oktober 2026
+
+Opdracht: eigen productfoto’s selecteren, als WebP voorbereiden (richtwaarde 200–300 kB), beschrijvende bestandsnamen/titels/altteksten/omschrijvingen toevoegen, productpresentatie verbeteren en bestellen via contact duidelijk maken. Hero blijft behouden; flyers blijven als losse PDF beschikbaar. Coen bevestigt dat de witte zak Vitalmix is. KingSeed-foto’s tonen ook 2 kg en 3,75 kg; dit bewijst geen actuele voorraad. Bestaande 7,5 kg-productbladinformatie blijft leidend.
+
+Bronnen: SEO-plan 2026–2027, tabbladen `SEO selectie` en `Pagina-keywordmap`, plus huidige broncode en aangeleverde foto’s visueel bekeken. Geen nieuwe zoekwoordexport gebruikt; geen nieuwe prestatiecijfers of productwerking afgeleid.
+
+Mapping vooraf:
+
+| URL | Intentie / cluster | Bron en actie | Prioriteit | Afhankelijkheid |
+| --- | --- | --- | --- | --- |
+| `/` productsectie | Merk, assortiment, contact | Opdracht: hoofdfoto’s, productknoppen, Vitalmix-foto; hero behouden | Nu | Geen |
+| `/producten/` | Commercieel: tuinmest, assortiment | SEO selectie: producthub versterken; foto’s vóór vergelijking en direct contact | Nu | Geen prijs/voorraad verzinnen |
+| Vier bestaande Dungking-productpagina’s | Transactioneel: productnaam en toepassing | Pagina-keywordmap + opdracht: galerij, korreldetails, contactbestelling, PDF | Nu | Productclaims/dosering behouden |
+| `/producten/kingseed` | Product: graszaad | Opdracht: echte verpakkingsfoto’s, galerij en contact | Nu | Extra formaten alleen gefotografeerde varianten; beschikbaarheid navragen |
+| `/producten/vitalmix` | Product: aanplantgrond | Opdracht + bevestiging witte zak: galerij en contact | Nu | Geen |
+| Bestaande adviespagina’s | Bestaande informatieve clusters | Passende productfoto bij productverwijzing; korreldetails waar inhoudelijk relevant | Nu | Geen nieuwe zoekintentie/claims |
+
+Uitvoering en verificatie staan hieronder. Coen heeft op 18 oktober 2026 expliciet toestemming gegeven voor commit en push naar `main` voor publicatie.
+
+Afgerond, lokaal op `main` (18 oktober 2026):
+
+- 23 geselecteerde foto's voor zes producten, plus 23 varianten van 560 px. Grote foto’s zijn 1600 × 1600, met behoud van verhoudingen en transparantie; 232.126–299.848 bytes per bestand. Geselecteerde originelen: 67.970.920 bytes; grote WebP’s: 6.608.962 bytes (90,3% kleiner). Kleinere varianten: 22.972–69.692 bytes.
+- Selectie, bronverwijzingen en vooraf voorbereide titels/altteksten/omschrijvingen in `content/product-photos.json`; bestandsgroottes in `content/product-photo-sizes.json`. Afbeeldingen bevatten XMP-titel en omschrijving; pagina’s gebruiken beschrijvende altteksten, titels en ImageObject-omschrijvingen.
+- Homepage: zes fotokaarten en duidelijke contactroute; bestaande hero behouden. Producthub: fotokaarten vóór technische vergelijking, compactere introductie, productgroepen behouden. Alle zes productpagina's: galerij, contactbestelling en waar beschikbaar losse flyer-PDF. Geen winkelmand, checkout, prijs of voorraad toegevoegd.
+- Foto’s toegevoegd bij productverwijzingen in zestien bestaande adviesartikelen; vijf artikelen hebben aanvullend korreldetails op kleurachtergrond, waaronder insectenmest. Bestaande teksten, doseringen en claims behouden. Geen foto’s van toepassing of klantresultaten gesuggereerd.
+- Herbruikbare galerijen in `scripts/product-photos.mjs`; conversiescript in `scripts/optimize-product-photos.py`. Builder verwerkt relatieve srcsets en galerijpaden, ook voor hosting in een submap. Productgegevens in JSON-LD en deelafbeeldingen verwijzen naar echte productfoto’s.
+
+Daadwerkelijk gecontroleerd:
+
+- 46 WebP-bestanden gedecodeerd en afmetingen, XMP-titel/omschrijving en bestandsgroottes gecontroleerd; alle 23 grote bestanden binnen 200–300 kB.
+- Builder geslaagd en herhaalde generatie gecontroleerd op identieke handmatig onderhouden pagina’s. Validator: 29 HTML-pagina's zonder fouten (metadata, JSON-LD, links, ankers, claims, sitemap). JavaScript-syntax en `git diff --check` geslaagd.
+- Lokale browsercontrole op feitelijke 400 × 843 en 1440 × 1000: zes productpagina’s, homepage, producthub en representatieve adviezen; geen horizontale overflow of kapotte geladen afbeeldingen. Galerijwissel, bijbehorende alttekst, pijltjestoetsen en mobiel menu getest. Desktopvoorbeelden van Bordermest, KingSeed en producthub visueel beoordeeld.
+- Geen testaanvraag of WhatsApp-bericht verzonden. Geen productiecontrole van nieuwe inhoud; niet gecommit, gepusht, gemerged of gepubliceerd. Publicatie vereist nog Coens expliciete toestemming volgens AGENTS.md. Foto’s zijn uitsluitend lokaal verwerkt; originelen zijn ongewijzigd.
+
+Publicatiestap op 18 oktober 2026:
+- Coen heeft expliciet toestemming gegeven voor commit en push naar `main`.
+- Voor publicatie blokkeert `.htaccess` HTTP-toegang tot Markdown-projectdocumenten en het `.xlsm`-SEO-onderzoek, omdat de repository ook als statische webroot wordt gebruikt. Publieke HTML-, afbeeldings- en PDF-routes blijven behouden.
+- Remote `origin/main` vóór commit opgehaald; actuele branch en controles worden gecontroleerd voordat de goedgekeurde wijziging wordt gepusht.

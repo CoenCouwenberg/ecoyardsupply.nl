@@ -1,0 +1,222 @@
+{
+  "startersmest": {
+    "name": "Dungking Startersmest",
+    "color": "geel",
+    "photos": [
+      {
+        "file": "dungking-startersmest-overzicht",
+        "source": "Geel/PNG met schaduw/IMG_2500.png",
+        "title": "Dungking Startersmest – overzicht",
+        "alt": "Dungking Startersmest: zak, transparante buis met mestkorrels en emmer met geel deksel",
+        "description": "Overzichtsfoto van Dungking Startersmest met de zak, een buis met korrels en de emmer. Vrijstaand met schaduw.",
+        "label": "Overzicht"
+      },
+      {
+        "file": "dungking-startersmest-emmer",
+        "source": "Geel/PNG met schaduw/IMG_2489.png",
+        "title": "Dungking Startersmest – emmer",
+        "alt": "Emmer Dungking Startersmest met geel deksel en productetiket",
+        "description": "Vooraanzicht van de emmer Dungking Startersmest, vrijstaand met schaduw.",
+        "label": "Emmer"
+      },
+      {
+        "file": "dungking-startersmest-zak",
+        "source": "Geel/PNG met schaduw/IMG_2498.png",
+        "title": "Dungking Startersmest – zak",
+        "alt": "Zak Dungking Startersmest met geel productlabel",
+        "description": "Vooraanzicht van de zak Dungking Startersmest, vrijstaand met schaduw.",
+        "label": "Zak"
+      },
+      {
+        "file": "dungking-startersmest-korrels",
+        "source": "Geel/IMG_2493.jpg",
+        "title": "Dungking Startersmest – korrels",
+        "alt": "Close-up van Dungking Startersmest korrels op een gele achtergrond",
+        "description": "Detailfoto van de vorm en structuur van Dungking Startersmest korrels tegen de bijbehorende productkleur.",
+        "label": "Korrels"
+      }
+    ]
+  },
+  "gazonmest": {
+    "name": "Dungking Gazonmest",
+    "color": "oranje",
+    "photos": [
+      {
+        "file": "dungking-gazonmest-overzicht",
+        "source": "Oranje/PNG met schaduw/IMG_2472.png",
+        "title": "Dungking Gazonmest – overzicht",
+        "alt": "Dungking Gazonmest: zak, transparante buis met mestkorrels en emmer met oranje deksel",
+        "description": "Overzichtsfoto van Dungking Gazonmest met de zak, een buis met korrels en de emmer. Vrijstaand met schaduw.",
+        "label": "Overzicht"
+      },
+      {
+        "file": "dungking-gazonmest-emmer",
+        "source": "Oranje/PNG met schaduw/IMG_2462.png",
+        "title": "Dungking Gazonmest – emmer",
+        "alt": "Emmer Dungking Gazonmest met oranje deksel en productetiket",
+        "description": "Vooraanzicht van de emmer Dungking Gazonmest, vrijstaand met schaduw.",
+        "label": "Emmer"
+      },
+      {
+        "file": "dungking-gazonmest-zak",
+        "source": "Oranje/PNG met schaduw/IMG_2466.png",
+        "title": "Dungking Gazonmest – zak",
+        "alt": "Zak Dungking Gazonmest met oranje productlabel",
+        "description": "Vooraanzicht van de zak Dungking Gazonmest, vrijstaand met schaduw.",
+        "label": "Zak"
+      },
+      {
+        "file": "dungking-gazonmest-korrels",
+        "source": "Oranje/IMG_2473.jpg",
+        "title": "Dungking Gazonmest – korrels",
+        "alt": "Close-up van Dungking Gazonmest korrels op een oranje achtergrond",
+        "description": "Detailfoto van de vorm en structuur van Dungking Gazonmest korrels tegen de bijbehorende productkleur.",
+        "label": "Korrels"
+      }
+    ]
+  },
+  "bordermest": {
+    "name": "Dungking Border- en Najaarsmest",
+    "color": "groen",
+    "photos": [
+      {
+        "file": "dungking-bordermest-overzicht",
+        "source": "Groen/PNG met schaduw/IMG_2483.png",
+        "title": "Dungking Border- en Najaarsmest – overzicht",
+        "alt": "Dungking Border- en Najaarsmest: zak, transparante buis met mestkorrels en emmer met groen deksel",
+        "description": "Overzichtsfoto van Dungking Border- en Najaarsmest met de zak, een buis met korrels en de emmer. Vrijstaand met schaduw.",
+        "label": "Overzicht"
+      },
+      {
+        "file": "dungking-bordermest-emmer",
+        "source": "Groen/PNG met schaduw/IMG_2477.png",
+        "title": "Dungking Border- en Najaarsmest – emmer",
+        "alt": "Emmer Dungking Border- en Najaarsmest met groen deksel en productetiket",
+        "description": "Vooraanzicht van de emmer Dungking Border- en Najaarsmest, vrijstaand met schaduw.",
+        "label": "Emmer"
+      },
+      {
+        "file": "dungking-bordermest-zak",
+        "source": "Groen/PNG met schaduw/IMG_2479.png",
+        "title": "Dungking Border- en Najaarsmest – zak",
+        "alt": "Zak Dungking Border- en Najaarsmest met groen productlabel",
+        "description": "Vooraanzicht van de zak Dungking Border- en Najaarsmest, vrijstaand met schaduw.",
+        "label": "Zak"
+      },
+      {
+        "file": "dungking-bordermest-korrels",
+        "source": "Groen/IMG_2485.jpg",
+        "title": "Dungking Border- en Najaarsmest – korrels",
+        "alt": "Close-up van Dungking Border- en Najaarsmest korrels op een groene achtergrond",
+        "description": "Detailfoto van de vorm en structuur van Dungking Border- en Najaarsmest korrels tegen de bijbehorende productkleur.",
+        "label": "Korrels"
+      }
+    ]
+  },
+  "aanplantmest": {
+    "name": "Dungking Aanplantmest",
+    "color": "blauw",
+    "photos": [
+      {
+        "file": "dungking-aanplantmest-overzicht",
+        "source": "Blauw/PNG met schaduw/IMG_2451.png",
+        "title": "Dungking Aanplantmest – overzicht",
+        "alt": "Dungking Aanplantmest: zak, transparante buis met mestkorrels en emmer met blauw deksel",
+        "description": "Overzichtsfoto van Dungking Aanplantmest met de zak, een buis met korrels en de emmer. Vrijstaand met schaduw.",
+        "label": "Overzicht"
+      },
+      {
+        "file": "dungking-aanplantmest-emmer",
+        "source": "Blauw/PNG met schaduw/IMG_2453.png",
+        "title": "Dungking Aanplantmest – emmer",
+        "alt": "Emmer Dungking Aanplantmest met blauw deksel en productetiket",
+        "description": "Vooraanzicht van de emmer Dungking Aanplantmest, vrijstaand met schaduw.",
+        "label": "Emmer"
+      },
+      {
+        "file": "dungking-aanplantmest-zak",
+        "source": "Blauw/PNG met schaduw/IMG_2468.png",
+        "title": "Dungking Aanplantmest – zak",
+        "alt": "Zak Dungking Aanplantmest met blauw productlabel",
+        "description": "Vooraanzicht van de zak Dungking Aanplantmest, vrijstaand met schaduw.",
+        "label": "Zak"
+      },
+      {
+        "file": "dungking-aanplantmest-korrels",
+        "source": "Blauw/IMG_2475.jpg",
+        "title": "Dungking Aanplantmest – korrels",
+        "alt": "Close-up van Dungking Aanplantmest korrels op een blauwe achtergrond",
+        "description": "Detailfoto van de vorm en structuur van Dungking Aanplantmest korrels tegen de bijbehorende productkleur.",
+        "label": "Korrels"
+      }
+    ]
+  },
+  "kingseed": {
+    "name": "KingSeed Allround",
+    "color": "rood",
+    "photos": [
+      {
+        "file": "kingseed-allround-overzicht",
+        "source": "Rood/IMG_2510.png",
+        "title": "KingSeed Allround – overzicht",
+        "alt": "KingSeed Allround graszaad: papieren zak en twee emmers, waarvan één met rood deksel",
+        "description": "Overzicht van de gefotografeerde KingSeed Allround-verpakkingen met bestaande schaduw.",
+        "label": "Overzicht"
+      },
+      {
+        "file": "kingseed-allround-emmer-75-kg",
+        "source": "Rood/7.5KG/IMG_2501.png",
+        "title": "KingSeed Allround – emmer 7,5 kg",
+        "alt": "KingSeed Allround graszaad in een emmer van 7,5 kg met rood deksel",
+        "description": "Vooraanzicht van de KingSeed Allround-emmer van 7,5 kg, vrijstaand met schaduw.",
+        "label": "Emmer 7,5 kg"
+      },
+      {
+        "file": "kingseed-allround-emmer-375-kg",
+        "source": "Rood/3.75KG/IMG_2505.png",
+        "title": "KingSeed Allround – emmer 3,75 kg",
+        "alt": "KingSeed Allround graszaad in een witte emmer van 3,75 kg",
+        "description": "Gefotografeerde KingSeed Allround-emmer van 3,75 kg. Vraag naar de actuele beschikbaarheid van deze verpakking.",
+        "label": "Emmer 3,75 kg"
+      },
+      {
+        "file": "kingseed-allround-zak-2-kg",
+        "source": "Rood/2KG/IMG_2503.png",
+        "title": "KingSeed Allround – zak 2 kg",
+        "alt": "KingSeed Allround graszaad in een papieren zak van 2 kg",
+        "description": "Gefotografeerde KingSeed Allround-zak van 2 kg. Vraag naar de actuele beschikbaarheid van deze verpakking.",
+        "label": "Zak 2 kg"
+      }
+    ]
+  },
+  "vitalmix": {
+    "name": "Vitalmix aanplantgrond",
+    "color": "wit",
+    "photos": [
+      {
+        "file": "vitalmix-aanplantgrond-zak",
+        "source": "Wit/PNG met schaduw/IMG_2514.png",
+        "title": "Vitalmix aanplantgrond – zak",
+        "alt": "Witte zak Vitalmix aanplantgrond met Eco Yard Supply-logo",
+        "description": "Vitalmix aanplantgrond in een witte zak met Eco Yard Supply-logo, vrijstaand met schaduw.",
+        "label": "Zak"
+      },
+      {
+        "file": "vitalmix-aanplantgrond-verpakking",
+        "source": "Wit/PNG met schaduw/IMG_2511.png",
+        "title": "Vitalmix aanplantgrond – verpakking",
+        "alt": "Witte gesloten zak Vitalmix aanplantgrond, van boven gefotografeerd",
+        "description": "Verpakkingsfoto van de witte Vitalmix-zak, vrijstaand met schaduw.",
+        "label": "Verpakking"
+      },
+      {
+        "file": "vitalmix-aanplantgrond-structuur",
+        "source": "Wit/PNG met schaduw/IMG_2517.png",
+        "title": "Vitalmix aanplantgrond – structuur",
+        "alt": "Losse Vitalmix aanplantgrond met zichtbare vezelige structuur",
+        "description": "Detailfoto van de structuur van Vitalmix aanplantgrond, vrijstaand met bestaande schaduw.",
+        "label": "Structuur"
+      }
+    ]
+  }
+}

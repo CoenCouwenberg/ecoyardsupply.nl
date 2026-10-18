@@ -28,3 +28,17 @@ Met `BASE_PATH=/preview` kan dezelfde server ook een hosting-submap simuleren. A
 De builder beheert de HTML in `advies/`, `producten/index.html`, `producten/vitalmix.html`, `producten/kingseed.html` en `voor-hoveniers.html`; pas die gegenereerde bestanden niet handmatig aan.
 
 Zie `SEO-ROADMAP.md` voor zoekwoordclusters, claimregels en volgende contentprioriteiten.
+
+## Productfoto’s
+
+De visueel gecontroleerde selectie en Nederlandse titels, altteksten en afbeeldingsomschrijvingen staan in `content/product-photos.json`. De originele fotomap blijft buiten de repository. Genereer de WebP-bestanden met Python en Pillow:
+
+```sh
+python3 scripts/optimize-product-photos.py "/pad/naar/Productfoto's"
+node scripts/build-advice.mjs
+node scripts/validate-site.mjs
+```
+
+Dit maakt 1600 × 1600 WebP’s van maximaal 300 kB en 560 × 560 varianten voor kaarten/miniaturen, met behoud van verhoudingen, transparantie en bestaande schaduwen. Titel en omschrijving worden ook als XMP opgeslagen. Werkelijke bestandsgroottes staan in `content/product-photo-sizes.json`. De huidige selectie valt volledig binnen 200–300 kB per grote foto; kleinere varianten zijn bewust kleiner.
+
+`scripts/product-photos.mjs` verzorgt galerijen, afbeeldingsmetadata en contactknoppen. De vier handmatig onderhouden Dungking-pagina’s bevatten gemarkeerde fotoblokken die de builder bijwerkt. Behoud deze blokmarkeringen bij toekomstige wijzigingen. Zonder JavaScript blijven de miniaturen als links naar de foto's bruikbaar.
