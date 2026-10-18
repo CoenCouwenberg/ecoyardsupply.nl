@@ -272,3 +272,9 @@ Publicatiestap op 18 oktober 2026:
 - Coen heeft expliciet toestemming gegeven voor commit en push naar `main`.
 - Voor publicatie blokkeert `.htaccess` HTTP-toegang tot Markdown-projectdocumenten en het `.xlsm`-SEO-onderzoek, omdat de repository ook als statische webroot wordt gebruikt. Publieke HTML-, afbeeldings- en PDF-routes blijven behouden.
 - Remote `origin/main` vóór commit opgehaald; actuele branch en controles worden gecontroleerd voordat de goedgekeurde wijziging wordt gepusht.
+
+Resultaat publicatiecontrole, 18 oktober 2026:
+- Websitecommit `f841841` succesvol naar `origin/main` gepusht. Geen force-push, mergeconflict of authenticatiewijziging nodig.
+- Sitevalidator vóór commit opnieuw geslaagd voor 29 pagina’s; JavaScript-syntax en diff-whitespace gecontroleerd.
+- Directe HTTPS-controle na push met cache-bypass: homepage en Bordermest geven HTTP 200 maar bevatten nog niet de nieuwe fotopaden/galerij; nieuwe Bordermest-WebP geeft HTTP 404. Hostingdeploy is dus nog niet live bevestigd.
+- Interne Markdown- en werkboekroutes geven op de oude live versie nog HTTP 200. De toegevoegde afscherming is pas actief zodra de hosting de nieuwe `.htaccess` overneemt. Geen documentinhoud in uitvoer getoond. Hostingconfiguratie niet gewijzigd; geen automatische monitor aangemaakt.
