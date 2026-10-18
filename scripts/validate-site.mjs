@@ -57,7 +57,8 @@ function localTarget(sourceRelative, href) {
     if (!href.startsWith(siteOrigin)) return null;
     href = href.slice(siteOrigin.length) || "/";
   }
-  const [pathname, fragment = ""] = href.split("#", 2);
+  const [targetWithQuery, fragment = ""] = href.split("#", 2);
+  const pathname = targetWithQuery.split("?", 1)[0];
   let targetRelative;
   if (!pathname) targetRelative = sourceRelative;
   else if (pathname.startsWith("/")) targetRelative = pathname === "/" ? "index.html" : pathname.slice(1);

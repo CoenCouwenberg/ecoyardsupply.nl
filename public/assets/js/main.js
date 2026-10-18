@@ -1,7 +1,9 @@
-const revealItems = document.querySelectorAll(".reveal");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNavigation = document.querySelector("#site-navigation");
 
+// Content is visible immediately, including with the previous CSS still cached.
+// Keep this before enabling the enhanced mobile menu styles.
+document.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
 document.documentElement.classList.add("reveal-animations");
 
 if (menuToggle && siteNavigation) {
@@ -20,26 +22,6 @@ if (menuToggle && siteNavigation) {
       siteNavigation.classList.remove("is-open");
     });
   });
-}
-
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    { threshold: 0.16 }
-  );
-
-  revealItems.forEach((item) => revealObserver.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
 document.addEventListener("click", (event) => {

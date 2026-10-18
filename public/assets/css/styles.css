@@ -1033,40 +1033,10 @@ p {
   fill: currentColor;
 }
 
-.reveal-animations .reveal {
-  opacity: 0;
-  transform: translateY(1.25rem);
-  transition:
-    opacity 620ms ease,
-    transform 620ms ease;
-}
-
-.reveal-animations .reveal.is-visible {
+/* Sections must never depend on a scroll observer to become readable. */
+.reveal {
   opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-animations .hero.reveal {
-  transform: translateY(0);
-}
-
-.reveal-animations .hero.reveal .hero-copy,
-.reveal-animations .hero.reveal .hero-panel {
-  opacity: 0;
-  transform: translateY(1rem);
-  transition:
-    opacity 700ms ease,
-    transform 700ms ease;
-}
-
-.reveal-animations .hero.reveal.is-visible .hero-copy,
-.reveal-animations .hero.reveal.is-visible .hero-panel {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-animations .hero.reveal.is-visible .hero-panel {
-  transition-delay: 120ms;
+  transform: none;
 }
 
 .footer-inner {
@@ -1217,13 +1187,6 @@ p {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-  }
-
-  .reveal-animations .reveal,
-  .reveal-animations .hero.reveal .hero-copy,
-  .reveal-animations .hero.reveal .hero-panel {
-    opacity: 1;
-    transform: none;
   }
 }
 

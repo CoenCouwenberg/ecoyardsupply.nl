@@ -278,3 +278,15 @@ Resultaat publicatiecontrole, 18 oktober 2026:
 - Sitevalidator vóór commit opnieuw geslaagd voor 29 pagina’s; JavaScript-syntax en diff-whitespace gecontroleerd.
 - Directe HTTPS-controle na push met cache-bypass: homepage en Bordermest geven HTTP 200 maar bevatten nog niet de nieuwe fotopaden/galerij; nieuwe Bordermest-WebP geeft HTTP 404. Hostingdeploy is dus nog niet live bevestigd.
 - Interne Markdown- en werkboekroutes geven op de oude live versie nog HTTP 200. De toegevoegde afscherming is pas actief zodra de hosting de nieuwe `.htaccess` overneemt. Geen documentinhoud in uitvoer getoond. Hostingconfiguratie niet gewijzigd; geen automatische monitor aangemaakt.
+
+## 17. Mobiele zichtbaarheid — 18 oktober 2026
+
+Coen meldt dat de homepage vanaf de producten onzichtbaar blijft tot in-/uitzoomen. Dit is een vervolgreparatie binnen de goedgekeurde productupdate/publicatie naar `main`.
+
+- Oorzaak lokaal gereproduceerd bij 400 × 600: productsectie circa 4.779 px hoog, dus maximaal 12,55% tegelijk in beeld. De IntersectionObserver vereiste 16%, waardoor de sectie op `opacity: 0` bleef staan.
+- Scrollafhankelijke verberging en sectie-/hero-verschijnanimaties verwijderd. Inhoud is vanaf het laden zichtbaar; mobiel menu, galerijen en andere interacties blijven behouden.
+- JavaScript markeert secties direct zichtbaar voordat de menustijlen worden aangezet. Dit houdt inhoud zichtbaar wanneer de vorige CSS nog is gecachet. Nieuwe CSS verbergt ook met de vorige JavaScript-versie geen secties.
+- Alle 29 pagina's laden CSS/JS met releasequery `v=20261018-visible`, zodat bestaande bezoekers de gerepareerde bestanden ophalen. Builder behoudt deze verwijzingen; validator ondersteunt queryparameters bij lokale bestandscontrole.
+- Gecontroleerd op 400 × 600 en 1440 × 1000: alle secties/hero-onderdelen hebben opacity 1; geen horizontale overflow. Mobiel menu getest. Aanvullende tijdelijke browserfixtures testen secties van 6.000 px zonder JavaScript en met beide combinaties van nieuwe/oude CSS en JavaScript, inclusief een observer die geen callback geeft: alle inhoud zichtbaar.
+- Sitevalidator geslaagd voor 29 pagina's; JavaScript-syntax en `git diff --check` geslaagd. Geen wijziging aan inhoud, productclaims, tracking of routes.
+- Lokale reparatie gecontroleerd; commit en push naar `main` volgen binnen de bestaande publicatieautorisatie. Live hosting blijft een afzonderlijk te controleren stap.
