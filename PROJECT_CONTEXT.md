@@ -290,3 +290,27 @@ Coen meldt dat de homepage vanaf de producten onzichtbaar blijft tot in-/uitzoom
 - Gecontroleerd op 400 × 600 en 1440 × 1000: alle secties/hero-onderdelen hebben opacity 1; geen horizontale overflow. Mobiel menu getest. Aanvullende tijdelijke browserfixtures testen secties van 6.000 px zonder JavaScript en met beide combinaties van nieuwe/oude CSS en JavaScript, inclusief een observer die geen callback geeft: alle inhoud zichtbaar.
 - Sitevalidator geslaagd voor 29 pagina's; JavaScript-syntax en `git diff --check` geslaagd. Geen wijziging aan inhoud, productclaims, tracking of routes.
 - Lokale reparatie gecontroleerd; commit en push naar `main` volgen binnen de bestaande publicatieautorisatie. Live hosting blijft een afzonderlijk te controleren stap.
+
+
+## 18. GTM en contactmetingen — 18 oktober 2026
+
+Coen heeft expliciet toestemming gegeven voor GTM-publicatie en commit/push naar `main`. De website haalt hij zelf op zijn eigen server binnen; hosting niet openen of wijzigen. Er staat geen contactformulier op de website; Coen heeft bevestigd dat het formulier later volgt. Geen testmail verstuurd en geen e-mailadres gewijzigd.
+
+Implementatie:
+- Container `GTM-5KRRJ4CW` op alle 29 pagina's: headscript en noscript direct na body. Gedeelde snippets in `scripts/tag-manager.mjs`; builder en vijf handmatig onderhouden pagina's aangepast. JavaScript-releasequery `v=20261018-gtm`.
+- Algemene contactklikken: `whatsapp_click`, `email_click`, `phone_click`. Deze vervangen de eerdere algemene `contact_click`.
+- Bestelknoppen op alle zes productpagina's en directe WhatsApp-bestelknoppen op de producthub: `product_whatsapp_click` en `product_phone_click`. Iedere klik stuurt uitsluitend zijn eigen gebeurtenis; geen dubbele algemene contactgebeurtenis. Metadata via `data-contact-intent="order"` en product-ID. Gewone contactklikken wissen productcontext uit de gedeelde dataLayer.
+- Product-ID wordt meegestuurd als `product_id` (bijvoorbeeld `gazonmest`). Geen contact-URL, WhatsApp-berichttekst of e-mailonderwerp in de klikgebeurtenissen. Bestaande PDF-meting en bestaande GA4-paginaweergavencode behouden.
+- GA4-account `396217987`, property `539448634`, stream `G-LQNK50RZ5W`: alle vijf gebeurtenissen aangemaakt en gemarkeerd als belangrijk, telling eenmaal per gebeurtenis, zonder fictieve standaardgeldwaarde. Gebeurtenisdimensie `Product` geregistreerd op parameter `product_id`.
+- GTM: tag `GA4 - Contactklikken`, gebeurtenisnaam `{{Event}}`, parameter `product_id={{DLV - product_id}}`. Trigger `Contactklikken - dataLayer` beperkt tot `^(whatsapp_click|email_click|phone_click|product_whatsapp_click|product_phone_click)$`.
+- GTM voegde automatisch Analytics-basistag en containerinstellingen toe. Dubbele configuratieopdrachten negeren staat aan; nieuwe automatische verzameling van door gebruikers verstrekte gegevens uitgezet. Geen extra alleen-lezen-accountkoppeling toegevoegd.
+- GTM-versie 2, `Ecoyard Supply - contact en productbestelintentie`, succesvol gepubliceerd op 18 oktober 2026 om 19:16 (Europe/Amsterdam). UI bevestigt “Versie 2 is live”.
+
+Uitgevoerde controles:
+- Builder, validator (29 pagina's), JavaScript-syntax en `git diff --check` geslaagd.
+- Tijdelijke Node/VM-tests: algemene versus productspecifieke gebeurtenissen, één event per klik, productcontext gewist bij algemene klik, WhatsApp-hostvalidatie, PDF-behoud, GTM-plaatsing op alle pagina's en bestelmetadata op alle zes productpagina's.
+- GTM-voorbeeldmodus op lokale preview poort 8974: alle drie algemene contactklikken echt getest, elk eenmaal geactiveerd en naar de juiste stream verstuurd. Eén paginaweergave zichtbaar voor het laden van de homepage; Tag Assistant-console 0.
+- Nieuwe productknoppen op Gazonmest echt getest: `product_phone_click` en `product_whatsapp_click`, tag precies tweemaal geactiveerd, beide hits naar `G-LQNK50RZ5W`. Hitdetail bevestigt `ep.product_id=gazonmest` en conversiestatus. Telefoon-appdialoog geannuleerd en WhatsApp-tab gesloten zonder gesprek of bericht.
+- GA4 bevestigt alle vijf gebeurtenissen als belangrijk en de opgeslagen Product-dimensie. Screenshots buiten webroot in `/private/tmp/ecoyard-ga4-five-key-events.png` en `/private/tmp/ecoyard-gtm-published.png`.
+
+Websitepublicatie: de broncode in deze release is bedoeld voor `main`; Coen zet de website zelf live vanaf GitHub. De nieuwe sitecode is nog niet op de productieserver geverifieerd. Na Coens serverupdate moet de live meting nog worden gecontroleerd. Browserconnector heeft alleen toegang tot Chrome-profiel Maaike; voor Coens bestaande Google-accounts is native Chrome gebruikt.

@@ -24,38 +24,50 @@ if (menuToggle && siteNavigation) {
   });
 }
 
+// GTM forwards distinct contact and product-order-intent events to the existing GA4 stream.
+// Send only the contact method; URLs may contain message text or email subjects.
 document.addEventListener("click", (event) => {
-  const link = event.target.closest("a");
+  const link = event.target.closest?.("a");
+  if (!link) return;
 
-  if (!link || typeof window.gtag !== "function") {
+  const url = new URL(link.href, window.location.href);
+  let contactMethod;
+  let eventName;
+  if (url.protocol === "tel:") {
+    contactMethod = "phone";
+    eventName = "phone_click";
+  } else if (url.protocol === "mailto:") {
+    contactMethod = "email";
+    eventName = "email_click";
+  } else if (url.protocol === "https:" &&
+      ["wa.me", "api.whatsapp.com", "web.whatsapp.com"].includes(url.hostname)) {
+    contactMethod = "whatsapp";
+    eventName = "whatsapp_click";
+  }
+
+  if (eventName) {
+    window.dataLayer = window.dataLayer || [];
+    const productId = link.dataset.productId;
+    const isProductOrder = link.dataset.contactIntent === "order" && productId &&
+      ["whatsapp", "phone"].includes(contactMethod);
+    window.dataLayer.push({
+      event: isProductOrder ? `product_${contactMethod}_click` : eventName,
+      contact_method: contactMethod,
+      // Clear product context on ordinary contact clicks in the shared data layer.
+      product_id: isProductOrder ? productId : undefined,
+      product_name: isProductOrder ? link.dataset.productName : undefined,
+    });
     return;
   }
 
-  const href = link.getAttribute("href") || "";
-  let eventName = "";
-  let eventDetails = {};
-
-  if (href.startsWith("tel:")) {
-    eventName = "contact_click";
-    eventDetails = { contact_method: "phone" };
-  } else if (href.startsWith("mailto:")) {
-    eventName = "contact_click";
-    eventDetails = { contact_method: "email" };
-  } else if (href.includes("wa.me/")) {
-    eventName = "contact_click";
-    eventDetails = { contact_method: "whatsapp" };
-  } else if (/\.pdf(?:$|[?#])/i.test(href)) {
-    eventName = "file_download";
-    eventDetails = { file_name: href.split("/").pop().split(/[?#]/)[0] };
-  } else {
-    return;
+  // Preserve the existing PDF measurement.
+  if (/\.pdf$/i.test(url.pathname) && typeof window.gtag === "function") {
+    window.gtag("event", "file_download", {
+      file_name: url.pathname.split("/").pop(),
+      link_text: link.textContent.trim(),
+      link_url: link.href,
+    });
   }
-
-  window.gtag("event", eventName, {
-    ...eventDetails,
-    link_text: link.textContent.trim(),
-    link_url: link.href,
-  });
 });
 
 // Keep every article available without JavaScript; enhance the overview with filters.

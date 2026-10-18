@@ -21,8 +21,11 @@ export function gallery(slug) {
 export function orderLink(slug) {
   return `https://wa.me/31626672878?text=${encodeURIComponent(`Hallo Eco Yard Supply, ik wil graag ${productPhotos[slug].name} bestellen. Kunnen jullie mij helpen met de hoeveelheid, prijs en beschikbaarheid?`)}`;
 }
+export function orderTracking(slug) {
+  return `data-contact-intent="order" data-product-id="${esc(slug)}" data-product-name="${esc(productPhotos[slug].name)}"`;
+}
 export function orderPanel(slug) {
-  return `<div class="product-order" id="bestellen"><p class="eyebrow">Bestellen bij Eco Yard Supply</p><p>Geef je gewenste hoeveelheid door. We stemmen prijs, beschikbaarheid en afhalen of levering persoonlijk met je af.</p><div class="actions"><a class="button" href="${orderLink(slug)}" target="_blank" rel="noopener">Bestellen via WhatsApp</a><a class="text-link" href="tel:+31626672878">Liever bellen? +31 6 2667 2878</a></div><p class="order-note">Je bestelling loopt via persoonlijk contact. Afhalen op afspraak.</p></div>`;
+  return `<div class="product-order" id="bestellen"><p class="eyebrow">Bestellen bij Eco Yard Supply</p><p>Geef je gewenste hoeveelheid door. We stemmen prijs, beschikbaarheid en afhalen of levering persoonlijk met je af.</p><div class="actions"><a class="button" href="${orderLink(slug)}" ${orderTracking(slug)} target="_blank" rel="noopener">Bestellen via WhatsApp</a><a class="text-link" href="tel:+31626672878" ${orderTracking(slug)}>Liever bellen? +31 6 2667 2878</a></div><p class="order-note">Je bestelling loopt via persoonlijk contact. Afhalen op afspraak.</p></div>`;
 }
 export function articlePhoto(page) {
   const slug = page.product.href.split('/').pop();
