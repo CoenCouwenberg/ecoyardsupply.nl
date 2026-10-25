@@ -314,3 +314,13 @@ Uitgevoerde controles:
 - GA4 bevestigt alle vijf gebeurtenissen als belangrijk en de opgeslagen Product-dimensie. Screenshots buiten webroot in `/private/tmp/ecoyard-ga4-five-key-events.png` en `/private/tmp/ecoyard-gtm-published.png`.
 
 Websitepublicatie: de broncode in deze release is bedoeld voor `main`; Coen zet de website zelf live vanaf GitHub. De nieuwe sitecode is nog niet op de productieserver geverifieerd. Na Coens serverupdate moet de live meting nog worden gecontroleerd. Browserconnector heeft alleen toegang tot Chrome-profiel Maaike; voor Coens bestaande Google-accounts is native Chrome gebruikt.
+
+
+## 19. NovaFerm Viva — 25 oktober 2026
+
+- Coen vraagt toevoeging en directe publicatie. Uitgevoerd op `main`; publicatiestatus volgt na push en HTTPS-controle. Eerdere handmatige serverprocedure blijft van toepassing; geen hostinginstellingen gewijzigd.
+- Nieuw: `/producten/novaferm-viva`, in de bestaande productstijl met één flesfoto, zonder miniaturengalerij. Bestellen via bestaande WhatsApp-/telefoonroute met product-ID `novaferm-viva`.
+- Homepage behoudt zes producten in twee rijen van drie. NovaFerm staat eronder in een eigen blok Plantenverzorging; dit blok staat ook onderaan de producthub, met groepsanker en opname in ItemList, sitemap en llms.txt. Geen extra assortiment verzonnen om een rij te vullen.
+- Bron: meegeleverde leveranciersscreenshot en transparante flesfoto. Werking beschreven volgens leverancier; dosering 1 liter/500 m², verdunnen in minimaal 25 liter water, vóór en na toepassing beregenen. Bewaar- en beschermingsinstructies meegenomen. Geen aanvullende toelatingsclaims gepubliceerd.
+- SEO-plan `Eco_Yard_Supply_SEO_plan_2026-2027.xlsm`: werkboekstructuur en teksten over productpagina’s ingezien; dit is een gerichte assortimentsuitbreiding op expliciet verzoek. Geen nieuwe zoekwoordstrategie of exportcijfers gebruikt.
+- Builder en validator geslaagd voor 30 HTML-pagina’s. Desktop en mobiele lay-out bekeken; bij werkelijk gemeten 480 en 780 CSS-pixels geen horizontale overflow. Desktop productpagina: één foto, geen defecte afbeeldingen, beide bestelknoppen dragen het juiste product-ID. Homepage behoudt bestaande rasterregels.

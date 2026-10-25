@@ -218,5 +218,19 @@
         "label": "Structuur"
       }
     ]
+  },
+  "novaferm-viva": {
+    "name": "NovaFerm Viva",
+    "color": "groen",
+    "photos": [
+      {
+        "file": "novaferm-viva-fles",
+        "source": "NovaFerm Viva bottle transparent achtergrond.png",
+        "title": "NovaFerm Viva – fles 1 liter",
+        "alt": "Witte fles NovaFerm Viva met groen etiket en witte dop",
+        "description": "Vrijstaande productfoto van de fles NovaFerm Viva met de bestaande schaduw.",
+        "label": "Fles 1 liter"
+      }
+    ]
   }
 }

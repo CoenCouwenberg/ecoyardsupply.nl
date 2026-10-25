@@ -25,7 +25,7 @@ node scripts/serve.mjs
 
 Met `BASE_PATH=/preview` kan dezelfde server ook een hosting-submap simuleren. Alle zichtbare interne links en assets gebruiken daarom relatieve paden; canonicals en structured data blijven bewust absolute productie-URL's.
 
-De builder beheert de HTML in `advies/`, `producten/index.html`, `producten/vitalmix.html`, `producten/kingseed.html` en `voor-hoveniers.html`; pas die gegenereerde bestanden niet handmatig aan.
+De builder beheert de HTML in `advies/`, `producten/index.html`, `producten/vitalmix.html`, `producten/kingseed.html`, `producten/novaferm-viva.html` en `voor-hoveniers.html`; pas die gegenereerde bestanden niet handmatig aan.
 
 Zie `SEO-ROADMAP.md` voor zoekwoordclusters, claimregels en volgende contentprioriteiten.
 
@@ -42,3 +42,5 @@ node scripts/validate-site.mjs
 Dit maakt 1600 × 1600 WebP’s van maximaal 300 kB en 560 × 560 varianten voor kaarten/miniaturen, met behoud van verhoudingen, transparantie en bestaande schaduwen. Titel en omschrijving worden ook als XMP opgeslagen. Werkelijke bestandsgroottes staan in `content/product-photo-sizes.json`. De huidige selectie valt volledig binnen 200–300 kB per grote foto; kleinere varianten zijn bewust kleiner.
 
 `scripts/product-photos.mjs` verzorgt galerijen, afbeeldingsmetadata en contactknoppen. De vier handmatig onderhouden Dungking-pagina’s bevatten gemarkeerde fotoblokken die de builder bijwerkt. Behoud deze blokmarkeringen bij toekomstige wijzigingen. Zonder JavaScript blijven de miniaturen als links naar de foto's bruikbaar.
+
+NovaFerm Viva gebruikt één aangeleverde flesfoto. Bewaar `NovaFerm Viva bottle transparent achtergrond.png` naast de andere bronmappen bij het opnieuw genereren van alle productfoto’s. Het blok Plantenverzorging op de homepage wordt door de builder bijgewerkt tussen de `novaferm-section`-markeringen.
