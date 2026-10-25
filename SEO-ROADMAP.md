@@ -24,11 +24,23 @@ Bron voor deze fase is tabblad `SEO selectie` in `Eco_Yard_Supply_SEO_plan_2026-
 
 - `/` — brede regionale landingspagina
 - `/producten/` — productvergelijker op toepassing, seizoen, NPK en dosering
-- `/producten/*` — zes afzonderlijke productpagina's met extensieloze URL's
-- `/advies/` — kennisbank met negentien verdiepende adviespagina's
+- `/producten/*` — zeven afzonderlijke productpagina's met extensieloze URL's
+- `/advies/` — kennisbank met negenentwintig verdiepende adviespagina's na de lokale uitbreiding van 25 oktober 2026
 - `/voor-hoveniers` — zakelijke en regionale landingspagina
 
 De kennisbank bevat naast de basisartikelen aparte zoekintenties voor tuinbemesting, insectenmest, rozen, voorjaarsbemesting, najaarsbemesting, graszoden, beukenhagen en fruitbomen. Elke adviespagina bevat een direct antwoord, inhoudelijke verdieping, FAQ, productschakel, gerelateerde artikelen en een transparante bronnotitie.
+
+## Lokale clusteruitbreiding — 25 oktober 2026
+
+Bron: Coens expliciete opdracht voor 10–15 relevante compacte blogs, gevolgd door de geplakte historische Zoekwoordplanner-tabel en screenshot. Instellingen: Nederland, alle talen, Google, oktober 2025–september 2026. Het eerdere prognosebestand is niet als zoekvolumebron gebruikt. De selectie vult het SEO-plan 2026–2027 aan; bestaande primaire URL's en productintenties blijven behouden.
+
+Tien nieuwe onderwerpen: engerlingen in gazon, emelten in gazon, verschil tussen beide larven, gazon doorzaaien, graszaad dat niet opkomt, graszaad bewaren, gazonmest per m² berekenen, bemesten bij droogte/regen, NPK begrijpen en aanplantgrond versus potgrond. Nieuwe broncontent staat in `content/cluster-advice-pages.mjs`, geïmporteerd door `content/advice-pages.mjs`.
+
+Vijf bestaande artikelen zijn gericht bijgewerkt: `gazon-herstellen`, `gazon-bemesten`, `wanneer-graszaad-zaaien`, `hoeveel-graszaad-per-m2` en `aanplantgrond-of-tuinaarde`. Hun tekst bevat nu maximaal vier interne links met unieke bestemmingen. Nieuwe artikelen bevatten drie of vier. Navigatie, bronnen, productzijbalk en gerelateerde kaarten blijven aparte onderdelen. NovaFerm, KingSeed, Vitalmix en Gazonmest verwijzen terug naar passende adviezen.
+
+De kennisbank heeft productbeelden en een extra filter Bodeminsecten. Nieuwe artikelen gebruiken echte product-/detailfoto's; productbeelden worden ook gebruikt bij delen. Een afbeeldingsupdate overschrijft geen recentere inhoudelijke wijzigingsdatum meer.
+
+De volledige mapping, geselecteerde onderzoekswaarden, bronnen en beperkingen staan buiten de webroot in `../SEO-clusterplan-2026-10-25.md`. Er zijn geen onderzoeksgegevens aan publieke artikelen toegevoegd. Status: lokaal gereed en gecontroleerd; Coen heeft op 25 oktober 2026 expliciet commit en push naar `main` geautoriseerd. Live publicatie volgt de bestaande handmatige serverprocedure en wordt afzonderlijk gecontroleerd.
 
 ## Publicatieregels
 

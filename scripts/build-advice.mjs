@@ -54,17 +54,18 @@ function footer() {
 }
 
 function head({ title, description, canonical, type = "article", schema }) {
-  const product = canonical.includes('/producten/') && productPhotos[canonical.split('/').pop()];
+  const advice = canonical.includes('/advies/') && pageBySlug.get(canonical.split('/').pop());
+  const product = productPhotos[(advice ? advice.product.href : canonical).split('/').pop()];
   const shareImage = product ? `${site}/public/assets/images/products/photos/${product.photos[0].file}.webp` : `${site}/public/assets/images/ecoyard-supply-hero.png`;
   const shareAlt = product ? product.photos[0].alt : 'Eco Yard Supply organische meststoffen in Noord-Brabant';
-  if (product && schema['@graph']) schema['@graph'].push(...product.photos.map(imageSchema));
+  if (product && canonical.includes('/producten/') && schema['@graph']) schema['@graph'].push(...product.photos.map(imageSchema));
   return `<!doctype html><html lang="nl"><head>${analytics()}
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${title}</title><meta name="description" content="${description}"><meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="${canonical}"><link rel="icon" type="image/png" href="/public/assets/images/ecoyard-favicon.png"><link rel="apple-touch-icon" href="/public/assets/images/ecoyard-favicon.png">
     <meta property="og:type" content="${type}"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="Eco Yard Supply"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${shareImage}"><meta property="og:image:alt" content="${shareAlt}">
     <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${shareImage}">
-    <script type="application/ld+json">${escapeJson(schema)}</script><script>document.documentElement.classList.add("js")</script><link rel="stylesheet" href="/public/assets/css/styles.css?v=20261018-visible"></head>`;
+    <script type="application/ld+json">${escapeJson(schema)}</script><script>document.documentElement.classList.add("js")</script><link rel="stylesheet" href="/public/assets/css/styles.css?v=20261025-clusters"></head>`;
 }
 
 function relatedCards(page) {
@@ -74,10 +75,14 @@ function relatedCards(page) {
   }).join("");
 }
 
+function articleModified(page) {
+  return [page.dateModified, page.datePublished || published, (articlePhoto(page) || detailPhoto(page)) && photoUpdate].filter(Boolean).sort().at(-1);
+}
+
 function articleSchema(page) {
   const canonical = `${site}/advies/${page.slug}`;
   const datePublished = page.datePublished || published;
-  const dateModified = articlePhoto(page) || detailPhoto(page) ? photoUpdate : (page.dateModified || page.datePublished || published);
+  const dateModified = articleModified(page);
   return { "@context": "https://schema.org", "@graph": [
     { "@type": "Article", "@id": `${canonical}#article`, headline: page.title, description: page.description, datePublished, dateModified, inLanguage: "nl-NL", mainEntityOfPage: canonical, image: productPhotos[page.product.href.split('/').pop()]?.photos.slice(0, 1).map(imageSchema), author: { "@type": "Organization", name: "Eco Yard Supply", url: site }, publisher: { "@id": `${site}/#business` } },
     { "@type": "BreadcrumbList", itemListElement: [
@@ -91,7 +96,7 @@ function articleSchema(page) {
 
 function articlePage(page) {
   const canonical = `${site}/advies/${page.slug}`;
-  const dateModified = articlePhoto(page) || detailPhoto(page) ? photoUpdate : (page.dateModified || page.datePublished || published);
+  const dateModified = articleModified(page);
   const bodyHtml = page.body.trim();
   const faqHtml = page.faq.map(([question, answer]) => `<details><summary>${question}</summary><p>${answer}</p></details>`).join("");
   return makePortable(`${head({ title: page.seoTitle, description: page.description, canonical, schema: articleSchema(page) })}<body class="article-page">${tagManagerBody}${header()}
@@ -118,15 +123,21 @@ function articlePage(page) {
 function hubPage() {
   const canonical = `${site}/advies/`;
   const adviceGroups = [
-    { title: "Graszaad", slugs: ["wanneer-graszaad-zaaien", "hoeveel-graszaad-per-m2"] },
-    { title: "Aanplantgrond", slugs: ["aanplantgrond-of-tuinaarde", "hoeveel-aanplantgrond-nodig"] },
-    { title: "Gazon verzorgen", slugs: ["gazon-bemesten", "gazon-herstellen", "organische-gazonmest-of-kunstmest", "gazon-bemesten-voorjaar", "gazon-bemesten-najaar", "mest-voor-graszoden"] },
+    { title: "Graszaad", slugs: ["wanneer-graszaad-zaaien", "hoeveel-graszaad-per-m2", "gazon-doorzaaien", "graszaad-komt-niet-op", "graszaad-bewaren"] },
+    { title: "Aanplantgrond", slugs: ["aanplantgrond-of-tuinaarde", "hoeveel-aanplantgrond-nodig", "aanplantgrond-of-potgrond"] },
+    { title: "Gazon verzorgen", slugs: ["gazon-bemesten", "gazon-herstellen", "organische-gazonmest-of-kunstmest", "gazon-bemesten-voorjaar", "gazon-bemesten-najaar", "mest-voor-graszoden", "hoeveel-gazonmest-per-m2", "gazon-bemesten-bij-droogte"] },
+    { title: "Bodeminsecten", slugs: ["engerlingen-in-gazon", "emelten-in-gazon", "verschil-engerlingen-en-emelten"] },
     { title: "Tuin, borders en bomen", slugs: ["tuin-bemesten", "rozen-bemesten", "borders-bemesten", "beukenhaag-bemesten", "fruitbomen-bemesten"] },
-    { title: "Bodem en bemesting", slugs: advicePages.filter((page) => !["wanneer-graszaad-zaaien", "hoeveel-graszaad-per-m2", "aanplantgrond-of-tuinaarde", "hoeveel-aanplantgrond-nodig", "gazon-bemesten", "gazon-herstellen", "organische-gazonmest-of-kunstmest", "gazon-bemesten-voorjaar", "gazon-bemesten-najaar", "mest-voor-graszoden", "tuin-bemesten", "rozen-bemesten", "borders-bemesten", "beukenhaag-bemesten", "fruitbomen-bemesten"].includes(page.slug)).map((page) => page.slug) },
   ];
+  const groupedSlugs = new Set(adviceGroups.flatMap(group => group.slugs));
+  adviceGroups.push({ title: "Bodem en bemesting", slugs: advicePages.filter(page => !groupedSlugs.has(page.slug)).map(page => page.slug) });
   const categoryBySlug = new Map(adviceGroups.flatMap((group, index) => group.slugs.map((slug) => [slug, String(index)])));
   const filters = [{ title: "Alles", value: "all" }, ...adviceGroups.map((group, index) => ({ title: group.title, value: String(index) }))].map((group) => `<button class="advice-filter" type="button" data-advice-filter="${group.value}" aria-pressed="${group.value === "all"}" aria-controls="advice-cards">${group.title}</button>`).join("");
-  const cards = advicePages.map((page) => `<article class="content-card" data-advice-category="${categoryBySlug.get(page.slug)}"><p class="eyebrow">${page.eyebrow}</p><h2><a href="/advies/${page.slug}">${page.title}</a></h2><p>${page.description}</p><a class="read-more" href="/advies/${page.slug}">Lees het advies</a></article>`).join("");
+  const cards = advicePages.map((page) => {
+    const product = productPhotos[page.product.href.split('/').pop()];
+    const picture = product ? `<div class="advice-card-photo">${photoImage(product.photos[0], { small: true })}</div>` : '';
+    return `<article class="content-card" data-advice-category="${categoryBySlug.get(page.slug)}">${picture}<p class="eyebrow">${page.eyebrow}</p><h2><a href="/advies/${page.slug}">${page.title}</a></h2><p>${page.description}</p><a class="read-more" href="/advies/${page.slug}">Lees het advies</a></article>`;
+  }).join("");
   const schema = { "@context": "https://schema.org", "@graph": [
     { "@type": "CollectionPage", "@id": `${canonical}#page`, name: adviceHub.title, description: adviceHub.description, url: canonical, inLanguage: "nl-NL", publisher: { "@id": `${site}/#business` } },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${site}/` }, { "@type": "ListItem", position: 2, name: "Advies", item: canonical }] },
@@ -143,7 +154,7 @@ function vitalmixPage() {
   const title = "Vitalmix aanplantgrond 50 liter | Eco Yard Supply";
   const description = "Vitalmix: hoogwaardige aanplantgrond in zakken van 50 liter. Bekijk de samenstelling en vraag Eco Yard Supply om advies voor jouw aanplantproject.";
   const schema = { "@context": "https://schema.org", "@graph": [
-    { "@type": "WebPage", "@id": `${canonical}#page`, name: title, description, url: canonical, dateModified: photoUpdate, inLanguage: "nl-NL" },
+    { "@type": "WebPage", "@id": `${canonical}#page`, name: title, description, url: canonical, dateModified: "2026-10-25", inLanguage: "nl-NL" },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${site}/` }, { "@type": "ListItem", position: 2, name: "Producten", item: `${site}/producten/` }, { "@type": "ListItem", position: 3, name: "Vitalmix aanplantgrond", item: canonical }] },
   ] };
   return makePortable(`${head({ title, description, canonical, type: "website", schema })}<body class="article-page">${tagManagerBody}${header()}<main id="inhoud">
@@ -158,7 +169,7 @@ function vitalmixPage() {
       <h2 id="aanplantmest">Aanplantgrond en aanplantmest: twee verschillende producten</h2><p>Vitalmix is een grondmengsel. De afzonderlijke <a href="/producten/aanplantmest">Dungking Aanplantmest</a> heeft een eigen samenstelling en doseervoorschrift. Neem die dosering niet over voor Vitalmix en combineer de producten niet zonder toepassingsadvies. Lees ook <a href="/advies/aanplantgrond-of-tuinaarde">hoe je kiest tussen aanplantgrond, tuinaarde en aanplantmest</a>.</p>
       <p class="source-line">Productinformatie aangeleverd door Eco Yard Supply op 28 september 2026. De actuele verpakking en het toepassingsadvies zijn leidend bij gebruik.</p>
     </article><aside class="article-sidebar"><div class="sticky-card"><p class="eyebrow">Jouw aanplantproject</p><h2>Bespreek je aanvraag</h2><p>Geef de plantnamen, afmetingen en gewenste hoeveelheid door. Vraag naar prijs, beschikbaarheid en de mogelijkheden voor afhalen of levering.</p><a class="button" href="tel:+31626672878">Bel Harm voor advies</a><a class="text-link" href="mailto:info@ecoyardsupply.nl?subject=Aanvraag%20Vitalmix">Mail over Vitalmix</a><p>Eco Yard Supply<br>Landhorst, Noord-Brabant<br>Bezoek en afhalen op afspraak.</p></div></aside></div></section>
-    <section class="section muted-section"><div class="container"><div class="section-heading"><p class="eyebrow">Voorbereid aanplanten</p><h2>Praktisch advies bij Vitalmix</h2></div><div class="cards related-grid">${relatedCards({ related: ["aanplantgrond-of-tuinaarde", "hoeveel-aanplantgrond-nodig", "mest-bij-aanplanten"] })}</div></div></section>
+    <section class="section muted-section"><div class="container"><div class="section-heading"><p class="eyebrow">Voorbereid aanplanten</p><h2>Praktisch advies bij Vitalmix</h2></div><div class="cards related-grid">${relatedCards({ related: ["aanplantgrond-of-tuinaarde", "hoeveel-aanplantgrond-nodig", "aanplantgrond-of-potgrond"] })}</div></div></section>
   </main>${footer()}</body></html>`, "../", "../");
 }
 
@@ -181,6 +192,7 @@ function novafermPage() {
       <h2 id="bewaren">Bewaren en zorgvuldig gebruiken</h2><p>Bewaar droog en koel bij maximaal 20 °C, buiten bereik van kinderen. Sluit de verpakking na gebruik.</p><p>Draag persoonlijke beschermingsmiddelen. Vermijd contact met ogen, mond en beschadigde huid. Schud goed vóór gebruik.</p>
       <p class="source-line">Bron: de door Eco Yard Supply aangeleverde leveranciersinformatie voor NovaFerm Viva, ontvangen op 25 oktober 2026. Controleer vóór gebruik de actuele verpakking en gebruiksaanwijzing.</p>
     </article><aside class="article-sidebar"><div class="sticky-card"><p class="eyebrow">Voor jouw tuin of project</p><h2>Bespreek de toepassing</h2><p>Vertel wat er in je tuin speelt en hoe groot het oppervlak is. Vraag naar de productkeuze, hoeveelheid, prijs en beschikbaarheid.</p><a class="button" href="tel:+31626672878">Bel Harm voor advies</a><a class="text-link" href="mailto:info@ecoyardsupply.nl?subject=Aanvraag%20NovaFerm%20Viva">Mail over NovaFerm Viva</a></div></aside></div></section>
+    <section class="section muted-section"><div class="container"><div class="section-heading"><p class="eyebrow">Eerst de oorzaak bekijken</p><h2>Engerlingen, emelten of iets anders?</h2></div><div class="cards related-grid">${relatedCards({ related: ["engerlingen-in-gazon", "emelten-in-gazon", "verschil-engerlingen-en-emelten"] })}</div></div></section>
   </main>${footer()}</body></html>`, "../", "../");
 }
 
@@ -211,6 +223,7 @@ function kingseedPage() {
       <p class="source-line">Bron: het door Eco Yard Supply aangeleverde KingSeed Allround-productblad. De zaairichtlijnen op deze pagina horen bij dit specifieke product.</p>
     </article><aside class="article-sidebar"><div class="sticky-card"><p class="eyebrow">Voor jouw gazon</p><h2>Bespreek je aanvraag</h2><p>Geef je oppervlakte door en vermeld of je een nieuw gazon aanlegt of doorzaait. Vraag naar prijs en beschikbaarheid.</p><a class="button" href="tel:+31626672878">Bel voor graszaadadvies</a><a class="text-link" href="mailto:info@ecoyardsupply.nl?subject=Aanvraag%20KingSeed">Mail over KingSeed</a></div></aside></div></section>
     <section class="section muted-section"><div class="container"><div class="section-heading"><p class="eyebrow">Praktisch aan de slag</p><h2>Advies over graszaad en gazonherstel</h2></div><div class="cards related-grid">${relatedCards({ related: ["wanneer-graszaad-zaaien", "hoeveel-graszaad-per-m2", "gazon-herstellen"] })}</div></div></section>
+    <section class="section"><div class="container"><div class="section-heading"><p class="eyebrow">Verder met je graszaad</p><h2>Doorzaaien, opkomst en bewaren</h2></div><div class="cards related-grid">${relatedCards({ related: ["gazon-doorzaaien", "graszaad-komt-niet-op", "graszaad-bewaren"] })}</div></div></section>
   </main>${footer()}</body></html>`, "../", "../");
 }
 
@@ -272,8 +285,8 @@ const homeHtml = await fs.readFile(homeFile, "utf8");
 await fs.writeFile(homeFile, homeHtml.replace(/<!-- novaferm-section:start -->[\s\S]*?<!-- novaferm-section:end -->/, `<!-- novaferm-section:start -->${makePortable(novafermSection(), "", "./")}<!-- novaferm-section:end -->`));
 
 const urls = [
-  ["/", "2026-10-25"], ["/producten/", "2026-10-25"], ["/producten/novaferm-viva", "2026-10-25"], ["/producten/kingseed", "2026-10-25"], ["/producten/vitalmix", photoUpdate], ["/producten/startersmest", photoUpdate], ["/producten/gazonmest", "2026-10-25"], ["/producten/bordermest", photoUpdate], ["/producten/aanplantmest", photoUpdate],
-  ["/voor-hoveniers", seedUpdate], ["/advies/", seedUpdate], ...advicePages.map((page) => [`/advies/${page.slug}`, articlePhoto(page) || detailPhoto(page) ? photoUpdate : (page.dateModified || page.datePublished || published)]),
+  ["/", "2026-10-25"], ["/producten/", "2026-10-25"], ["/producten/novaferm-viva", "2026-10-25"], ["/producten/kingseed", "2026-10-25"], ["/producten/vitalmix", "2026-10-25"], ["/producten/startersmest", photoUpdate], ["/producten/gazonmest", "2026-10-25"], ["/producten/bordermest", photoUpdate], ["/producten/aanplantmest", photoUpdate],
+  ["/voor-hoveniers", seedUpdate], ["/advies/", "2026-10-25"], ...advicePages.map((page) => [`/advies/${page.slug}`, articleModified(page)]),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([url, lastmod]) => `  <url><loc>${site}${url}</loc><lastmod>${lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 await fs.writeFile(path.join(root, "sitemap.xml"), sitemap);

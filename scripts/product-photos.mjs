@@ -34,6 +34,12 @@ export function articlePhoto(page) {
   return product ? `<a class="advice-product-photo" href="${page.product.href}">${photoImage(product.photos[0], { sizes: '(min-width: 58rem) 300px, 100vw' })}</a>` : '';
 }
 export function detailPhoto(page) {
+  if (page.photo) {
+    const product = productPhotos[page.photo.product];
+    const photo = product.photos.find(p => p.label === page.photo.label);
+    if (!photo) throw new Error(`Unknown detail photo for ${page.slug}`);
+    return `<figure class="advice-detail-photo">${photoImage(photo, { sizes: '(min-width: 58rem) 700px, 100vw' })}<figcaption>${esc(page.photo.caption)}</figcaption></figure>`;
+  }
   const slug = ({ 'insectenmest': 'aanplantmest', 'gazon-bemesten': 'gazonmest', 'gazon-bemesten-voorjaar': 'startersmest', 'borders-bemesten': 'bordermest', 'gazon-bemesten-najaar': 'bordermest' })[page.slug];
   if (!slug) return '';
   const product = productPhotos[slug];

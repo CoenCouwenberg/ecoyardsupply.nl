@@ -1,4 +1,7 @@
+import { clusterAdvicePages } from "./cluster-advice-pages.mjs";
+
 export const advicePages = [
+  ...clusterAdvicePages,
   {
     slug: "wanneer-graszaad-zaaien",
     title: "Wanneer graszaad zaaien? Temperatuur, seizoen en nazorg",
@@ -15,11 +18,12 @@ export const advicePages = [
 <ol class="steps-list"><li><strong>Beoordeel de plek.</strong> KingSeed Allround is volgens het productblad bedoeld voor zon en halfschaduw. Ga bij diepe schaduw eerst na welk mengsel en welke aanpak passen.</li><li><strong>Bereid de grond voor.</strong> Verwijder onkruid en stenen, maak de grond los en werk naar een vlak zaaibed. Zorg dat regenwater kan wegzakken.</li><li><strong>Meet de oppervlakte.</strong> Kies daarna de hoeveelheid voor nieuwe aanleg of doorzaaien. Dat zijn verschillende doseringen.</li><li><strong>Plan de nazorg.</strong> Zaai op een moment waarop je de eerste weken het bodemvocht kunt blijven controleren.</li></ol>
 <h2 id="zaaien">Nieuw gazon of bestaand gazon doorzaaien?</h2>
 <p>Bij nieuwe aanleg is de KingSeed-richtlijn 25 gram per vierkante meter. Voor doorzaaien van een bestaande grasmat is dat 10 gram per vierkante meter. Weeg de benodigde hoeveelheid af en verdeel gelijkmatig. Bekijk de <a href="/advies/hoeveel-graszaad-per-m2">rekentabel voor graszaad per m²</a> voor jouw oppervlak.</p>
-<p>Bij een dun of beschadigd gazon helpt ook de oorzaak bepalen. Lees eerst <a href="/advies/gazon-herstellen">waarom een gazon geel, dun of kaal wordt</a>. Doorzaaien neemt een probleem met afwatering of intensieve betreding niet vanzelf weg.</p>
+<p>Werk je aan een bestaande grasmat? Volg het <a href="/advies/gazon-doorzaaien">stappenplan voor gazon doorzaaien</a> en beoordeel eerst de oorzaak van dunne plekken. Doorzaaien neemt een probleem met afwatering of intensieve betreding niet vanzelf weg.</p>
 <h2 id="nazorg">Vocht, opkomst en de eerste maaibeurt</h2>
 <p>Houd de grond volgens het KingSeed-productblad de eerste weken vochtig. Geef voorzichtig water zodat het zaad niet wegspoelt. Beperk belopen zolang het jonge gras zich nog moet vestigen.</p>
 <p>Het productblad noemt zichtbaar resultaat binnen één tot twee weken. Zie dit als een indicatie bij passende omstandigheden: bodemtemperatuur, vocht en voorbereiding beïnvloeden de opkomst. Het is geen belofte dat het gazon dan al volledig dicht of belastbaar is.</p>
 <p>Maai volgens het productblad zodra het gras 8 cm hoog is. Controleer ook of de jonge planten voldoende vaststaan en maai voorzichtig. Bespreek eventuele bemesting afzonderlijk; de zaaihoeveelheid is geen mestadvies.</p>
+<p>Zie je na het zaaien weinig ontwikkeling? Controleer <a href="/advies/graszaad-komt-niet-op">waarom graszaad niet opkomt</a> voordat je meer zaad of voeding toevoegt.</p>
 <h2 id="product">KingSeed Allround voor jouw gazon</h2>
 <p>Bekijk <a href="/producten/kingseed">KingSeed Allround graszaad</a> voor de samenstelling, het bereik per verpakking en het downloadbare productblad. Eco Yard Supply denkt mee met hoveniers en tuinliefhebbers in Noord-Brabant. Vermeld bij je vraag het oppervlak, de hoeveelheid zon en of je een nieuw gazon maakt of doorzaait.</p>
 `,
@@ -27,7 +31,7 @@ export const advicePages = [
     related: ["hoeveel-graszaad-per-m2", "gazon-herstellen", "gazon-bemesten"],
     sourceNote: "<p>Zaaihoeveelheden, samenstelling, toepassingsperiode en gebruiksvoorwaarden komen uit het <a href=\"/public/assets/pdfs/kingseed-allround.pdf\">aangeleverde KingSeed Allround-productblad (PDF)</a>. De actuele verpakking blijft leidend. Rekenvoorbeelden zijn berekend met de daarin vermelde doseringen.</p><p>Algemene voorbereiding en nazorg: <a href=\"https://www.rhs.org.uk/lawns/lawns-from-seed\">RHS: een gazon zaaien</a>. De productspecifieke KingSeed-richtlijnen hierboven komen uit het aangeleverde productblad.</p>",
     datePublished: "2026-10-01",
-    dateModified: "2026-10-01",
+    dateModified: "2026-10-25",
     product: {"href": "/producten/kingseed", "label": "Bekijk KingSeed Allround", "note": "Graszaad voor nieuwe aanleg en doorzaai, met productspecifieke dosering en downloadbaar productblad."},
   },
   {
@@ -53,13 +57,13 @@ export const advicePages = [
 <p>Het productblad noemt een houdbaarheid van twee jaar ongeopend en één jaar na openen, mits donker en droog bewaard. Controleer de verpakking voor de actuele houdbaarheid en bewaar een restant goed afgesloten op een passende plek.</p>
 <h2 id="moment">Een goede berekening is pas het begin</h2>
 <p>Zaai op een goed voorbereid oppervlak en zorg dat de grond de eerste weken vochtig blijft. Lees <a href="/advies/wanneer-graszaad-zaaien">wanneer je KingSeed graszaad kunt zaaien</a> voor temperatuur en nazorg. Bij terugkerende kale plekken helpt het advies over <a href="/advies/gazon-herstellen">gazonherstel</a> om eerst de oorzaak te bepalen.</p>
-<p>Bekijk de <a href="/producten/kingseed">KingSeed-productpagina</a> of bespreek de hoeveelheid en beschikbaarheid met Eco Yard Supply. Geef door of het om nieuwe aanleg, volledig doorzaaien of plaatselijk herstel gaat.</p>
+<p>Houd je zaad over? Lees hoe je <a href="/advies/graszaad-bewaren">KingSeed graszaad bewaart</a> en noteer de openingsdatum. Bespreek bij een aanvraag of het om nieuwe aanleg, volledig doorzaaien of plaatselijk herstel gaat.</p>
 `,
     faq: [["Hoeveel KingSeed graszaad heb ik nodig voor 100 m²?", "Voor een nieuw gazon is dat 2,5 kg bij 25 g/m². Voor doorzaaien is dat 1 kg bij 10 g/m²."], ["Hoeveel m² kan ik zaaien met 7,5 kg?", "Met KingSeed Allround is 7,5 kg volgens het productblad voldoende voor 300 m² nieuwe aanleg of 750 m² doorzaaien."], ["Geldt dezelfde dosering voor elk graszaad?", "Nee. Mengsels kunnen andere doseringen hebben. Gebruik de hoeveelheid op het productblad of de actuele verpakking van jouw graszaad."]],
     related: ["wanneer-graszaad-zaaien", "gazon-herstellen", "mest-voor-graszoden"],
     sourceNote: "<p>Zaaihoeveelheden, samenstelling, toepassingsperiode en gebruiksvoorwaarden komen uit het <a href=\"/public/assets/pdfs/kingseed-allround.pdf\">aangeleverde KingSeed Allround-productblad (PDF)</a>. De actuele verpakking blijft leidend. Rekenvoorbeelden zijn berekend met de daarin vermelde doseringen.</p>",
     datePublished: "2026-10-01",
-    dateModified: "2026-10-01",
+    dateModified: "2026-10-25",
     product: {"href": "/producten/kingseed", "label": "Bekijk KingSeed Allround", "note": "Graszaad voor nieuwe aanleg en doorzaai, met productspecifieke dosering en downloadbaar productblad."},
   },
 {
@@ -85,7 +89,7 @@ export const advicePages = [
 <ol class="steps-list"><li><strong>Wat ga je doen?</strong> Noteer of je gaat aanplanten, een niveauverschil wilt opvullen of bestaande planten wilt bemesten.</li><li><strong>Welke planten en grond heb je?</strong> Geef de plantnamen door en beschrijf de huidige bodem. Vermeld ook of het om volle grond of een plantenbak gaat.</li><li><strong>Wat zegt het productvoorschrift?</strong> Controleer de geschikte toepassing, mengverhouding en aanwezige voeding voordat je een hoeveelheid bestelt.</li></ol>
 <h2 id="hoeveelheid">Hoeveel grond heb je nodig?</h2>
 <p>Meet eerst de ruimte die gevuld moet worden en houd rekening met de kluit en de grond die je opnieuw gebruikt. In <a href="/advies/hoeveel-aanplantgrond-nodig">hoeveel aanplantgrond heb je nodig?</a> lees je hoe je liters omrekent naar zakken van 50 liter. Het rekenvoorbeeld bepaalt alleen de hoeveelheid, niet de juiste mengverhouding.</p>
-<p>Twijfel je vooral over de conditie van de bestaande bodem? Begin dan met het advies over <a href="/advies/tuingrond-verbeteren">tuingrond verbeteren</a>. Stuur bij een productvraag de plantnamen, afmetingen en een foto van de plantplaats mee.</p>
+<p>Wil je juist een plantenpot of bak vullen? Lees de <a href="/advies/aanplantgrond-of-potgrond">vergelijking van aanplantgrond en potgrond</a>. Stuur bij een productvraag de plantnamen, afmetingen en een foto van de plantplaats mee.</p>
 `,
   "faq": [
     [
@@ -108,7 +112,7 @@ export const advicePages = [
   ],
   "sourceNote": "<p>Algemene productkeuze: <a href=\"https://www.pokon.nl/producten/item/aanplantgrond-tuinplanten-bomen-hagen-bio-30l/\">Pokon over aanplantgrond</a> en <a href=\"https://www.pokon.nl/producten/item/tuinaarde-25l/\">Pokon over tuinaarde</a>. Deze bronnen beschrijven hun eigen producten; hun mengverhoudingen en productwerking gelden niet als voorschrift voor Vitalmix. De Vitalmix-productgegevens zijn aangeleverd door Eco Yard Supply op 28 september 2026.</p>",
   "datePublished": "2026-09-30",
-  "dateModified": "2026-09-30",
+  "dateModified": "2026-10-25",
   "product": {
     "href": "/producten/vitalmix",
     "label": "Bekijk Vitalmix aanplantgrond",
@@ -173,17 +177,18 @@ export const advicePages = [
     title: "Gazon bemesten: wanneer, hoe vaak en welke mest?",
     seoTitle: "Gazon bemesten: wanneer, hoe vaak en welke mest? | Eco Yard Supply",
     description: "Praktische gids voor gazon bemesten in het voorjaar, de zomer en het najaar. Met stappenplan, dosering en productkeuze voor tuinen in Noord-Brabant.",
-    dateModified: "2026-08-31",
+    dateModified: "2026-10-25",
     eyebrow: "Gazonadvies",
+    photo: { product: "gazonmest", label: "Korrels", caption: "Zo zien de korrels van Dungking Gazonmest eruit. Kies de toepassing en weeg de voorgeschreven hoeveelheid af." },
     intro: "Een gazon bemest je op het moment dat het gras actief groeit en de bodem voldoende vochtig is. Voor de meeste gazons zijn twee groeibeurten en een aangepaste najaarsbemesting een bruikbaar uitgangspunt; stem het aantal beurten altijd af op bodem, weer en conditie van de grasmat.",
     summary: "Start in het voorjaar zodra het gras groeit, geef zo nodig een tweede gift in juni of juli en kies in het najaar een meststof met een samenstelling die past bij afharding en winterweerbaarheid. Strooi gelijkmatig, houd de productdosering aan en beregen wanneer het daarna lang droog blijft.",
     body: `
       <h2 id="wanneer">Wanneer moet je gras of een gazon bemesten?</h2>
-      <p>De kalender is een hulpmiddel, geen harde regel. Gras neemt voeding vooral op wanneer het groeit. Wacht daarom na de winter tot de groei op gang komt en de bodem niet bevroren of kletsnat is. In een droog voorjaar of tijdens een hittegolf stel je bemesting liever uit. Bekijk voor de rest van de tuin de aparte <a href="/advies/tuin-bemesten">bemestingskalender voor gazon, borders, rozen, hagen en bomen</a>.</p>
+      <p>De kalender is een hulpmiddel, geen harde regel. Gras neemt voeding vooral op wanneer het groeit. Wacht daarom na de winter tot de groei op gang komt en de bodem niet bevroren of kletsnat is. In een droog voorjaar of tijdens een hittegolf stel je bemesting liever uit. Lees hoe je <a href="/advies/gazon-bemesten-bij-droogte">het strooimoment bij droogte of regen beoordeelt</a>.</p>
       <div class="table-wrap"><table class="advice-table">
         <thead><tr><th>Periode</th><th>Doel</th><th>Passende keuze binnen het assortiment</th></tr></thead>
         <tbody>
-          <tr><td>Februari - mei</td><td>Een krachtige start wanneer het bodemleven nog rustig is</td><td><a href="/producten/startersmest">Dungking Startersmest</a></td></tr>
+          <tr><td>Februari - mei</td><td>Een krachtige start wanneer het bodemleven nog rustig is</td><td>Dungking Startersmest</td></tr>
           <tr><td>Maart - april</td><td>Groei, kleur, beworteling en een dichtere grasmat ondersteunen</td><td><a href="/producten/gazonmest">Dungking Gazonmest</a></td></tr>
           <tr><td>Juni - juli</td><td>Voeding aanvullen tijdens het groeiseizoen</td><td>Dungking Gazonmest, als bodem en weer dit toelaten</td></tr>
           <tr><td>September - november</td><td>Afharding en winterweerbaarheid ondersteunen</td><td><a href="/producten/bordermest">Dungking Border- en Najaarsmest</a></td></tr>
@@ -203,9 +208,9 @@ export const advicePages = [
       </ol>
       <h2 id="dosering">Hoeveel gazonmest per m²?</h2>
       <p>Voor Dungking Gazonmest vermeldt het productblad 1 kg per 15 m² in maart-april en juni-juli. Voor de Border- en Najaarsmest staat in september-november 1 kg per 10 m². Dit zijn productspecifieke richtlijnen; gebruik ze niet automatisch voor een andere meststof.</p>
-      <aside class="note-card"><strong>Rekenvoorbeeld:</strong> voor een gazon van 90 m² is bij 1 kg per 15 m² in totaal 6 kg nodig. Rond pas af nadat je het gazon hebt opgemeten.</aside>
+      <aside class="note-card"><strong>Rekenvoorbeeld:</strong> voor een gazon van 90 m² is bij 1 kg per 15 m² in totaal 6 kg nodig. Bekijk de <a href="/advies/hoeveel-gazonmest-per-m2">rekentabel voor gazonmest per m²</a> voor andere oppervlakken en het verdelen over strooirondes.</aside>
       <h2 id="keuze">Welke mest past bij jouw gazon?</h2>
-      <p>Kies niet alleen op de term “beste gazonmest”. De beste keuze hangt af van seizoen, bodem en doel. Startersmest is gericht op het vroege voorjaar, Gazonmest op groei en onderhoud, en Border- en Najaarsmest op de latere seizoensfase. Twijfel je tussen productsoorten, lees dan de feitelijke vergelijking <a href="/advies/organische-gazonmest-of-kunstmest">organische gazonmest of kunstmest</a>. Bij een nieuw gazon of nieuwe graszoden is ook de voorbereiding van de bodem bepalend; bekijk dan de gids over <a href="/advies/mest-bij-aanplanten">mest bij nieuwe aanplant</a>.</p>
+      <p>Kies niet alleen op de term “beste gazonmest”. De beste keuze hangt af van seizoen, bodem en doel. Startersmest is gericht op het vroege voorjaar, Gazonmest op groei en onderhoud, en Border- en Najaarsmest op de latere seizoensfase. Bij een nieuw gazon of nieuwe graszoden is ook de voorbereiding van de bodem bepalend. Kies eerst de toepassing en volg daarna het bijbehorende productvoorschrift.</p>
     `,
     faq: [
       ["Kun je een gazon bemesten als het droog is?", "Stel bemesting bij langdurige droogte of felle zon liever uit. Beregen na het strooien wanneer het productblad dit voorschrijft en regen uitblijft."],
@@ -411,7 +416,7 @@ export const advicePages = [
     title: "Gazon herstellen: van geel of dun gras naar een sterkere grasmat",
     seoTitle: "Gazon herstellen en geel gras aanpakken | Eco Yard Supply",
     description: "Ontdek waarom gras geel, dun of kaal wordt en herstel je gazon stap voor stap met de juiste diagnose, bodemzorg en bemesting.",
-    dateModified: "2026-10-01",
+    dateModified: "2026-10-25",
     eyebrow: "Probleemoplossing",
     intro: "Een geel of dun gazon heeft niet automatisch meer mest nodig. Controleer eerst vocht, maaigedrag, bodemverdichting, vilt en gebruiksschade. Bemesting helpt pas goed wanneer de oorzaak en het seizoen bij de gekozen aanpak passen.",
     summary: "Begin met de oorzaak: watertekort, een dichte bodem, te kort maaien, vilt of een voedingsvraag. Herstel daarna de groeiomstandigheden en bemest gericht. Een goed gevoede, dichter groeiende grasmat laat minder open ruimte over voor mos en onkruid, maar mest is geen bestrijdingsmiddel.",
@@ -425,6 +430,7 @@ export const advicePages = [
           <tr><td>Mos tussen dun gras</td><td>Schaduw, vocht, lage maaistand of zwakke grasgroei</td><td>Beoordeel licht, afwatering en maaihoogte</td></tr>
           <tr><td>Kale looplijnen</td><td>Betreding en bodemverdichting</td><td>Bekijk waar verkeer zich concentreert</td></tr>
           <tr><td>Gele strepen na strooien</td><td>Ongelijke of te ruime dosering</td><td>Vergelijk strooipatroon en gebruikte hoeveelheid</td></tr>
+          <tr><td>Losse zoden of larven bij beschadigde wortels</td><td>Mogelijke vraat door bodeminsecten</td><td>Bekijk de larven en vergelijk de wortels met een minder beschadigde plek</td></tr>
         </tbody>
       </table></div>
       <h2 id="aanpak">Gazon herstellen in de juiste volgorde</h2>
@@ -441,16 +447,18 @@ export const advicePages = [
       <h2 id="mos">Mos en onkruid: formuleer het doel goed</h2>
       <p>Gazonmest bestrijdt geen mos of onkruid. Een dichtere, goed onderhouden grasmat kan wel minder open ruimte overlaten waarin ongewenste planten zich vestigen. Blijven mos of kale plekken terugkomen, onderzoek dan vooral schaduw, vocht, pH, bodemverdichting en maaigedrag.</p>
       <aside class="note-card"><strong>Twijfel over de oorzaak?</strong> Stuur Eco Yard Supply een paar overzichts- en detailfoto’s, plus informatie over bodem, beregening en onderhoud. Dat maakt productadvies veel gerichter.</aside>
+      <h2 id="bodeminsecten">Larven onder het beschadigde gras?</h2>
+      <p>Bekijk eerst het <a href="/advies/verschil-engerlingen-en-emelten">verschil tussen engerlingen en emelten</a>. Een gevonden larve is nog geen volledige diagnose. <a href="/producten/novaferm-viva">NovaFerm Viva</a> is een plantenhulpmiddel voor de bodem; bespreek of die toepassing past bij de beoordeelde oorzaak en volg de eigen gebruiksaanwijzing.</p>
       <h2 id="doorzaaien">Graszaad kiezen voor doorzaai</h2>
-      <p><a href="/producten/kingseed">KingSeed Allround</a> is volgens het productblad geschikt voor nieuwe aanleg en doorzaaien in zon en halfschaduw. Voor doorzaaien geldt 10 g/m². Bekijk <a href="/advies/wanneer-graszaad-zaaien">het juiste zaaimoment</a> en <a href="/advies/hoeveel-graszaad-per-m2">de rekentabel voor graszaad</a>. Stem aanvullende bemesting apart af op bodem, seizoen en eerdere giften.</p>
+      <p><a href="/producten/kingseed">KingSeed Allround</a> is volgens het productblad geschikt voor nieuwe aanleg en doorzaaien in zon en halfschaduw. Voor doorzaaien geldt 10 g/m², van april tot en met oktober bij minimaal 10 °C bodemtemperatuur. Stem aanvullende bemesting apart af op bodem, seizoen en eerdere giften.</p>
     `,
     faq: [
       ["Hoe krijg je een geel gazon weer groen?", "Herstel eerst vocht, maaien en bodemconditie. Bemest alleen wanneer voeding en seizoen bij het probleem passen; meer mest is niet altijd de oplossing."],
       ["Moet je altijd verticuteren om een gazon te herstellen?", "Nee. Verticuteren is vooral zinvol bij een storende viltlaag. Zonder diagnose kan het extra stress en kale plekken veroorzaken."],
       ["Helpt gazonmest tegen mos?", "Gazonmest is geen mosbestrijder. Een gezonder en dichter gazon kan minder ruimte laten voor mos, maar de achterliggende omstandigheden moeten ook worden aangepakt."],
     ],
-    sourceNote: "<p>Dungking-specificaties komen uit de aangeleverde meststofproductbladen. De aanvullende gegevens voor doorzaai komen uit het <a href=\"/public/assets/pdfs/kingseed-allround.pdf\">KingSeed Allround-productblad</a>. Volg per product de actuele verpakking; graszaad en mest hebben afzonderlijke gebruiksvoorschriften.</p>",
-    related: ["gazon-bemesten", "tuingrond-verbeteren", "gazon-bemesten-voorjaar"],
+    sourceNote: "<p>Dungking-specificaties komen uit de aangeleverde meststofproductbladen. De aanvullende gegevens voor doorzaai komen uit het <a href=\"/public/assets/pdfs/kingseed-allround.pdf\">KingSeed Allround-productblad</a>. De NovaFerm-informatie is aangeleverd op 25 oktober 2026. Algemene herkenning: <a href=\"https://www.rhs.org.uk/biodiversity/chafer-grubs-in-lawns\">RHS over keverlarven</a> en <a href=\"https://www.rhs.org.uk/biodiversity/leatherjackets\">RHS over emelten</a>, geraadpleegd 25 oktober 2026. Volg per product de actuele verpakking; er is geen gezamenlijke werking of mengbaarheid geclaimd.</p>",
+    related: ["gazon-doorzaaien", "verschil-engerlingen-en-emelten", "gazon-bemesten"],
     product: { href: "/producten/gazonmest", label: "Bekijk Gazonmest", note: "Productspecificaties, toepassing en dosering voor gericht gazononderhoud." },
   },
   {

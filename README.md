@@ -6,7 +6,7 @@ Statische website van Eco Yard Supply met een productvergelijker, productpagina'
 
 Voor de publieke website is geen framework of package-installatie nodig. De HTML, CSS en JavaScript kunnen direct statisch worden gehost.
 
-Adviescontent staat centraal in `content/advice-pages.mjs`. Genereer na een inhoudelijke wijziging de pagina's, sitemap en AI-overzicht opnieuw:
+Adviescontent staat centraal in `content/advice-pages.mjs`, dat de tien artikelen uit de uitbreiding van 25 oktober 2026 importeert uit `content/cluster-advice-pages.mjs`. Genereer na een inhoudelijke wijziging de pagina's, sitemap en AI-overzicht opnieuw:
 
 ```powershell
 node scripts/build-advice.mjs

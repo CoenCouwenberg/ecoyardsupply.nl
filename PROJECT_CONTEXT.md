@@ -340,3 +340,29 @@ Publicatiecontrole:
 - Onderbouwing: aangeleverde leveranciersscreenshot blijft leidend. Actuele fabrikantpagina https://www.agrosolution.eu/novaferm-viva op 25 oktober 2026 geraadpleegd; bevestigt bodemtoepassing. De buitenlandse professionele dosering wijkt af van de aangeleverde 1-literinformatie en is niet overgenomen. Geen specifieke mengbaarheid met Dungking of zaad geclaimd.
 
 - Vervolgcontrole: builder en validator geslaagd (30 pagina’s), aanbevelingen bij Gazonmest en KingSeed in browser bekeken; KingSeed-link opent NovaFerm. Bij werkelijk gemeten 480 CSS-pixels op beide pagina’s geen horizontale overflow. Sitemap-lastmod van beide productpagina’s bijgewerkt.
+
+## 20. Blogclusters en interne links — 25 oktober 2026
+
+Coen vraagt eerst zoekwoordonderzoek en daarna 10–15 compacte, relevante blogs, met circa drie rond het nieuwe product NovaFerm Viva. Hij levert na een ongeschikte geaggregeerde prognose-export de historische zoekwoordtabel als tekst en screenshot aan. Daarmee is de afgesproken onderzoeksstap voldoende ingevuld om lokaal verder te schrijven. Er is in deze opdracht geen toestemming gegeven voor commit, push of publicatie.
+
+Gelezen bronnen: SEO-plan `Eco_Yard_Supply_SEO_plan_2026-2027.xlsm`, tabbladen `SEO selectie` en `Pagina-keywordmap`; roadmap, productcontext, relevante productbladen en actuele RHS-/Pokon-bronnen. Nieuwe onderzoeksinstellingen volgens screenshot: Nederland, alle talen, Google, oktober 2025–september 2026. Geen nieuwe historische CSV; de geplakte cijfers zijn niet onafhankelijk via een account geverifieerd. Geen volumeoptellingen of organische concurrentiescores berekend; streepjes betekenen ontbrekende gegevens. Merkzoekopdrachten voor NovaFerm in het algemeen worden niet uitsluitend aan Viva toegerekend.
+
+Lokale uitvoering:
+- Tien nieuwe artikelen in `content/cluster-advice-pages.mjs`, geïmporteerd in de bestaande advice-bron: `engerlingen-in-gazon`, `emelten-in-gazon`, `verschil-engerlingen-en-emelten`, `gazon-doorzaaien`, `graszaad-komt-niet-op`, `graszaad-bewaren`, `hoeveel-gazonmest-per-m2`, `gazon-bemesten-bij-droogte`, `wat-betekent-npk`, `aanplantgrond-of-potgrond`.
+- Vijf bestaande blogs gericht bijgewerkt: gazonherstel, gazonbemesting, zaaimoment, zaaihoeveelheid en aanplantgrond versus tuinaarde. Drie/vier interne tekstlinks per nieuw artikel en maximaal vier in deze bijgewerkte artikelen; geen herhaalde bestemming binnen de artikeltekst. Bronnen, navigatie, productzijbalk en gerelateerde kaarten apart gehouden.
+- Productroutes terug naar de blogs bij NovaFerm, KingSeed, Vitalmix en Gazonmest. Geen bestaande URL's gewijzigd/verwijderd. Product-CTA's en meetcode behouden.
+- Nieuwe blogs met bestaande productfoto's en passende bijschriften; extra beeld op kennisbankkaarten. Extra adviesfilter Bodeminsecten. Geen gefingeerde schade-/praktijkfoto's.
+- Builder kiest voor artikelmetadata en sitemap de meest recente inhoudelijke/fotodatum, zodat een oudere fotodatum nieuwe publicaties niet terugdateert. Productbeelden in social metadata. CSS-query verhoogd naar `20261025-clusters`.
+- Mapping en onderzoeksnotities buiten publieke webroot: `/Users/coenc/Documents/Ecoyard/SEO-clusterplan-2026-10-25.md`. Bestaand werkboek ongewijzigd; geen nieuwe ruwe export of screenshot in webroot gezet.
+
+Controles:
+- Builder en sitevalidator geslaagd voor 40 HTML-pagina's; JavaScript-syntax en `git diff --check` geslaagd.
+- Aanvullend alle 40 routes lokaal HTTP 200, datums/schema/sitemap van de 15 nieuwe/bijgewerkte artikelen consistent, tekstlinklimiet en unieke bestemmingen gecontroleerd; elk nieuw artikel heeft inkomende links buiten de adviesindex.
+- 42 browsercontroles: nieuwe en bijgewerkte blogs, vier productpagina's, kennisbank en homepage bij werkelijk gemeten 390 en 1440 CSS-pixels. Geen defecte beelden, horizontale pagina-overflow of JavaScript-fouten. Adviesfilters Alles (29), Graszaad (5), Bodeminsecten (3), mobiel menu en echte NovaFerm→blog→productnavigatie gecontroleerd. Contactacties niet verstuurd; externe meetverzoeken in de testbrowser geblokkeerd.
+- Screenshots visueel gecontroleerd voor kennisbank, larvenvergelijking, dosering en grondkeuze. Testscript/resultaten buiten repository in `/private/tmp/ecoyard-clusters-qa*`. Lokale preview op `http://127.0.0.1:8976/`.
+
+Status: alleen lokale wijzigingen op `main`. Niet gecommit, gepusht of gepubliceerd. Geen live ranking-, verkeers- of indexatieverbetering vastgesteld. Eerdere handmatige serverprocedure blijft gelden zodra publicatie wordt geautoriseerd.
+
+### Publicatieverzoek — 25 oktober 2026
+
+Coen geeft na beoordeling expliciet opdracht: “Top, push naar live”. Hiermee zijn commit en push van de volledige gecontroleerde bloguitbreiding, inclusief bijbehorende projectdocumentatie, naar `origin/main` geautoriseerd. De bestaande afspraak blijft: Coen haalt de wijzigingen zelf op zijn server uit GitHub op; geen hostinginstellingen of serververbinding wijzigen. De 40-paginavalidator en `git diff --check` zijn vóór commit opnieuw geslaagd. De bestaande `.htaccess` schermt Markdown- en XLSM-documentatie af. De langere onderzoeksmapping staat buiten de webroot en wordt niet meegestuurd. Na push volgt een HTTPS-controle van kennisbank, nieuw artikel en sitemap; een geslaagde Git-push bewijst nog geen live serverupdate.
