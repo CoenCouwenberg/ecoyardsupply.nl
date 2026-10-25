@@ -330,3 +330,13 @@ Publicatiecontrole:
 - Live HTTPS-controle na push: `/producten/novaferm-viva` en de nieuwe WebP geven HTTP 404; homepage HTTP 200 zonder NovaFerm. Publicatie op de server is dus nog niet uitgevoerd/bevestigd.
 - Geen beschikbare deployconfiguratie of serververbinding in dit project; eerdere afspraak is handmatig ophalen vanaf GitHub door Coen. Serverupdate blijft nodig om het product live te zetten.
 - Aanvullend desktop bij werkelijk 1440 CSS-pixels: homepage exact zes kaarten in drie kolommen, geen horizontale overflow. Producthub toont het NovaFerm-blok zonder overflow.
+
+
+### Vervolg: relevante productverwijzingen — 25 oktober 2026
+
+- Coen bevestigt expliciet ook de documentatiecommit te pushen en vraagt relevante aanbevelingen bij andere producten, mits feitelijk correct.
+- Toegevoegd op Gazonmest en KingSeed: compact adviesblok voor bezoekers die engerlingen of emelten vermoeden, met verwijzing naar NovaFerm Viva en eerst beoordeling van de oorzaak. Geen standaard combinatieaankoop of onbewezen gezamenlijke werking geadviseerd.
+- NovaFerm-pagina verwijst terug naar Gazonmest en KingSeed voor de afzonderlijke doelen voeding en doorzaai, elk met een eigen gebruiksaanwijzing. Bestaande producthubvermelding onder Plantenverzorging gecontroleerd.
+- Onderbouwing: aangeleverde leveranciersscreenshot blijft leidend. Actuele fabrikantpagina https://www.agrosolution.eu/novaferm-viva op 25 oktober 2026 geraadpleegd; bevestigt bodemtoepassing. De buitenlandse professionele dosering wijkt af van de aangeleverde 1-literinformatie en is niet overgenomen. Geen specifieke mengbaarheid met Dungking of zaad geclaimd.
+
+- Vervolgcontrole: builder en validator geslaagd (30 pagina’s), aanbevelingen bij Gazonmest en KingSeed in browser bekeken; KingSeed-link opent NovaFerm. Bij werkelijk gemeten 480 CSS-pixels op beide pagina’s geen horizontale overflow. Sitemap-lastmod van beide productpagina’s bijgewerkt.
