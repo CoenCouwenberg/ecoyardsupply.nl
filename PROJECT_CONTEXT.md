@@ -324,3 +324,9 @@ Websitepublicatie: de broncode in deze release is bedoeld voor `main`; Coen zet 
 - Bron: meegeleverde leveranciersscreenshot en transparante flesfoto. Werking beschreven volgens leverancier; dosering 1 liter/500 m², verdunnen in minimaal 25 liter water, vóór en na toepassing beregenen. Bewaar- en beschermingsinstructies meegenomen. Geen aanvullende toelatingsclaims gepubliceerd.
 - SEO-plan `Eco_Yard_Supply_SEO_plan_2026-2027.xlsm`: werkboekstructuur en teksten over productpagina’s ingezien; dit is een gerichte assortimentsuitbreiding op expliciet verzoek. Geen nieuwe zoekwoordstrategie of exportcijfers gebruikt.
 - Builder en validator geslaagd voor 30 HTML-pagina’s. Desktop en mobiele lay-out bekeken; bij werkelijk gemeten 480 en 780 CSS-pixels geen horizontale overflow. Desktop productpagina: één foto, geen defecte afbeeldingen, beide bestelknoppen dragen het juiste product-ID. Homepage behoudt bestaande rasterregels.
+
+Publicatiecontrole:
+- Websitewijziging gecommit als `6cadd9b` en succesvol gepusht naar `origin/main`.
+- Live HTTPS-controle na push: `/producten/novaferm-viva` en de nieuwe WebP geven HTTP 404; homepage HTTP 200 zonder NovaFerm. Publicatie op de server is dus nog niet uitgevoerd/bevestigd.
+- Geen beschikbare deployconfiguratie of serververbinding in dit project; eerdere afspraak is handmatig ophalen vanaf GitHub door Coen. Serverupdate blijft nodig om het product live te zetten.
+- Aanvullend desktop bij werkelijk 1440 CSS-pixels: homepage exact zes kaarten in drie kolommen, geen horizontale overflow. Producthub toont het NovaFerm-blok zonder overflow.
