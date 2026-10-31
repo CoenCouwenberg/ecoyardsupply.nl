@@ -404,3 +404,7 @@ Status blijft lokaal op `main`; niet gecommit, gepusht of gepubliceerd. Eerdere 
 ### Push naar main geautoriseerd — 31 oktober 2026
 
 Coen geeft na beoordeling expliciet opdracht: “Prima, push het naar main”. Hiermee zijn commit en push naar `origin/main` van de logo-update, prijsbron, compacte productkaarten, verpakkingskeuze, gegenereerde pagina's en bijbehorende documentatie geautoriseerd. Sitevalidator (40 pagina's), JavaScript-syntax en `git diff --check` zijn vóór commit opnieuw geslaagd. Actuele `origin/main` opgehaald vóór de push; authenticatie en hostingconfiguratie blijven ongewijzigd. De Brevo-exports buiten de repository blijven lokaal beschikbaar. Bestaande `.htaccess` schermt interne Markdown-documentatie af. Na push volgt alleen een HTTPS-controle; Coen haalt de website zoals eerder afgesproken zelf op zijn server uit GitHub op.
+
+Uitkomst push en live controle — 31 oktober 2026:
+- Websitewijzigingen gecommit als `f1ff0bc` en succesvol gepusht naar `origin/main`; lokale HEAD en remote-trackingbranch kwamen overeen. Geen mergeconflict, force-push of authenticatiewijziging.
+- HTTPS-controle met cache-bypass na de push: homepage en `/producten/startersmest` HTTP 200, beide zonder nieuwe SVG-verwijzing of verpakkingskeuze/vanaf-prijzen. `/public/assets/images/ecoyard-supply-logo.svg` HTTP 404. De server heeft de release nog niet overgenomen. Coens handmatige serverupdate blijft nodig; hosting niet geopend of aangepast.
