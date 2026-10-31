@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import { productPrices, businessPriceNote } from '../content/product-prices.mjs';
 const site = 'https://ecoyardsupply.nl';
 export const photoUpdate = '2026-10-18';
 export const productPhotos = JSON.parse(await fs.readFile(new URL('../content/product-photos.json', import.meta.url), 'utf8'));
@@ -12,11 +13,14 @@ export function imageSchema(photo) {
 }
 export function gallery(slug) {
   const product = productPhotos[slug];
+  const cheapest = [...(productPrices[slug] || [])].sort((a, b) => a.cents - b.cents)[0];
+  const initial = product.photos.find(p => p.label === cheapest?.photo) || product.photos[0];
+  const initialIndex = product.photos.indexOf(initial);
   if (product.photos.length === 1) return `<div class="product-gallery" aria-label="Productfoto van ${esc(product.name)}"><figure class="gallery-stage"><a href="${photoBase}${product.photos[0].file}.webp" target="_blank" rel="noopener" aria-label="Open productfoto op volledig formaat">${photoImage(product.photos[0], { eager: true, sizes: '(min-width: 58rem) 48vw, 100vw' })}</a><figcaption>${esc(product.photos[0].label)}</figcaption></figure><a class="text-link" href="${photoBase}${product.photos[0].file}.webp" target="_blank" rel="noopener">Open foto op volledig formaat ↗</a></div>`;
   return `<div class="product-gallery" data-product-gallery aria-label="Foto’s van ${esc(product.name)}">
-    <figure class="gallery-stage"><a data-gallery-full href="${photoBase}${product.photos[0].file}.webp" target="_blank" rel="noopener" aria-label="Open productfoto op volledig formaat">${photoImage(product.photos[0], { eager: true, sizes: '(min-width: 58rem) 48vw, 100vw' })}</a><figcaption data-gallery-caption aria-live="polite">${esc(product.photos[0].label)} · 1 van ${product.photos.length}</figcaption></figure>
-    <nav class="gallery-thumbs" aria-label="Kies een productfoto">${product.photos.map((p, i) => `<a href="${photoBase}${p.file}.webp" data-gallery-select data-src="${photoBase}${p.file}.webp" data-small="${photoBase}${p.file}-560.webp" data-alt="${esc(p.alt)}" data-title="${esc(p.title)}" data-caption="${esc(p.label)} · ${i + 1} van ${product.photos.length}" aria-label="Toon ${esc(p.label.toLowerCase())}"${i === 0 ? ' aria-current="true"' : ''}>${photoImage(p, { small: true })}<span>${esc(p.label)}</span></a>`).join('')}</nav>
-    <a class="gallery-zoom text-link" data-gallery-zoom href="${photoBase}${product.photos[0].file}.webp" target="_blank" rel="noopener">Open foto op volledig formaat ↗</a>
+    <figure class="gallery-stage"><a data-gallery-full href="${photoBase}${initial.file}.webp" target="_blank" rel="noopener" aria-label="Open productfoto op volledig formaat">${photoImage(initial, { eager: true, sizes: '(min-width: 58rem) 48vw, 100vw' })}</a><figcaption data-gallery-caption aria-live="polite">${esc(initial.label)} · ${initialIndex + 1} van ${product.photos.length}</figcaption></figure>
+    <nav class="gallery-thumbs" aria-label="Kies een productfoto">${product.photos.map((p, i) => `<a href="${photoBase}${p.file}.webp" data-gallery-select data-photo-label="${esc(p.label)}" data-src="${photoBase}${p.file}.webp" data-small="${photoBase}${p.file}-560.webp" data-alt="${esc(p.alt)}" data-title="${esc(p.title)}" data-caption="${esc(p.label)} · ${i + 1} van ${product.photos.length}" aria-label="Toon ${esc(p.label.toLowerCase())}"${i === initialIndex ? ' aria-current="true"' : ''}>${photoImage(p, { small: true })}<span>${esc(p.label)}</span></a>`).join('')}</nav>
+    <a class="gallery-zoom text-link" data-gallery-zoom href="${photoBase}${initial.file}.webp" target="_blank" rel="noopener">Open foto op volledig formaat ↗</a>
   </div>`;
 }
 export function orderLink(slug) {
@@ -25,8 +29,27 @@ export function orderLink(slug) {
 export function orderTracking(slug) {
   return `data-contact-intent="order" data-product-id="${esc(slug)}" data-product-name="${esc(productPhotos[slug].name)}"`;
 }
+export function retailPrices(slug) {
+  const prices = productPrices[slug];
+  if (!prices) return '';
+  const euro = new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' });
+  return `<div class="product-prices"><p class="price-heading">Consumentenprijzen <span>inclusief btw</span></p><dl>${prices.map(({ packaging, cents }) => `<div><dt>${esc(packaging)}</dt><dd>${euro.format(cents / 100)}</dd></div>`).join('')}</dl><p class="business-price-note">${businessPriceNote}</p></div>`;
+}
+const euro = new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' });
+export function cardPrice(slug) {
+  const prices = productPrices[slug];
+  if (!prices?.length) return '';
+  return `<a class="card-price" href="/producten/${esc(slug)}"><span>Vanaf</span><strong>${euro.format(Math.min(...prices.map(p => p.cents)) / 100)}</strong><span class="visually-hidden"> inclusief btw</span></a>`;
+}
+function purchasePrice(slug) {
+  const prices = productPrices[slug];
+  if (!prices?.length) return '';
+  const cheapest = prices.reduce((a, b) => a.cents < b.cents ? a : b);
+  if (prices.length === 1) return `<div class="purchase-pricing"><p class="selected-price"><strong>${euro.format(cheapest.cents / 100)}</strong><span>inclusief btw · ${esc(cheapest.packaging)}</span></p><p class="business-price-note">${businessPriceNote}</p></div>`;
+  return `<div data-static-prices>${retailPrices(slug)}</div><div class="purchase-pricing" data-variant-picker hidden><p class="selected-price" aria-live="polite" aria-atomic="true"><strong data-variant-price>${euro.format(cheapest.cents / 100)}</strong><span>inclusief btw</span></p><fieldset class="variant-options"><legend>Kies je verpakking</legend>${prices.map(p => `<label class="variant-option"><input type="radio" name="verpakking" value="${esc(p.packaging)}" data-cents="${p.cents}" data-photo="${esc(p.photo || 'Overzicht')}"${p === cheapest ? ' checked' : ''}><span>${esc(p.packaging)}</span><strong>${euro.format(p.cents / 100)}</strong></label>`).join('')}</fieldset><p class="business-price-note">${businessPriceNote}</p></div>`;
+}
 export function orderPanel(slug) {
-  return `<div class="product-order" id="bestellen"><p class="eyebrow">Bestellen bij Eco Yard Supply</p><p>Geef je gewenste hoeveelheid door. We stemmen prijs, beschikbaarheid en afhalen of levering persoonlijk met je af.</p><div class="actions"><a class="button" href="${orderLink(slug)}" ${orderTracking(slug)} target="_blank" rel="noopener">Bestellen via WhatsApp</a><a class="text-link" href="tel:+31626672878" ${orderTracking(slug)}>Liever bellen? +31 6 2667 2878</a></div><p class="order-note">Je bestelling loopt via persoonlijk contact. Afhalen op afspraak.</p></div>`;
+  return `<div class="product-order" id="bestellen" data-product-purchase data-product-name="${esc(productPhotos[slug].name)}">${purchasePrice(slug)}<div class="actions"><a class="button" href="${orderLink(slug)}" ${orderTracking(slug)} target="_blank" rel="noopener">Bestellen via WhatsApp</a><a class="text-link" href="tel:+31626672878" ${orderTracking(slug)}>Liever bellen? +31 6 2667 2878</a></div><p class="order-note">We stemmen beschikbaarheid en afhalen of levering persoonlijk met je af. Afhalen op afspraak.</p></div>`;
 }
 export function articlePhoto(page) {
   const slug = page.product.href.split('/').pop();
@@ -67,6 +90,9 @@ export async function refreshHandwrittenPages(root) {
   for (const [slug, product] of Object.entries(productPhotos)) {
     const re = new RegExp(`(<a class="product-card-media" href="producten/${slug}"[^>]*>)[\\s\\S]*?(</a>)`);
     html = html.replace(re, `$1${photoImage(product.photos[0]).replaceAll('src="/', 'src="').replaceAll('srcset="/', 'srcset="').replaceAll(', /public/', ', public/')}$2`);
+    // Keep card pricing generated from the same source as the product pages.
+    const card = new RegExp(`(<article class="product-card">(?:(?!</article>)[\\s\\S])*?href="producten/${slug}"(?:(?!</article>)[\\s\\S])*?)(<a class="button" href="producten/${slug}">)`);
+    html = html.replace(card, (_, before, button) => `${before.replace(/<!-- product-prices:start -->[\s\S]*?<!-- product-prices:end -->\s*/, '')}<!-- product-prices:start -->${cardPrice(slug).replace('href="/', 'href="')}<!-- product-prices:end -->\n              ${button}`);
   }
   html = html.replace(/href="producten\/([^"#]+)#inhoud"/g, 'href="producten/$1#bestellen"');
   await fs.writeFile(file, html);

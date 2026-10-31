@@ -132,3 +132,31 @@ document.querySelectorAll('[data-product-gallery]').forEach((gallery) => {
     });
   });
 });
+
+// Enhance the complete static price list into an accessible packaging selector.
+document.querySelectorAll('[data-product-purchase]').forEach((purchase) => {
+  const picker = purchase.querySelector('[data-variant-picker]');
+  if (!picker) return;
+  const choices = [...picker.querySelectorAll('input[type="radio"]')];
+  const price = picker.querySelector('[data-variant-price]');
+  const whatsapp = purchase.querySelector('a[data-contact-intent="order"][href^="https://wa.me/"]');
+  const gallery = document.querySelector('[data-product-gallery]');
+  const euro = new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' });
+  function selectPackaging(choice) {
+    price.textContent = euro.format(Number(choice.dataset.cents) / 100);
+    const photo = [...(gallery?.querySelectorAll('[data-gallery-select]') || [])]
+      .find(link => link.dataset.photoLabel === choice.dataset.photo);
+    photo?.click();
+    if (whatsapp) {
+      const url = new URL(whatsapp.href);
+      url.searchParams.set('text', `Hallo Eco Yard Supply, ik wil graag ${purchase.dataset.productName} bestellen: ${choice.value}. Kunnen jullie mij helpen met de hoeveelheid en beschikbaarheid?`);
+      whatsapp.href = url.href;
+    }
+  }
+  picker.addEventListener('change', (event) => {
+    if (choices.includes(event.target)) selectPackaging(event.target);
+  });
+  selectPackaging(choices.find(choice => choice.checked));
+  purchase.querySelector('[data-static-prices]').hidden = true;
+  picker.hidden = false;
+});
