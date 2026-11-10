@@ -1,6 +1,8 @@
+import { newsPages } from "./news-pages.mjs";
 import { clusterAdvicePages } from "./cluster-advice-pages.mjs";
 
 export const advicePages = [
+  ...newsPages,
   ...clusterAdvicePages,
   {
     slug: "wanneer-graszaad-zaaien",

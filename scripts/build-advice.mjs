@@ -57,8 +57,8 @@ function footer() {
 function head({ title, description, canonical, type = "article", schema }) {
   const advice = canonical.includes('/advies/') && pageBySlug.get(canonical.split('/').pop());
   const product = productPhotos[(advice ? advice.product.href : canonical).split('/').pop()];
-  const shareImage = product ? `${site}/public/assets/images/products/photos/${product.photos[0].file}.webp` : `${site}/public/assets/images/ecoyard-supply-hero.png`;
-  const shareAlt = product ? product.photos[0].alt : 'Eco Yard Supply organische meststoffen in Noord-Brabant';
+  const shareImage = advice?.image ? `${site}${advice.image.src}` : product ? `${site}/public/assets/images/products/photos/${product.photos[0].file}.webp` : `${site}/public/assets/images/ecoyard-supply-hero.png`;
+  const shareAlt = advice?.image?.alt || (product ? product.photos[0].alt : 'Eco Yard Supply organische meststoffen in Noord-Brabant');
   if (product && canonical.includes('/producten/') && schema['@graph']) schema['@graph'].push(...product.photos.map(imageSchema));
   return `<!doctype html><html lang="nl"><head>${analytics()}
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -85,7 +85,7 @@ function articleSchema(page) {
   const datePublished = page.datePublished || published;
   const dateModified = articleModified(page);
   return { "@context": "https://schema.org", "@graph": [
-    { "@type": "Article", "@id": `${canonical}#article`, headline: page.title, description: page.description, datePublished, dateModified, inLanguage: "nl-NL", mainEntityOfPage: canonical, image: productPhotos[page.product.href.split('/').pop()]?.photos.slice(0, 1).map(imageSchema), author: { "@type": "Organization", name: "Eco Yard Supply", url: site }, publisher: { "@id": `${site}/#business` } },
+    { "@type": "Article", "@id": `${canonical}#article`, headline: page.title, description: page.description, datePublished, dateModified, inLanguage: "nl-NL", mainEntityOfPage: canonical, image: page.image ? { "@type": "ImageObject", contentUrl: `${site}${page.image.src}`, name: page.image.title, description: page.image.description, caption: page.image.caption, width: page.image.width, height: page.image.height } : productPhotos[page.product.href.split('/').pop()]?.photos.slice(0, 1).map(imageSchema), author: { "@type": "Organization", name: "Eco Yard Supply", url: site }, publisher: { "@id": `${site}/#business` } },
     { "@type": "BreadcrumbList", itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: `${site}/` },
       { "@type": "ListItem", position: 2, name: "Advies", item: `${site}/advies/` },
@@ -93,6 +93,12 @@ function articleSchema(page) {
     ] },
     { "@type": "FAQPage", mainEntity: page.faq.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
   ] };
+}
+
+function editorialPhoto(page, small = false) {
+  const image = page.image;
+  const img = `<img src="${small ? image.small : image.src}" alt="${image.alt}" title="${image.title}" width="${small ? 576 : image.width}" height="${small ? 384 : image.height}" ${small ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">`;
+  return small ? `<div class="advice-card-photo">${img}</div>` : `<figure class="advice-detail-photo">${img}<figcaption>${image.caption}</figcaption></figure>`;
 }
 
 function articlePage(page) {
@@ -110,7 +116,7 @@ function articlePage(page) {
       <section class="section"><div class="container article-layout">
         <article class="article-body">
           <aside class="direct-answer"><p class="eyebrow">Kort antwoord</p><p>${page.summary}</p></aside>
-      ${detailPhoto(page) ? detailPhoto(page) + "\n" : ""}${bodyHtml}
+      ${page.image ? editorialPhoto(page) + "\n" : (detailPhoto(page) ? detailPhoto(page) + "\n" : "")}${bodyHtml}
           <aside class="editorial-note"><p class="eyebrow">Bronnen en controle</p><h2>Hoe dit advies is opgebouwd</h2>${page.sourceNote || `<p>Productsamenstelling, toepassingsperioden en doseringen zijn gecontroleerd aan de hand van de aangeleverde Dungking-productbladen. Praktische stappen zijn bewust voorwaardelijk geformuleerd, omdat bodem, weer en uitgangssituatie het resultaat beïnvloeden. De actuele verpakking en het actuele productblad blijven leidend.</p><p>Inhoudelijk gecontroleerd door Eco Yard Supply &middot; Laatste wijziging: ${dateModified.split("-").reverse().join("-")}</p>`}</aside>
           <section class="faq-section article-faq" aria-labelledby="faq-title"><p class="eyebrow">Veelgestelde vragen</p><h2 id="faq-title">Veelgestelde vragen</h2><div class="faq-grid">${faqHtml}</div></section>
         </article>
@@ -124,6 +130,7 @@ function articlePage(page) {
 function hubPage() {
   const canonical = `${site}/advies/`;
   const adviceGroups = [
+    { title: "Nieuws en verkooppunten", slugs: ["dungking-handelsonderneming-vos-wanroij"] },
     { title: "Graszaad", slugs: ["wanneer-graszaad-zaaien", "hoeveel-graszaad-per-m2", "gazon-doorzaaien", "graszaad-komt-niet-op", "graszaad-bewaren"] },
     { title: "Aanplantgrond", slugs: ["aanplantgrond-of-tuinaarde", "hoeveel-aanplantgrond-nodig", "aanplantgrond-of-potgrond"] },
     { title: "Gazon verzorgen", slugs: ["gazon-bemesten", "gazon-herstellen", "organische-gazonmest-of-kunstmest", "gazon-bemesten-voorjaar", "gazon-bemesten-najaar", "mest-voor-graszoden", "hoeveel-gazonmest-per-m2", "gazon-bemesten-bij-droogte"] },
@@ -136,7 +143,7 @@ function hubPage() {
   const filters = [{ title: "Alles", value: "all" }, ...adviceGroups.map((group, index) => ({ title: group.title, value: String(index) }))].map((group) => `<button class="advice-filter" type="button" data-advice-filter="${group.value}" aria-pressed="${group.value === "all"}" aria-controls="advice-cards">${group.title}</button>`).join("");
   const cards = advicePages.map((page) => {
     const product = productPhotos[page.product.href.split('/').pop()];
-    const picture = product ? `<div class="advice-card-photo">${photoImage(product.photos[0], { small: true })}</div>` : '';
+    const picture = page.image ? editorialPhoto(page, true) : product ? `<div class="advice-card-photo">${photoImage(product.photos[0], { small: true })}</div>` : '';
     return `<article class="content-card" data-advice-category="${categoryBySlug.get(page.slug)}">${picture}<p class="eyebrow">${page.eyebrow}</p><h2><a href="/advies/${page.slug}">${page.title}</a></h2><p>${page.description}</p><a class="read-more" href="/advies/${page.slug}">Lees het advies</a></article>`;
   }).join("");
   const schema = { "@context": "https://schema.org", "@graph": [
@@ -286,8 +293,8 @@ const homeHtml = await fs.readFile(homeFile, "utf8");
 await fs.writeFile(homeFile, homeHtml.replace(/<!-- novaferm-section:start -->[\s\S]*?<!-- novaferm-section:end -->/, `<!-- novaferm-section:start -->${makePortable(novafermSection(), "", "./")}<!-- novaferm-section:end -->`));
 
 const urls = [
-  ["/", priceUpdate], ["/producten/", priceUpdate], ["/producten/novaferm-viva", priceUpdate], ["/producten/kingseed", priceUpdate], ["/producten/vitalmix", priceUpdate], ["/producten/startersmest", priceUpdate], ["/producten/gazonmest", priceUpdate], ["/producten/bordermest", priceUpdate], ["/producten/aanplantmest", priceUpdate],
-  ["/voor-hoveniers", seedUpdate], ["/advies/", "2026-10-25"], ...advicePages.map((page) => [`/advies/${page.slug}`, articleModified(page)]),
+  ["/", "2026-11-10"], ["/producten/", priceUpdate], ["/producten/novaferm-viva", priceUpdate], ["/producten/kingseed", priceUpdate], ["/producten/vitalmix", priceUpdate], ["/producten/startersmest", priceUpdate], ["/producten/gazonmest", priceUpdate], ["/producten/bordermest", priceUpdate], ["/producten/aanplantmest", priceUpdate],
+  ["/voor-hoveniers", seedUpdate], ["/advies/", advicePages.map(articleModified).sort().at(-1)], ...advicePages.map((page) => [`/advies/${page.slug}`, articleModified(page)]),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([url, lastmod]) => `  <url><loc>${site}${url}</loc><lastmod>${lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`;
 await fs.writeFile(path.join(root, "sitemap.xml"), sitemap);

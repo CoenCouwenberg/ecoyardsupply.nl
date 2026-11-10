@@ -408,3 +408,16 @@ Coen geeft na beoordeling expliciet opdracht: “Prima, push het naar main”. H
 Uitkomst push en live controle — 31 oktober 2026:
 - Websitewijzigingen gecommit als `f1ff0bc` en succesvol gepusht naar `origin/main`; lokale HEAD en remote-trackingbranch kwamen overeen. Geen mergeconflict, force-push of authenticatiewijziging.
 - HTTPS-controle met cache-bypass na de push: homepage en `/producten/startersmest` HTTP 200, beide zonder nieuwe SVG-verwijzing of verpakkingskeuze/vanaf-prijzen. `/public/assets/images/ecoyard-supply-logo.svg` HTTP 404. De server heeft de release nog niet overgenomen. Coens handmatige serverupdate blijft nodig; hosting niet geopend of aangepast.
+
+## 22. Nieuw verkooppunt Handelsonderneming Vos — 10 november 2026
+
+Coen vraagt expliciet een nieuwe blog met aangeleverde winkelfoto, SEO/GEO, FAQ en directe publicatie/push. De aanvankelijke plaatsnaam Waalwijk is door Coens adresaanvulling gecorrigeerd naar **Handelsonderneming Vos, Bus 6, 5446 PK Wanroij**; Vos Capelle is expliciet uitgesloten.
+
+- Nieuwe blog `/advies/dungking-handelsonderneming-vos-wanroij`, bron `content/news-pages.mjs`. Feitelijk verkooppuntnieuws met winkelachtergrond, adres/telefoon, Landhorst-afhalen op afspraak, korte novembertips, vier FAQ's en contact-CTA. Geen prijsvoordeel of specifiek winkelassortiment/voorraad verzonnen.
+- Winkelgegevens gecontroleerd op https://www.handelsondernemingvos.nl/ en `/tuin-en-park`; seizoen bij KNMI. Bestaande Dungking-productrichtlijnen voor najaarsbemesting behouden. Geen nieuwe zoekwoordvolumes gebruikt; gerichte nieuwsopdracht in de bestaande SEO-roadmap, geen strategische herstructurering.
+- Aangeleverde foto bijgesneden tot 1152 × 768 (3:2), WebP 286.140 bytes, plus miniatuur 576 × 384. Nederlandse bestandsnaam, titel, beschrijving, zichtbare caption en beeldgetrouwe alttekst. Afzonderlijke blogfoto ondersteund in builder, social metadata en Article/ImageObject.
+- Advieshub: filter Nieuws en verkooppunten, nieuwe kaart met winkelfoto. Homepage krijgt een compacte verwijzing. Sitemap en llms.txt bijgewerkt; alleen homepage, advieshub en nieuwe blog krijgen een nieuwe sitemapdatum.
+- Builder en validator geslaagd (41 HTML-pagina's), JavaScript-syntax en diff-whitespacecontrole geslaagd. Blogweergave op mobiel en desktop visueel gecontroleerd; titel ingekort voor leesbaarheid. Geen contactaanvragen verstuurd. QA-bestanden buiten webroot onder `/private/tmp/ecoyard-blog-*`.
+- Commit/push naar `origin/main` zijn in deze opdracht expliciet geautoriseerd. De bestaande hostingprocedure blijft: Coen haalt GitHub-wijzigingen zelf op de server op. Een geslaagde push is geen bevestiging van live publicatie. Geen hosting-/authenticatieconfiguratie gewijzigd.
+
+Aanvullende browsercontrole: homepage, advieshub en nieuwe blog bij 390 en 1440 CSS-pixels allemaal HTTP 200, geen horizontale overflow, ontbrekende afbeeldingen na laden of JavaScript-paginafouten. Nieuwsfilter toont uitsluitend de nieuwe blog; eerste FAQ opent correct.
