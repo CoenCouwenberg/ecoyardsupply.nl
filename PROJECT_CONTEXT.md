@@ -421,3 +421,5 @@ Coen vraagt expliciet een nieuwe blog met aangeleverde winkelfoto, SEO/GEO, FAQ 
 - Commit/push naar `origin/main` zijn in deze opdracht expliciet geautoriseerd. De bestaande hostingprocedure blijft: Coen haalt GitHub-wijzigingen zelf op de server op. Een geslaagde push is geen bevestiging van live publicatie. Geen hosting-/authenticatieconfiguratie gewijzigd.
 
 Aanvullende browsercontrole: homepage, advieshub en nieuwe blog bij 390 en 1440 CSS-pixels allemaal HTTP 200, geen horizontale overflow, ontbrekende afbeeldingen na laden of JavaScript-paginafouten. Nieuwsfilter toont uitsluitend de nieuwe blog; eerste FAQ opent correct.
+
+Publicatie-uitkomst: websitecommit `0a7462a` succesvol gepusht naar `origin/main`. Live HTTPS-controle met cache-bypass na push: nieuwe blog en WebP beide HTTP 404; sitemap HTTP 200 zonder de blog. Serverupdate door Coen blijft nodig. Deze uitkomst wordt in een aparte documentatiecommit vastgelegd en gepusht.
