@@ -3,6 +3,7 @@ export const newsPages = [{
   title: "Dungking nu ook bij Vos in Wanroij",
   seoTitle: "Dungking bij Vos in Wanroij | Eco Yard Supply",
   description: "Dungking van Eco Yard Supply is nu ook te koop bij Handelsonderneming Vos, Bus 6 in Wanroij. Bekijk het verkooppunt en onze tuintips voor november.",
+  showSourceNote: false,
   eyebrow: "Nieuw verkooppunt in Noord-Brabant",
   datePublished: "2026-11-10",
   dateModified: "2026-11-10",

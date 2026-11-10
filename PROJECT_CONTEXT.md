@@ -423,3 +423,13 @@ Coen vraagt expliciet een nieuwe blog met aangeleverde winkelfoto, SEO/GEO, FAQ 
 Aanvullende browsercontrole: homepage, advieshub en nieuwe blog bij 390 en 1440 CSS-pixels allemaal HTTP 200, geen horizontale overflow, ontbrekende afbeeldingen na laden of JavaScript-paginafouten. Nieuwsfilter toont uitsluitend de nieuwe blog; eerste FAQ opent correct.
 
 Publicatie-uitkomst: websitecommit `0a7462a` succesvol gepusht naar `origin/main`. Live HTTPS-controle met cache-bypass na push: nieuwe blog en WebP beide HTTP 404; sitemap HTTP 200 zonder de blog. Serverupdate door Coen blijft nodig. Deze uitkomst wordt in een aparte documentatiecommit vastgelegd en gepusht.
+
+## 23. Vernieuwd blogoverzicht — 10 november 2026
+
+Coen vraagt expliciet een moderner blogoverzicht, hogere vullende foto's, drie kolommen op desktop, een andere achtergrond, verwijderen van het bron-/controleblok bij de Vos-blog en push naar main.
+
+- `/advies/` opnieuw vormgegeven binnen de bestaande stack: rustige witte achtergrond, lichte effen introductie, compacte categoriefilters, kaarten met dunne rand, vierkante hoge beeldvlakken met object-fit cover, consistente koppen/tekst en contactblok. Drie kolommen vanaf 1024 px, twee vanaf 672 px, één op mobiel. Vierkante productfoto's vullen zonder uitsnijden; de echte winkelfoto wordt centraal uitgesneden. Foto's en teksten zijn klikbaar, toetsenbordfocus en reduced-motion worden ondersteund.
+- Bron-/controleblok alleen bij de Vos-blog verborgen via `showSourceNote: false`; broninformatie blijft in de contentbron beschikbaar. Andere artikelen behouden hun bronnen.
+- Cacheversie van CSS alleen op advieshub vernieuwd. Nieuwe stijlen uitsluitend binnen `.journal-page`, geen herontwerp van productpagina's of homepage. Bestaande metadata, canonicals, tracking en URL's behouden. Geen nieuwe SEO-strategie of exports nodig voor deze gerichte ontwerpwijziging.
+- Builder en validator geslaagd voor 41 pagina's; syntax/diffcontrole geslaagd. Browser bij werkelijk 390, 768 en 1440 CSS-pixels: HTTP 200, respectievelijk 1/2/3 kolommen, geen overflow, ontbrekende beelden of JavaScript-fouten. Filters Nieuws (1), Graszaad (5), Alles (30), doorklik naar Vos, eerste FAQ en mobiel menu gecontroleerd. Screenshot mobiel/desktop visueel beoordeeld. QA buiten webroot onder `/private/tmp/ecoyard-journal-*`.
+- Commit/push naar origin/main expliciet geautoriseerd in deze opdracht. Hosting blijft handmatig door Coen ophalen uit GitHub; geen hostinginstellingen gewijzigd.
